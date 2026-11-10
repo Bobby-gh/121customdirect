@@ -1,9 +1,11 @@
+import Link from 'next/link'
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <a href="#" className="logo">
+          <Link href="/121customsdirect" className="logo">
             <svg className="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="8" fill="url(#footer-logo-gradient)" />
               <path d="M12 28V12L20 8L28 12V28" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -17,17 +19,17 @@ function Footer() {
               </defs>
             </svg>
             <span className="logo-text">121 Customs Direct</span>
-          </a>
+          </Link>
           <p>Making customs declarations simple, accurate, and accessible for every business.</p>
         </div>
 
         <div className="footer-links">
           <div className="footer-column">
             <h4>Company</h4>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Solutions</a>
-            <a href="#">Contact</a>
+            <Link href="/121customsdirect">Home</Link>
+            <Link href="/121customsdirect/about">About Us</Link>
+            <Link href="/121customsdirect/solutions">Solutions</Link>
+            <Link href="/121customsdirect/contact">Contact</Link>
           </div>
           <div className="footer-column">
             <h4>Resources</h4>

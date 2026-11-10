@@ -1,4 +1,6 @@
-function Solutions({ onNavigate }) {
+import Link from 'next/link'
+
+function Solutions() {
   const solutions = [
     {
       number: '01',
@@ -46,7 +48,7 @@ function Solutions({ onNavigate }) {
       <section className="page-header">
         <div className="container">
           <nav className="breadcrumb">
-            <a href="#" onClick={() => onNavigate('home')}>Home</a>
+            <Link href="/121customsdirect">Home</Link>
             <span className="breadcrumb-separator">/</span>
             <span className="breadcrumb-current">Solutions</span>
           </nav>
@@ -82,12 +84,12 @@ function Solutions({ onNavigate }) {
                   </span>
                 ))}
               </div>
-              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}>
+              <Link href="/121customsdirect/contact">
                 Learn More
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12H19M12 5L19 12L12 19" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -100,16 +102,12 @@ function Solutions({ onNavigate }) {
             <p>
               Get in touch with our team to discuss how 121 Customs Direct can help your business.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/121customsdirect/contact"
               className="btn btn-primary btn-lg"
-              onClick={(e) => {
-                e.preventDefault()
-                onNavigate('contact')
-              }}
             >
               Contact Us Today
-            </a>
+            </Link>
           </div>
         </div>
       </section>

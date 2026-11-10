@@ -1,6 +1,9 @@
-import { useState } from 'react'
+'use client'
 
-function Contact({ onNavigate }) {
+import { useState } from 'react'
+import Link from 'next/link'
+
+function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,7 +34,7 @@ function Contact({ onNavigate }) {
       <section className="page-header">
         <div className="container">
           <nav className="breadcrumb">
-            <a href="#" onClick={() => onNavigate('home')}>Home</a>
+            <Link href="/121customsdirect">Home</Link>
             <span className="breadcrumb-separator">/</span>
             <span className="breadcrumb-current">Contact Us</span>
           </nav>

@@ -1,4 +1,6 @@
-function Hero({ onNavigate }) {
+import Link from 'next/link'
+
+function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -30,33 +32,19 @@ function Hero({ onNavigate }) {
           </p>
 
           <div className="hero-actions">
-            <a
-              href="#"
-              className="btn btn-primary btn-lg"
-              onClick={(e) => {
-                e.preventDefault()
-                onNavigate('solutions')
-              }}
-            >
+            <Link href="/121customsdirect/solutions" className="btn btn-primary btn-lg">
               <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 16V12M12 8H12.01" />
               </svg>
               Learn About Our Solution
-            </a>
-            <a
-              href="#"
-              className="btn btn-outline btn-lg"
-              onClick={(e) => {
-                e.preventDefault()
-                onNavigate('contact')
-              }}
-            >
+            </Link>
+            <Link href="/121customsdirect/contact" className="btn btn-outline btn-lg">
               Contact Us
               <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12H19M12 5L19 12L12 19" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="hero-stats">

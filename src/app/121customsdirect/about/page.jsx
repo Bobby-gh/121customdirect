@@ -1,30 +1,12 @@
-import { useEffect } from 'react'
+import Link from 'next/link'
 
-function About({ onNavigate }) {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    const elements = document.querySelectorAll('.fade-in')
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
+function About() {
   return (
     <div className="about-page">
       <section className="page-header">
         <div className="container">
           <nav className="breadcrumb">
-            <a href="#" onClick={() => onNavigate('home')}>Home</a>
+            <Link href="/121customsdirect">Home</Link>
             <span className="breadcrumb-separator">/</span>
             <span className="breadcrumb-current">About Us</span>
           </nav>
@@ -241,16 +223,9 @@ function About({ onNavigate }) {
           <div className="cta-content fade-in">
             <h2>Ready to Simplify Your Customs Declarations?</h2>
             <p>Join the businesses that trust 121 Customs Direct for their HMRC compliance needs.</p>
-            <a
-              href="#"
-              className="btn btn-primary btn-lg"
-              onClick={(e) => {
-                e.preventDefault()
-                onNavigate('contact')
-              }}
-            >
+            <Link href="/121customsdirect/contact" className="btn btn-primary btn-lg">
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>
