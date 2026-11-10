@@ -53,7 +53,7 @@ function About({ onNavigate }) {
             </div>
             <div className="story-content fade-in">
               <span className="section-label">Our Story</span>
-              <h2>Built to Bridge the Gap Between Customs and Business</h2>
+              <h2>Built to Bridge the Gap Between Customs and Businesses</h2>
               <p>
                 At 121 Customs Direct, we saw firsthand how complex and overwhelming HMRC customs declarations could be for businesses of all sizes. The paperwork, the regulations, the constant changes - it was a barrier that prevented many companies from trading confidently.
               </p>
