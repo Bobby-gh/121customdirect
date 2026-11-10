@@ -1,12 +1,13 @@
 import Link from 'next/link'
+import PageHero from '../../../components/PageHero'
 
 function Solutions() {
   const solutions = [
     {
       number: '01',
-      title: 'Customs Declaration Software',
-      description: 'Our flagship solution provides a complete, user-friendly platform for submitting HMRC customs declarations. Built with compliance at its core, it guides you through every step of the process.',
-      features: ['Real-time HMRC Integration', 'Automated Validation', 'Multi-Commodity Support', 'Document Management'],
+      title: 'Customs declarations',
+      description: 'Support with the information and steps involved in preparing customs declarations for goods moving across borders.',
+      features: ['Declaration preparation', 'Shipment details', 'Supporting information', 'Next-step guidance'],
       color: 'blue',
       image: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -17,9 +18,9 @@ function Solutions() {
     },
     {
       number: '02',
-      title: 'Trade Compliance Advisory',
-      description: 'Navigate complex trade regulations with confidence. Our expert advisors help you understand your obligations, classify goods correctly, and stay compliant with changing HMRC requirements.',
-      features: ['Commodity Classification', 'Regulatory Updates', 'Risk Assessment', 'Training & Support'],
+      title: 'Guidance and advice',
+      description: 'Talk through customs questions, understand what information may be needed and get a clearer view of the process ahead.',
+      features: ['Practical guidance', 'Requirements explained', 'Questions answered', 'Support for your situation'],
       color: 'yellow',
       image: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -30,9 +31,9 @@ function Solutions() {
     },
     {
       number: '03',
-      title: 'API & System Integration',
-      description: 'Seamlessly connect your existing systems with HMRC through our robust API. Automate your customs workflows and reduce manual effort while maintaining full compliance.',
-      features: ['RESTful API', 'Webhook Notifications', 'Custom Workflows', '24/7 Uptime'],
+      title: 'Connected workflows',
+      description: 'Explore how customs processes can sit more naturally alongside the systems and routines your business already uses.',
+      features: ['Workflow discussions', 'Process review', 'System requirements', 'A practical way forward'],
       color: 'green',
       image: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -45,27 +46,19 @@ function Solutions() {
 
   return (
     <div className="solutions-page">
-      <section className="page-header">
-        <div className="container">
-          <nav className="breadcrumb">
-            <Link href="/121customsdirect">Home</Link>
-            <span className="breadcrumb-separator">/</span>
-            <span className="breadcrumb-current">Solutions</span>
-          </nav>
-          <h1 className="page-title">
-            Our <span className="highlight">Solutions</span>
-          </h1>
-          <p className="page-subtitle">
-            Comprehensive customs declaration tools and services designed to make HMRC compliance simple, accurate, and accessible.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our services"
+        title="Practical help for customs work."
+        description="From a single declaration question to a broader workflow, start with the support that fits your business."
+        action={{ href: '/121customsdirect/contact', label: 'Talk through what you need' }}
+      />
 
       <section className="solutions-hero">
-        <span className="section-label">What We Offer</span>
-        <h2>Customs Direct - Your Complete HMRC Solution</h2>
+        <span className="section-label">What we offer</span>
+        <h2>A considered approach to customs.</h2>
         <p>
-          At 121 Customs Direct, we believe that customs declarations should be straightforward. Our software connects the complex world of HMRC requirements with the people who need to use them. Whether you're importing goods, exporting products, or managing a supply chain, our solutions adapt to your needs.
+          Tell us what you are moving and where you are getting stuck. We can help you understand
+          the declaration process, the details to gather and the possible next steps.
         </p>
       </section>
 
@@ -98,9 +91,9 @@ function Solutions() {
       <section className="solutions-cta">
         <div className="container">
           <div className="cta-content fade-in">
-            <h2>Ready to Transform Your Customs Process?</h2>
+            <h2>Not sure where to start?</h2>
             <p>
-              Get in touch with our team to discuss how 121 Customs Direct can help your business.
+            Tell us a little about your customs question. We can help you work out what to do next.
             </p>
             <Link
               href="/121customsdirect/contact"

@@ -1,5 +1,5 @@
-import '../index.css'
 import '../style.css'
+import '../redesign.css'
 
 export const metadata = {
   title: '121 Customs Direct',
@@ -10,12 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body>{children}</body>
     </html>

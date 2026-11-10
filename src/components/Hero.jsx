@@ -1,147 +1,150 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+const slides = [
+  {
+    eyebrow: 'Customs support, made clear',
+    title: 'Good customs work starts with a clear conversation.',
+    description:
+      'Importing or exporting can bring a lot of questions. We help you understand the details, the paperwork and what needs to happen next.',
+    note: 'A practical place to start',
+    detail: 'Tell us what you are moving and where you are in the process.',
+    image: 'https://images.unsplash.com/photo-1494438639946-8b0f7d328d95?w=800&q=80',
+    bgGradient: 'from-blue-50 via-white to-blue-50',
+  },
+  {
+    eyebrow: 'For the work behind every shipment',
+    title: 'The paperwork matters. So does the person doing it.',
+    description:
+      'Customs declarations call for care and attention. Get a more personal approach to the steps that keep trade moving.',
+    note: 'Clear, considered support',
+    detail: 'We take time to understand your question before recommending a next step.',
+    image: 'https://images.unsplash.com/photo-1447407008750-65f6ae9f3e09?w=800&q=80',
+    bgGradient: 'from-slate-50 via-white to-slate-50',
+  },
+  {
+    eyebrow: 'Here when you need a hand',
+    title: 'When the rules feel complicated, let’s talk them through.',
+    description:
+      'Whether you are new to customs or dealing with a particular challenge, we can help make the process easier to navigate.',
+    note: 'Start with a conversation',
+    detail: 'Bring your question. We will help you work out what to do next.',
+    image: 'https://images.unsplash.com/photo-1463569224974-bdc0dc1a8e5b?w=800&q=80',
+    bgGradient: 'from-stone-50 via-white to-stone-50',
+  },
+]
 
 function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0)
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const slide = slides[activeSlide]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const showSlide = (index) => setActiveSlide((index + slides.length) % slides.length)
+
   return (
-    <section className="hero">
-      <div className="hero-bg">
-        <div className="hero-pattern"></div>
-        <div className="hero-shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-        </div>
+    <section className="home-hero" aria-roledescription="carousel" aria-label="121 Customs Direct">
+      {/* Background images */}
+      <div className="home-hero-bg">
+        {slides.map((s, i) => (
+          <div
+            key={i}
+            className={`home-hero-bg-slide ${i === activeSlide ? 'is-active' : ''}`}
+            style={{ backgroundImage: `url(${s.image})` }}
+          />
+        ))}
+        <div className={`home-hero-bg-overlay bg-gradient-to-r ${slide.bgGradient} bg-[length:100%_100%]`} />
+        <div className="home-hero-bg-fog fog-bottom" />
+        <div className="home-hero-bg-fog fog-top" />
       </div>
 
-      <div className="container hero-container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <svg className="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-            </svg>
-            <span>Trusted by UK businesses</span>
-          </div>
-
-          <h1 className="hero-title">
-            Customs Declarations
-            <br />
-            <span className="highlight-text">Made Simple</span>
-          </h1>
-
-          <p className="hero-subtitle">
-            121 Customs Direct connects your business directly with HMRC requirements. Our software solution streamlines customs declarations, linking complex processes with the people who need them most.
-          </p>
-
-          <div className="hero-actions">
-            <Link href="/121customsdirect/solutions" className="btn btn-primary btn-lg">
-              <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16V12M12 8H12.01" />
-              </svg>
-              Learn About Our Solution
+      <div className="home-hero-layout">
+        <div className="home-hero-copy" aria-live="polite" aria-atomic="true">
+          <p className="editorial-eyebrow">{slide.eyebrow}</p>
+          <h1>{slide.title}</h1>
+          <p className="home-hero-description">{slide.description}</p>
+          <div className="home-hero-actions">
+            <Link
+              href="/121customsdirect/contact"
+              className={`button button-dark ${!imageLoaded ? 'is-delayed' : ''}`}
+            >
+              Talk to our team
+              <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/121customsdirect/contact" className="btn btn-outline btn-lg">
-              Contact Us
-              <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12H19M12 5L19 12L12 19" />
-              </svg>
+            <Link
+              href="/121customsdirect/solutions"
+              className={`text-link ${!imageLoaded ? 'is-delayed' : ''}`}
+            >
+              Explore our services
+              <span aria-hidden="true">↗</span>
             </Link>
           </div>
-
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">10,000+</span>
-              <span className="stat-label">Declarations Processed</span>
+          <div className="slider-controls">
+            <button
+              type="button"
+              className="slider-arrow"
+              onClick={() => showSlide(activeSlide - 1)}
+              aria-label="Previous slide"
+            >
+              ←
+            </button>
+            <div className="slider-dots" aria-label="Choose a slide">
+              {slides.map((item, index) => (
+                <button
+                  type="button"
+                  key={item.eyebrow}
+                  className={`slider-dot ${index === activeSlide ? 'is-active' : ''}`}
+                  onClick={() => showSlide(index)}
+                  aria-label={`Show slide ${index + 1}`}
+                  aria-current={index === activeSlide ? 'true' : undefined}
+                />
+              ))}
             </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">98%</span>
-              <span className="stat-label">First-Time Approval Rate</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">24/7</span>
-              <span className="stat-label">Support Available</span>
-            </div>
+            <span className="slider-count">
+              0{activeSlide + 1} <span aria-hidden="true">/</span> 0{slides.length}
+            </span>
+            <button
+              type="button"
+              className="slider-arrow"
+              onClick={() => showSlide(activeSlide + 1)}
+              aria-label="Next slide"
+            >
+              →
+            </button>
           </div>
         </div>
 
-        <div className="hero-visual">
-          <div className="hero-card hero-card-1">
-            <div className="card-header">
-              <div className="card-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <span className="card-title">Declaration Status</span>
-            </div>
-            <div className="card-status active">
-              <div className="status-indicator"></div>
-              <span>Submitted Successfully</span>
-            </div>
-            <div className="card-details">
-              <div className="detail-row">
-                <span className="detail-label">EORI Number</span>
-                <span className="detail-value">GB123456789000</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Commodity Code</span>
-                <span className="detail-value">8471.30.01</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Declaration Type</span>
-                <span className="detail-value">Import</span>
-              </div>
-            </div>
+        <aside className="hero-note" aria-label={slide.note}>
+          <div className="hero-note-topline">
+            <span>121 Customs Direct</span>
+            <span aria-hidden="true">
+              {String(activeSlide + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
+            </span>
           </div>
-
-          <div className="hero-card hero-card-2">
-            <div className="card-header">
-              <div className="card-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <span className="card-title">Real-Time Tracking</span>
-            </div>
-            <div className="tracking-bar">
-              <div className="tracking-fill"></div>
-              <div className="tracking-marker" style={{ left: '75%' }}>
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="6" />
-                </svg>
-                <span>In Progress</span>
-              </div>
-            </div>
-            <div className="tracking-steps">
-              <div className="step completed">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Submitted</span>
-              </div>
-              <div className="step completed">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Verified</span>
-              </div>
-              <div className="step active">
-                <div className="step-dot"></div>
-                <span>Processing</span>
-              </div>
-              <div className="step">
-                <div className="step-dot"></div>
-                <span>Completed</span>
-              </div>
-            </div>
+          <div className="hero-note-rule" />
+          <p className="hero-note-label">A note for your next shipment</p>
+          <p className="hero-note-title">{slide.note}</p>
+          <p className="hero-note-detail">{slide.detail}</p>
+          <div className="hero-note-mark" aria-hidden="true">
+            121
           </div>
-        </div>
+          <p className="hero-note-signoff">Trade, with people in mind.</p>
+        </aside>
       </div>
 
-      <div className="hero-scroll-indicator">
-        <div className="scroll-mouse">
-          <div className="scroll-wheel"></div>
+      <div className="home-hero-bottomline">
+        <div className="container">
+          <span>Import · Export · Customs declarations</span>
+          <span>UK-based support for businesses</span>
         </div>
       </div>
     </section>
