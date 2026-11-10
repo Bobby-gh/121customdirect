@@ -58,7 +58,7 @@ function About({ onNavigate }) {
                 At 121 Customs Direct, we saw firsthand how complex and overwhelming HMRC customs declarations could be for businesses of all sizes. The paperwork, the regulations, the constant changes - it was a barrier that prevented many companies from trading confidently.
               </p>
               <p>
-                We set out to change that. Our mission was simple: create a software solution that makes customs declarations as straightforward as possible, linking the technical requirements of customs processes directly with the people who need to use them..
+                We set out to change that. Our mission was simple: create a software solution that makes customs declarations as straightforward as possible, linking the technical requirements of customs processes directly with the people who need to use them.
               </p>
               <p>
                 What started as a vision to simplify trade compliance has grown into a trusted platform serving businesses across the UK, helping them navigate HMRC requirements with confidence and ease.
