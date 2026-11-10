@@ -31,7 +31,7 @@ function About({ onNavigate }) {
           <h1 className="page-title">
             About <span className="highlight">121 Customs Direct</span>
           </h1>
-          <p className="page-subtitle">Connecting businesses with seamless customs solutions since day one.</p>
+          <p className="page-subtitle">Connecting businesses with seamless customs solutions since day one..</p>
         </div>
       </section>
 
