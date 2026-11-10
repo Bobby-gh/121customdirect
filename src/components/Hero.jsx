@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const slides = [
   {
@@ -12,8 +11,7 @@ const slides = [
       'Importing or exporting can bring a lot of questions. We help you understand the details, the paperwork and what needs to happen next.',
     note: 'A practical place to start',
     detail: 'Tell us what you are moving and where you are in the process.',
-    image: 'https://images.unsplash.com/photo-1494438639946-8b0f7d328d95?w=800&q=80',
-    bgGradient: 'from-blue-50 via-white to-blue-50',
+    imageUrl: 'https://images.unsplash.com/photo-1494438639946-8b0f7d328d95?w=1200&q=85',
   },
   {
     eyebrow: 'For the work behind every shipment',
@@ -22,8 +20,7 @@ const slides = [
       'Customs declarations call for care and attention. Get a more personal approach to the steps that keep trade moving.',
     note: 'Clear, considered support',
     detail: 'We take time to understand your question before recommending a next step.',
-    image: 'https://images.unsplash.com/photo-1447407008750-65f6ae9f3e09?w=800&q=80',
-    bgGradient: 'from-slate-50 via-white to-slate-50',
+    imageUrl: 'https://images.unsplash.com/photo-1447407008750-65f6ae9f3e09?w=1200&q=85',
   },
   {
     eyebrow: 'Here when you need a hand',
@@ -32,14 +29,12 @@ const slides = [
       'Whether you are new to customs or dealing with a particular challenge, we can help make the process easier to navigate.',
     note: 'Start with a conversation',
     detail: 'Bring your question. We will help you work out what to do next.',
-    image: 'https://images.unsplash.com/photo-1463569224974-bdc0dc1a8e5b?w=800&q=80',
-    bgGradient: 'from-stone-50 via-white to-stone-50',
+    imageUrl: 'https://images.unsplash.com/photo-1463569224974-bdc0dc1a8e5b?w=1200&q=85',
   },
 ]
 
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0)
-  const [imageLoaded, setImageLoaded] = useState(false)
   const slide = slides[activeSlide]
 
   useEffect(() => {
@@ -53,37 +48,32 @@ function Hero() {
 
   return (
     <section className="home-hero" aria-roledescription="carousel" aria-label="121 Customs Direct">
-      {/* Background images */}
+      {/* Background hero images */}
       <div className="home-hero-bg">
         {slides.map((s, i) => (
           <div
             key={i}
             className={`home-hero-bg-slide ${i === activeSlide ? 'is-active' : ''}`}
-            style={{ backgroundImage: `url(${s.image})` }}
+            style={{ backgroundImage: `url(${s.imageUrl})` }}
+            aria-hidden="true"
           />
         ))}
-        <div className={`home-hero-bg-overlay bg-gradient-to-r ${slide.bgGradient} bg-[length:100%_100%]`} />
+        <div className="home-hero-bg-overlay" aria-hidden="true" />
         <div className="home-hero-bg-fog fog-bottom" />
         <div className="home-hero-bg-fog fog-top" />
       </div>
 
       <div className="home-hero-layout">
-        <div className="home-hero-copy" aria-live="polite" aria-atomic="true">
+        <div className="home-hero-copy" aria-live="polite">
           <p className="editorial-eyebrow">{slide.eyebrow}</p>
           <h1>{slide.title}</h1>
           <p className="home-hero-description">{slide.description}</p>
           <div className="home-hero-actions">
-            <Link
-              href="/121customsdirect/contact"
-              className={`button button-dark ${!imageLoaded ? 'is-delayed' : ''}`}
-            >
+            <Link href="/121customsdirect/contact" className="button button-dark">
               Talk to our team
               <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="/121customsdirect/solutions"
-              className={`text-link ${!imageLoaded ? 'is-delayed' : ''}`}
-            >
+            <Link href="/121customsdirect/solutions" className="text-link">
               Explore our services
               <span aria-hidden="true">↗</span>
             </Link>

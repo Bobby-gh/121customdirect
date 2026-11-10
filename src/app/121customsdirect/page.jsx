@@ -2,8 +2,8 @@ import Hero from '../../components/Hero'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const introImage = 'https://images.unsplash.com/photo-1447407008750-65f6ae9f3e09?w=700&q=80'
-const approachImage = 'https://images.unsplash.com/photo-1463569224974-bdc0dc1a8e5b?w=600&q=80'
+const introImage = 'https://images.unsplash.com/photo-1447407008750-65f6ae9f3e09?w=900&q=85'
+const approachImage = 'https://images.unsplash.com/photo-1463569224974-bdc0dc1a8e5b?w=700&q=85'
 
 function Home() {
   return (
@@ -33,9 +33,9 @@ function Home() {
               <Image
                 src={introImage}
                 alt="A person reviewing customs documents at a bright desk"
-                width={600}
-                height={440}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                fill
+                sizes="(max-width: 900px) 100vw, 55vw"
+                style={{ objectFit: 'cover' }}
                 unoptimized
               />
               <div className="home-intro-image-accent" />
@@ -60,11 +60,11 @@ function Home() {
               <span className="home-service-number">01</span>
               <div className="home-service-visual">
                 <Image
-                  src="https://images.unsplash.com/photo-1567490588220-95d6f33f75e4?w=240&q=80"
+                  src="https://images.unsplash.com/photo-1567490588220-95d6f33f75e4?w=300&q=85"
                   alt="Customs declarations"
-                  width={96}
-                  height={96}
-                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 14 }}
+                  fill
+                  sizes="(max-width: 720px) 80vw, 140px"
+                  style={{ objectFit: 'cover', borderRadius: 14 }}
                   unoptimized
                 />
               </div>
@@ -81,11 +81,11 @@ function Home() {
               <span className="home-service-number">02</span>
               <div className="home-service-visual">
                 <Image
-                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=240&q=80"
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=300&q=85"
                   alt="Guidance when things get unclear"
-                  width={96}
-                  height={96}
-                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 14 }}
+                  fill
+                  sizes="(max-width: 720px) 80vw, 140px"
+                  style={{ objectFit: 'cover', borderRadius: 14 }}
                   unoptimized
                 />
               </div>
@@ -102,11 +102,11 @@ function Home() {
               <span className="home-service-number">03</span>
               <div className="home-service-visual">
                 <Image
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e921c6e?w=240&q=80"
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e921c6e?w=300&q=85"
                   alt="A more connected way to work"
-                  width={96}
-                  height={96}
-                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 14 }}
+                  fill
+                  sizes="(max-width: 720px) 80vw, 140px"
+                  style={{ objectFit: 'cover', borderRadius: 14 }}
                   unoptimized
                 />
               </div>
@@ -130,9 +130,9 @@ function Home() {
               <Image
                 src={approachImage}
                 alt="A considered support approach"
-                width={520}
-                height={420}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                style={{ objectFit: 'cover' }}
                 unoptimized
               />
               <div className="approach-image-accent approach-accent-1" />
