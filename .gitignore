@@ -1,4 +1,3 @@
 node_modules/
 dist/
-about.html
-css/style.css
+.env*
