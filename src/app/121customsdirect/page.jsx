@@ -4,11 +4,12 @@ import Hero from '../../components/Hero'
 import EnquiryForm from '../../components/EnquiryForm'
 import AppPreview from '../../components/AppPreview'
 import {
+  businessMeeting,
   cargoShipSea,
   containerShip,
   parcels,
   planeInClouds,
-  portAerial,
+  portCrew,
   trailerFleet,
   truckHighway,
   warehouseBoxes,
@@ -33,7 +34,7 @@ const services = [
   {
     number: '03',
     title: 'Guidance & compliance',
-    image: portAerial,
+    image: businessMeeting,
     copy: 'Straight answers on duty, reliefs and paperwork.',
     points: ['Duty & VAT', 'Restricted goods', 'Process reviews'],
   },
@@ -142,8 +143,8 @@ function Home() {
           <div className="home-welcome-visual">
             <div className="media-frame media-tall">
               <Image
-                src={portAerial}
-                alt="Aerial view of a container port with cranes and stacked shipping containers"
+                src={businessMeeting}
+                alt="Colleagues around a table in a business meeting"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
                 style={{ objectFit: 'cover' }}
@@ -330,6 +331,23 @@ function Home() {
             <Link href="/121customsdirect/about" className="button button-dark">
               More about us
               <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* People at the port */}
+      <section
+        className="people-band"
+        style={{ '--people-image': `url(${portCrew})` }}
+      >
+        <div className="container">
+          <div className="people-band-inner">
+            <p className="eyebrow">At the port</p>
+            <h2>People who know your cargo.</h2>
+            <p>Ports, hauliers and HMRC — we deal with them daily, so you do not have to.</p>
+            <Link href="/121customsdirect/contact" className="button button-light">
+              Talk to our team <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

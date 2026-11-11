@@ -1,17 +1,21 @@
 // Central image library for the site.
-// Card/section photos are Unsplash; full-bleed banner photos are Pexels cargo and
-// port shots. All URLs are verified and served unoptimized via next/image.
+// Banner photos are Pexels cargo and port shots; card and section photos are
+// Unsplash, plus Pexels people photography. All URLs are served unoptimized via
+// next/image or as CSS backgrounds.
 
 const u = (id, w = 1600, q = 85) =>
   `https://images.unsplash.com/${id}?w=${w}&q=${q}&auto=format&fit=crop`
 
-// Banner imagery: clean cargo, container and port photography (Pexels, free to use).
-// Served at 2400px wide so full-bleed banners stay sharp on large screens.
-const banner = (id) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=2400`
+// Pexels imagery (free to use).
+const pexels = (id, w = 1600) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
 
-// Freight, port and shipment imagery
-export const portAerial = u('photo-1494412651409-8963ce7935a7')
+// Full-bleed banners, served at 2400px wide so they stay sharp on large screens.
+const banner = (id) => pexels(id, 2400)
+
+// People and port imagery
+export const businessMeeting = pexels('6146820')
+export const portCrew = pexels('28438301')
 export const portCranes = u('photo-1494412574643-ff11b0a5c1c3')
 export const containerShip = u('photo-1578575437130-527eed3abbec')
 export const cargoShipSea = u('photo-1605745341112-85968b19335b')

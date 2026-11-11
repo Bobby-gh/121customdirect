@@ -864,6 +864,63 @@ img {
   margin-top: 0.4rem;
 }
 
+/* ---------- People band ---------- */
+
+.people-band {
+  position: relative;
+  padding: clamp(4rem, 8vw, 6.6rem) 0;
+  background-color: var(--ink);
+  background-image: var(--people-image);
+  background-position: center 74%;
+  background-size: cover;
+  color: #fff;
+  isolation: isolate;
+}
+
+.people-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    270deg,
+    rgba(11, 33, 51, 0.94) 0%,
+    rgba(11, 33, 51, 0.84) 38%,
+    rgba(11, 33, 51, 0.45) 100%
+  );
+}
+
+.people-band-inner {
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.people-band h2 {
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.people-band p:not(.eyebrow) {
+  margin: 0 0 1.7rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+}
+
+.people-band .eyebrow {
+  color: #dfa76b;
+}
+
+@media (max-width: 820px) {
+  .people-band-inner {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .people-band::before {
+    background: rgba(11, 33, 51, 0.88);
+  }
+}
+
 /* ---------- Process ---------- */
 
 .process-section {
