@@ -40,7 +40,7 @@ export const homeBanners = [
   banner('20216716'),
   banner('21234960'),
   banner('20581299'),
-  banner('3856433')
+  banner('Ddov6KEV9b0')
 ]
 
 // Per-page banner rotation
