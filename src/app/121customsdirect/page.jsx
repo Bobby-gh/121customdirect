@@ -228,7 +228,7 @@ function Home() {
       </section>
 
       {/* CustomsDirect app highlight */}
-      <section className="section-pad app-highlight">
+      <section className="section-pad app-highlight section-dark">
         <div className="container app-highlight-grid">
           <div className="app-highlight-copy">
             <p className="eyebrow">
@@ -303,7 +303,7 @@ function Home() {
       </section>
 
       {/* About the company */}
-      <section className="section-pad home-about">
+      <section className="section-pad home-about section-dark">
         <div className="container split-layout">
           <div className="split-visual">
             <div className="media-frame">
@@ -376,7 +376,7 @@ function Home() {
       </section>
 
       {/* Partners */}
-      <section className="section-pad partners-section">
+      <section className="section-pad partners-section section-dark">
         <div className="container">
           <div className="section-heading-row">
             <div>

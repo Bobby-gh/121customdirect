@@ -1,7 +1,11 @@
 // Central image library for the site.
 // All photos are Unsplash URLs (verified) and are served unoptimized via next/image.
 
-const u = (id, w = 1600) => `https://images.unsplash.com/${id}?w=${w}&q=85&auto=format&fit=crop`
+const u = (id, w = 1600, q = 85) =>
+  `https://images.unsplash.com/${id}?w=${w}&q=${q}&auto=format&fit=crop`
+
+// Banner images are pulled at a higher resolution so they stay crisp full-bleed.
+const banner = (id) => u(id, 2400, 88)
 
 // Freight, port and shipment imagery
 export const portAerial = u('photo-1494412651409-8963ce7935a7')
@@ -22,11 +26,33 @@ export const planeWing = u('photo-1436491865332-7a61a109cc05')
 export const roadDusk = u('photo-1471958680802-1345a694ba6d')
 export const roadFog = u('photo-1516410529446-2c777cb7366d')
 
-// Home page banner rotation
-export const homeBanners = [portAerial, containerShip, truckDusk, warehouseRacks, planeInClouds]
+// Home page banner rotation (high resolution)
+export const homeBanners = [
+  banner('photo-1494412651409-8963ce7935a7'),
+  banner('photo-1578575437130-527eed3abbec'),
+  banner('photo-1591768793355-74d04bb6608f'),
+  banner('photo-1553413077-190dd305871c'),
+  banner('photo-1570710891163-6d3b5c47248b'),
+]
 
-// Per-page banner rotation
-export const aboutBanners = [portCranes, warehouseBoxes, truckHighway]
-export const solutionsBanners = [containerShip, planeAtGate, trailerFleet]
-export const contactBanners = [cargoShipSea, warehouseAisle, roadDusk]
-export const appBanners = [warehouseAisle, portAerial, planeLanding]
+// Per-page banner rotation (high resolution)
+export const aboutBanners = [
+  banner('photo-1494412574643-ff11b0a5c1c3'),
+  banner('photo-1586528116311-ad8dd3c8310d'),
+  banner('photo-1519003722824-194d4455a60c'),
+]
+export const solutionsBanners = [
+  banner('photo-1578575437130-527eed3abbec'),
+  banner('photo-1569154941061-e231b4725ef1'),
+  banner('photo-1565793298595-6a879b1d9492'),
+]
+export const contactBanners = [
+  banner('photo-1605745341112-85968b19335b'),
+  banner('photo-1587293852726-70cdb56c2866'),
+  banner('photo-1471958680802-1345a694ba6d'),
+]
+export const appBanners = [
+  banner('photo-1587293852726-70cdb56c2866'),
+  banner('photo-1494412651409-8963ce7935a7'),
+  banner('photo-1587019158091-1a103c5dd17f'),
+]

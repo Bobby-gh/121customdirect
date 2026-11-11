@@ -168,7 +168,7 @@ function AboutContent() {
         </div>
       </section>
 
-      <section className="section-pad about-capabilities">
+      <section className="section-pad about-capabilities section-dark">
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What we handle</p>

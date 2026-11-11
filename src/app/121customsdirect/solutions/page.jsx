@@ -186,7 +186,7 @@ function SolutionsContent() {
         </div>
       </section>
 
-      <section className="section-pad inclusions-section">
+      <section className="section-pad inclusions-section section-dark">
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What is included</p>

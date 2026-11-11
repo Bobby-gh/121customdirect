@@ -26,7 +26,8 @@ html {
 body {
   color: #274052;
   background: var(--paper);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), 'Inter', -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,10 +36,10 @@ h2,
 h3,
 h4 {
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), 'Source Serif 4', Georgia, 'Times New Roman', serif;
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
 }
 
 h2 {
@@ -89,15 +90,22 @@ img {
   height: 34px;
 }
 
-.nav-link,
-.navbar .btn-nav {
-  color: var(--ink);
-}
-
 .nav-link {
+  color: var(--ink);
   font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.01em;
+}
+
+/* The nav CTA keeps light text on its dark pill. */
+.navbar .btn-nav {
+  color: #fff;
+  background: var(--ink);
+}
+
+.navbar .btn-nav:hover {
+  color: #fff;
+  background: var(--ink-soft);
 }
 
 .nav-link::after {
@@ -207,7 +215,7 @@ img {
   gap: 0.7rem;
   margin: 0 0 1.1rem;
   color: var(--accent);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
   font-size: 0.71rem;
   font-weight: 700;
   letter-spacing: 0.17em;
@@ -239,6 +247,112 @@ img {
 
 .section-pad {
   padding: clamp(3.6rem, 7vw, 6.4rem) 0;
+}
+
+/* Navy band. Paired with white sections for the site's primary palette. */
+.section-dark {
+  background: var(--ink);
+  color: #d7e2eb;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #fff;
+}
+
+.section-dark .lead,
+.section-dark .section-note,
+.section-dark .split-copy p:not(.eyebrow),
+.section-dark .app-highlight-copy > p:not(.eyebrow),
+.section-dark .app-feature-copy > p:not(.eyebrow),
+.section-dark .contact-info > p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-dark .eyebrow {
+  color: #dfa76b;
+}
+
+.section-dark .tick-list li {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.section-dark .text-link {
+  color: #fff;
+}
+
+.section-dark .text-link:hover {
+  border-color: #fff;
+}
+
+/* Primary buttons invert to white on navy. */
+.section-dark .button-dark,
+.section-dark .btn-primary {
+  background: #fff;
+  color: var(--ink);
+}
+
+.section-dark .button-dark:hover,
+.section-dark .btn-primary:hover {
+  background: #e7eef4;
+  color: var(--ink);
+}
+
+.section-dark .contact-prompt-list,
+.section-dark .contact-prompt-list li {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.section-dark .contact-prompt-list li {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.section-dark .partner-wall {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.section-dark .partner-tile {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.section-dark .partner-tile:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.section-dark .partner-mark {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.section-dark .partner-name {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.section-dark .step-card {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-dark .step-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .media-frame {
+  box-shadow: none;
+}
+
+.section-dark .media-inset {
+  border-color: var(--ink);
+}
+
+.section-dark .form-panel {
+  border-color: transparent;
+}
+
+.section-dark .app-pill {
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .section-note {
@@ -467,7 +581,7 @@ img {
 
 .media-badge-value {
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -507,7 +621,7 @@ img {
 }
 
 .stats-band-value {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -654,7 +768,8 @@ img {
 /* ---------- Freight grid ---------- */
 
 .home-freight {
-  background: var(--paper-alt);
+  background: #fff;
+  border-top: 1px solid var(--line);
 }
 
 .freight-grid {
@@ -751,7 +866,8 @@ img {
 /* ---------- Process ---------- */
 
 .process-section {
-  background: var(--paper-alt);
+  background: #fff;
+  border-top: 1px solid var(--line);
 }
 
 .step-grid {
@@ -849,7 +965,11 @@ img {
 /* ---------- Enquiry / forms ---------- */
 
 .home-enquiry {
-  background: var(--paper-alt);
+  background: #fff;
+}
+
+.home-enquiry .form-panel {
+  border-color: var(--line-strong);
 }
 
 .enquiry-layout {
@@ -1096,7 +1216,7 @@ img {
   gap: 1.5rem;
   padding: 1.15rem 0;
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
   font-size: 1.08rem;
   list-style: none;
   cursor: pointer;
@@ -1567,7 +1687,7 @@ img {
 .app-preview-ref {
   margin: 0;
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
   font-size: 1.15rem;
 }
 
@@ -1626,7 +1746,7 @@ img {
 
 .app-preview-totals strong {
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-heading), Georgia, 'Times New Roman', serif;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -1684,7 +1804,7 @@ img {
 /* ---------- App highlight (home) ---------- */
 
 .app-highlight {
-  background: linear-gradient(180deg, #fff 0%, var(--paper-alt) 100%);
+  background: var(--ink);
 }
 
 .app-highlight-grid {
@@ -1790,7 +1910,7 @@ img {
 /* ---------- App page ---------- */
 
 .app-spotlight-section {
-  background: var(--paper-alt);
+  background: var(--ink);
 }
 
 .app-feature-card h3 {

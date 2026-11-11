@@ -100,7 +100,7 @@ function CustomsDirectApp() {
         </div>
       </section>
 
-      <section className="section-pad app-spotlight-section">
+      <section className="section-pad app-spotlight-section section-dark">
         <div className="container split-layout">
           <div className="split-copy">
             <p className="eyebrow">Built for UK trade</p>
