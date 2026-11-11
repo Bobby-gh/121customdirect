@@ -1,111 +1,230 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import PageHero from '../../../components/PageHero'
+import {
+  cargoShipSea,
+  containerShip,
+  parcels,
+  planeAtGate,
+  portCranes,
+  solutionsBanners,
+  trailerFleet,
+  truckHighway,
+  warehouseAisle,
+} from '../../../components/images'
 
-function Solutions() {
-  const solutions = [
-    {
-      number: '01',
-      title: 'Customs declarations',
-      description: 'Support with the information and steps involved in preparing customs declarations for goods moving across borders.',
-      features: ['Declaration preparation', 'Shipment details', 'Supporting information', 'Next-step guidance'],
-      color: 'blue',
-      image: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <path d="M3 9h18M9 21V9" />
-        </svg>
-      ),
-    },
-    {
-      number: '02',
-      title: 'Guidance and advice',
-      description: 'Talk through customs questions, understand what information may be needed and get a clearer view of the process ahead.',
-      features: ['Practical guidance', 'Requirements explained', 'Questions answered', 'Support for your situation'],
-      color: 'yellow',
-      image: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
-        </svg>
-      ),
-    },
-    {
-      number: '03',
-      title: 'Connected workflows',
-      description: 'Explore how customs processes can sit more naturally alongside the systems and routines your business already uses.',
-      features: ['Workflow discussions', 'Process review', 'System requirements', 'A practical way forward'],
-      color: 'green',
-      image: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-        </svg>
-      ),
-    },
-  ]
+const solutions = [
+  {
+    number: '01',
+    title: 'Import declarations',
+    image: portCranes,
+    description:
+      'Entries prepared for goods arriving in the UK — including CDS submissions, duty and VAT calculation, and support when HMRC raises a query.',
+    features: ['CDS entries', 'Duty & VAT', 'Query handling', 'Record keeping'],
+  },
+  {
+    number: '02',
+    title: 'Export declarations',
+    image: containerShip,
+    description:
+      'Export entries and the accompanying paperwork, so goods leave with the right documentation and proof of export for your records.',
+    features: ['Export entries', 'Proof of export', 'Licences', 'Origin evidence'],
+  },
+  {
+    number: '03',
+    title: 'Freight coordination',
+    image: truckHighway,
+    description:
+      'Sea, air and road movements arranged alongside the customs work, with one point of contact from collection through to delivery.',
+    features: ['FCL & LCL', 'Air cargo', 'Groupage', 'Door to door'],
+  },
+  {
+    number: '04',
+    title: 'Warehousing & fulfilment',
+    image: warehouseAisle,
+    description:
+      'Short-term storage, consolidation and final-mile dispatch for stock that needs to move in stages rather than all at once.',
+    features: ['Storage', 'Consolidation', 'Pick & pack', 'Final mile'],
+  },
+  {
+    number: '05',
+    title: 'Duty & tax advice',
+    image: cargoShipSea,
+    description:
+      'A clear view of what your goods will cost to import — including commodity codes, preferential rates and reliefs you may be able to use.',
+    features: ['Classification', 'Preference', 'Reliefs', 'Cost estimates'],
+  },
+  {
+    number: '06',
+    title: 'Ongoing trade support',
+    image: parcels,
+    description:
+      'For regular importers and exporters: a retained service covering repeat declarations, audits and questions as they come up.',
+    features: ['Retained service', 'Audit support', 'Training', 'Priority response'],
+  },
+]
 
+const faqs = [
+  {
+    question: 'What information do you need to prepare a declaration?',
+    answer:
+      'Commercial invoice, packing list, transport document, commodity codes, values, origin and the parties involved. If you do not have all of it, we can tell you what is missing and what can be sourced.',
+  },
+  {
+    question: 'Do you work with small or occasional importers?',
+    answer:
+      'Yes. A single shipment is fine. We quote per declaration, so there is no retainer needed unless you want one.',
+  },
+  {
+    question: 'Can you clear goods that are already at the port?',
+    answer:
+      'Often, yes — but timing matters. Send the paperwork as soon as the shipment is booked so demurrage and storage charges can be avoided.',
+  },
+  {
+    question: 'Which countries do you cover?',
+    answer:
+      'Imports and exports between the UK and the rest of the world, including EU trade under the Trade and Cooperation Agreement.',
+  },
+]
+
+function SolutionsContent() {
   return (
-    <div className="solutions-page">
-      <PageHero
-        eyebrow="Our services"
-        title="Practical help for customs work."
-        description="From a single declaration question to a broader workflow, start with the support that fits your business."
-        action={{ href: '/121customsdirect/contact', label: 'Talk through what you need' }}
-      />
+    <main className="solutions-page">
+      <PageHero images={solutionsBanners} label="Freight and customs services banner" />
 
-      <section className="solutions-hero">
-        <span className="section-label">What we offer</span>
-        <h2>A considered approach to customs.</h2>
-        <p>
-          Tell us what you are moving and where you are getting stuck. We can help you understand
-          the declaration process, the details to gather and the possible next steps.
-        </p>
-      </section>
-
-      <section className="solutions-grid">
-        {solutions.map((solution, index) => (
-          <div key={index} className={`solution-card fade-in`}>
-            <div className="solution-image">{solution.image}</div>
-            <div className="solution-card-body">
-              <span className="solution-number">{solution.number}</span>
-              <h3>{solution.title}</h3>
-              <p>{solution.description}</p>
-              <div className="solution-features">
-                {solution.features.map((feature, fIndex) => (
-                  <span key={fIndex} className="solution-feature-tag">
-                    {feature}
-                  </span>
-                ))}
-              </div>
-              <Link href="/121customsdirect/contact">
-                Learn More
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12H19M12 5L19 12L12 19" />
-                </svg>
-              </Link>
-            </div>
+      <section className="section-pad page-intro">
+        <div className="container page-intro-grid">
+          <div>
+            <p className="eyebrow">Our services</p>
+            <h1 className="page-title-lg">Practical help for customs and freight work.</h1>
           </div>
-        ))}
-      </section>
-
-      <section className="solutions-cta">
-        <div className="container">
-          <div className="cta-content fade-in">
-            <h2>Not sure where to start?</h2>
-            <p>
-            Tell us a little about your customs question. We can help you work out what to do next.
+          <div>
+            <p className="lead">
+              From a single declaration question to a retained service across regular shipments, we
+              take on the parts of the process that are easiest to get wrong.
             </p>
-            <Link
-              href="/121customsdirect/contact"
-              className="btn btn-primary btn-lg"
-            >
-              Contact Us Today
-            </Link>
+            <p>
+              Everything below can be used on its own or combined — most clients start with a
+              declaration and add freight or warehousing once the paperwork is under control.
+            </p>
           </div>
         </div>
       </section>
-    </div>
+
+      <section className="section-pad solutions-grid-section">
+        <div className="container">
+          <div className="card-grid card-grid-3">
+            {solutions.map((solution) => (
+              <article className="service-card" key={solution.number}>
+                <div className="service-card-media">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    fill
+                    sizes="(max-width: 720px) 100vw, 33vw"
+                    style={{ objectFit: 'cover' }}
+                    unoptimized
+                  />
+                  <span className="service-card-number">{solution.number}</span>
+                </div>
+                <div className="service-card-body">
+                  <h3>{solution.title}</h3>
+                  <p>{solution.description}</p>
+                  <div className="tag-row">
+                    {solution.features.map((feature) => (
+                      <span className="tag" key={feature}>
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  <Link href="/121customsdirect/contact" className="text-link">
+                    Enquire <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad inclusions-section">
+        <div className="container split-layout split-layout-reverse">
+          <div className="split-copy">
+            <p className="eyebrow">What is included</p>
+            <h2>One team for the paperwork and the movement.</h2>
+            <p>
+              Customs and freight are usually handled by separate companies, which is where delays
+              and duplicated questions come from. We keep both in the same conversation.
+            </p>
+            <ul className="tick-list tick-list-wide">
+              <li>Declaration preparation and submission to HMRC</li>
+              <li>Duty and VAT calculated before the goods land</li>
+              <li>Shipping documents checked against the entry</li>
+              <li>Carrier and port liaison through clearance</li>
+              <li>Copies of everything filed and kept for your records</li>
+              <li>A named contact for questions during the shipment</li>
+            </ul>
+          </div>
+          <div className="split-visual">
+            <div className="media-frame">
+              <Image
+                src={trailerFleet}
+                alt="Trailers lined up at a freight terminal"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                style={{ objectFit: 'cover' }}
+                unoptimized
+              />
+            </div>
+            <div className="media-frame media-inset">
+              <Image
+                src={planeAtGate}
+                alt="Aircraft on the apron ready for cargo"
+                fill
+                sizes="200px"
+                style={{ objectFit: 'cover' }}
+                unoptimized
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad faq-section">
+        <div className="container faq-layout">
+          <div className="faq-intro">
+            <p className="eyebrow">Questions</p>
+            <h2>Things clients ask before they start.</h2>
+            <p>
+              If your question is not here, send it over — we answer straight, even when the answer
+              is that we are not the right fit.
+            </p>
+            <Link href="/121customsdirect/contact" className="text-link">
+              Ask us directly <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <details className="faq-item" key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="closing-cta">
+        <div className="container closing-cta-inner">
+          <h2>Not sure which service you need?</h2>
+          <p>Tell us what is moving and we will point you to the right starting place.</p>
+          <Link href="/121customsdirect/contact" className="button button-light">
+            Contact us <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+    </main>
   )
 }
 
-export default Solutions
+export default SolutionsContent
