@@ -28,6 +28,7 @@ function Footer() {
           <div className="footer-column">
             <h4>Start here</h4>
             <Link href="/121customsdirect/solutions">Explore our services</Link>
+            <Link href="/121customsdirect/solutions/customsdirect">CustomsDirect app</Link>
             <Link href="/121customsdirect/contact">Ask a question</Link>
           </div>
         </div>

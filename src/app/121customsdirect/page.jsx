@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '../../components/Hero'
 import EnquiryForm from '../../components/EnquiryForm'
+import AppPreview from '../../components/AppPreview'
 import {
   cargoShipSea,
   containerShip,
@@ -128,9 +129,9 @@ function Home() {
               Moving goods across borders, without the paperwork slowing you down.
             </h1>
             <p className="lead">
-              121 Customs Direct is a UK customs brokerage and freight partner. We handle import and
-              export declarations, coordinate sea, air and road shipments, and keep the details
-              straight from collection to clearance.
+              121 Customs Direct is a UK customs company specialising in HMRC declarations and
+              consultancy. We handle import and export entries, coordinate sea, air and road
+              shipments, and keep the details straight from collection to clearance.
             </p>
             <p>
               Whether you ship once a year or every week, you get the same thing: a named contact,
@@ -223,6 +224,44 @@ function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CustomsDirect app highlight */}
+      <section className="section-pad app-highlight">
+        <div className="container app-highlight-grid">
+          <div className="app-highlight-copy">
+            <p className="eyebrow">
+              CustomsDirect app
+              <span className="app-pill">New</span>
+            </p>
+            <h2>Declare it yourself, with our team behind you.</h2>
+            <p>
+              CustomsDirect is our own app for UK customs declarations. Prepare import and export
+              entries, calculate duty and VAT, and submit straight to HMRC’s Customs Declaration
+              Service — with the option to have a declaration checked by us before it goes in.
+            </p>
+            <ul className="tick-list tick-list-wide">
+              <li>Guided CDS declaration builder</li>
+              <li>Duty and VAT estimates</li>
+              <li>Documents and audit trail in one place</li>
+              <li>Live status from draft to cleared</li>
+            </ul>
+            <div className="app-highlight-actions">
+              <Link href="/121customsdirect/solutions/customsdirect" className="button button-dark">
+                Explore CustomsDirect <span aria-hidden="true">→</span>
+              </Link>
+              <a
+                href="http://customs-uk.vercel.app/"
+                className="text-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open the app <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <AppPreview />
         </div>
       </section>
 

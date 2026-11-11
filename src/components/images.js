@@ -29,3 +29,4 @@ export const homeBanners = [portAerial, containerShip, truckDusk, warehouseRacks
 export const aboutBanners = [portCranes, warehouseBoxes, truckHighway]
 export const solutionsBanners = [containerShip, planeAtGate, trailerFleet]
 export const contactBanners = [cargoShipSea, warehouseAisle, roadDusk]
+export const appBanners = [warehouseAisle, portAerial, planeLanding]

@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+const APP_URL = 'http://customs-uk.vercel.app/'
+
 const navItems = [
   { label: 'Home', path: '/121customsdirect' },
   { label: 'About Us', path: '/121customsdirect/about' },
@@ -17,6 +19,7 @@ function Navbar() {
   const handleNavClick = () => {
     setIsMenuOpen(false)
   }
+  const solutionsActive = pathname.startsWith('/121customsdirect/solutions')
 
   return (
     <nav className="navbar">
@@ -32,22 +35,72 @@ function Navbar() {
         </Link>
 
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          {navItems.map(({ label, path }) => (
-            <li key={path}>
-              <Link
-                href={path}
-                className={`nav-link ${pathname === path ? 'active' : ''}`}
-                onClick={handleNavClick}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {navItems.map(({ label, path }) =>
+            label === 'Solutions' ? (
+              <li key={path} className="nav-item has-dropdown">
+                <Link
+                  href={path}
+                  className={`nav-link ${solutionsActive ? 'active' : ''}`}
+                  onClick={handleNavClick}
+                  aria-haspopup="true"
+                >
+                  {label}
+                  <span className="nav-caret" aria-hidden="true">
+                    ⌄
+                  </span>
+                </Link>
+                <ul className="nav-dropdown">
+                  <li>
+                    <Link href="/121customsdirect/solutions" onClick={handleNavClick}>
+                      <span className="nav-dropdown-title">Customs &amp; freight services</span>
+                      <span className="nav-dropdown-sub">Declarations, freight, warehousing</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/121customsdirect/solutions/customsdirect"
+                      className="nav-dropdown-feature"
+                      onClick={handleNavClick}
+                    >
+                      <span className="nav-dropdown-title">
+                        CustomsDirect app
+                        <span className="nav-badge">App</span>
+                      </span>
+                      <span className="nav-dropdown-sub">UK customs declarations software</span>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            ) : (
+              <li key={path}>
+                <Link
+                  href={path}
+                  className={`nav-link ${pathname === path ? 'active' : ''}`}
+                  onClick={handleNavClick}
+                >
+                  {label}
+                </Link>
+              </li>
+            )
+          )}
+          <li className="nav-menu-cta">
+            <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
+              Get started
+              <span aria-hidden="true">↗</span>
+            </a>
+          </li>
         </ul>
 
-        <Link href="/121customsdirect/contact" className="btn btn-primary btn-nav" onClick={handleNavClick}>
-          Talk to us
-        </Link>
+        <a
+          href={APP_URL}
+          className="btn btn-primary btn-nav"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleNavClick}
+        >
+          Get started
+          <span aria-hidden="true">↗</span>
+        </a>
 
         <button
           className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}

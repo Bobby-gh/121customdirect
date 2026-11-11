@@ -72,9 +72,9 @@ function AboutContent() {
           </div>
           <div>
             <p className="lead">
-              We are a UK customs brokerage working with importers, exporters and freight forwarders
-              who would rather understand the process than simply absorb the cost of getting it
-              wrong.
+              We are a UK customs company specialising in HMRC declarations and consultancy, working
+              with importers, exporters and freight forwarders who would rather understand the
+              process than simply absorb the cost of getting it wrong.
             </p>
             <p>
               That means a named contact, a checked declaration and a straight answer about what your

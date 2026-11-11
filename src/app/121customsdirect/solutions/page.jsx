@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import PageHero from '../../../components/PageHero'
+import AppPreview from '../../../components/AppPreview'
 import {
   cargoShipSea,
   containerShip,
@@ -100,14 +101,52 @@ function SolutionsContent() {
           </div>
           <div>
             <p className="lead">
-              From a single declaration question to a retained service across regular shipments, we
-              take on the parts of the process that are easiest to get wrong.
+              As a UK customs company specialising in HMRC declarations and consultancy, we take on
+              the parts of the process that are easiest to get wrong — from a single declaration
+              question to a retained service across regular shipments.
             </p>
             <p>
               Everything below can be used on its own or combined — most clients start with a
               declaration and add freight or warehousing once the paperwork is under control.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* CustomsDirect app spotlight */}
+      <section className="solutions-app-spotlight">
+        <div className="container app-feature-banner">
+          <div className="app-feature-copy">
+            <p className="eyebrow eyebrow-light">
+              CustomsDirect app
+              <span className="app-pill app-pill-light">App</span>
+            </p>
+            <h2>Submit your own HMRC declarations.</h2>
+            <p>
+              Our declaration app for UK importers, exporters and forwarders. Build an entry, see
+              the duty and VAT, attach the documents and send it to CDS — then track it through to
+              clearance.
+            </p>
+            <div className="app-feature-actions">
+              <Link href="/121customsdirect/solutions/customsdirect" className="button button-light">
+                Explore the app <span aria-hidden="true">→</span>
+              </Link>
+              <a
+                href="http://customs-uk.vercel.app/"
+                className="text-link text-link-light"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open CustomsDirect <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <ul className="app-feature-points">
+              <li>CDS submissions</li>
+              <li>Duty &amp; VAT estimates</li>
+              <li>Declaration records</li>
+            </ul>
+          </div>
+          <AppPreview />
         </div>
       </section>
 
