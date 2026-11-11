@@ -34,8 +34,6 @@ export const roadFog = u('photo-1516410529446-2c777cb7366d')
 // tugs at berth / container ship loading
 export const homeBanners = [
   banner('20216716'),
-  banner('10726228'),
-  banner('14020705'),
   banner('21234960'),
   banner('20581299'),
   banner('3856433')
