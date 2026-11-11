@@ -12,21 +12,18 @@ import {
 const principles = [
   {
     number: '01',
-    title: 'Make it understandable',
-    description:
-      'Customs has its own language. We explain the requirement in the terms of your shipment, not in tariff codes alone.',
+    title: 'Make it clear',
+    description: 'We explain the requirement in the terms of your shipment.',
   },
   {
     number: '02',
-    title: 'Pay attention to the details',
-    description:
-      'A wrong commodity code or a missing document can hold a shipment for days. We check before anything is submitted.',
+    title: 'Mind the details',
+    description: 'A wrong code or missing document can hold a shipment for days.',
   },
   {
     number: '03',
-    title: 'Treat every question seriously',
-    description:
-      'No two businesses are alike. Good support starts with listening to what you are actually trying to do.',
+    title: 'Answer properly',
+    description: 'No two businesses are alike. It starts with listening.',
   },
 ]
 
@@ -62,7 +59,7 @@ const capabilities = [
 function AboutContent() {
   return (
     <main className="about-page">
-      <PageHero images={aboutBanners} label="Freight and warehousing banner" />
+      <PageHero images={aboutBanners} label="Cargo and port banner" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
@@ -72,14 +69,10 @@ function AboutContent() {
           </div>
           <div>
             <p className="lead">
-              We are a UK customs company specialising in HMRC declarations and consultancy, working
-              with importers, exporters and freight forwarders who would rather understand the
-              process than simply absorb the cost of getting it wrong.
+              A UK customs company for HMRC declarations and consultancy, working with importers,
+              exporters and forwarders.
             </p>
-            <p>
-              That means a named contact, a checked declaration and a straight answer about what your
-              shipment needs before it moves.
-            </p>
+            <p>A named contact, a checked declaration, a straight answer.</p>
           </div>
         </div>
       </section>
@@ -111,20 +104,14 @@ function AboutContent() {
 
           <div className="split-copy">
             <p className="eyebrow">Our story</p>
-            <h2>Trade has enough moving parts. Getting help should not be another one.</h2>
+            <h2>Getting help should be the easy part.</h2>
             <p>
-              Customs declarations bring together shipment details, supporting information and
-              specific requirements. Handled alongside the rest of a business, it is easy to lose
-              track of what has been filed, what is outstanding and what HMRC is waiting for.
+              Declarations pull together shipment details, documents and HMRC requirements. It is
+              easy to lose track of what is filed and what is outstanding.
             </p>
             <p>
-              121 Customs Direct was set up to take that weight off the desk. We began with
-              declarations for local importers and grew into freight coordination as clients asked us
-              to look after the movement as well as the paperwork.
-            </p>
-            <p>
-              We are deliberately small. The person who prepares your entry is the person you can
-              call about it — and the person who will remember your commodity codes next time.
+              We are deliberately small: the person who prepares your entry is the person you can
+              call about it.
             </p>
             <Link href="/121customsdirect/contact" className="text-link">
               Talk to the team <span aria-hidden="true">→</span>
@@ -152,8 +139,7 @@ function AboutContent() {
               <h2>Good service is in the details.</h2>
             </div>
             <p className="section-note">
-              Not grand promises — just a considered way to approach the work and the people behind
-              it.
+              No grand promises — just a considered approach to the work.
             </p>
           </div>
           <div className="card-grid card-grid-3">
@@ -172,10 +158,10 @@ function AboutContent() {
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What we handle</p>
-            <h2>Declarations, freight and the parts that connect them.</h2>
+            <h2>Declarations, freight and what connects them.</h2>
             <p>
-              We cover the full span of a shipment — from the classification of the goods to the
-              final delivery — so nothing falls between a forwarder, a broker and a haulier.
+              We cover the span of a shipment, so nothing falls between a forwarder, a broker and a
+              haulier.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -213,11 +199,10 @@ function AboutContent() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">Companies we work with</p>
-              <h2>Long-standing partners across the supply chain.</h2>
+              <h2>Partners across the supply chain.</h2>
             </div>
             <p className="section-note">
-              Hauliers, forwarders and distributors who rely on us for the customs side of their
-              shipments.
+              Hauliers, forwarders and distributors who rely on us for customs.
             </p>
           </div>
           <div className="partner-wall">
@@ -242,7 +227,7 @@ function AboutContent() {
           <div>
             <p className="eyebrow">Start here</p>
             <h2>Tell us what you are working through.</h2>
-            <p>We will start with your question and take it from there — no obligation.</p>
+            <p>We will start with your question — no obligation.</p>
           </div>
           <div className="cta-panel-actions">
             <Link href="/121customsdirect/contact" className="button button-dark">

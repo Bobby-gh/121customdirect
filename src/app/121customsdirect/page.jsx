@@ -20,25 +20,22 @@ const services = [
     number: '01',
     title: 'Customs declarations',
     image: warehouseBoxes,
-    copy:
-      'Import and export declarations prepared with care — commodity codes, values, origin and the supporting information HMRC expects, checked before anything is submitted.',
-    points: ['Import & export entries', 'Commodity code support', 'Document checking'],
+    copy: 'Import and export entries, checked before anything is submitted.',
+    points: ['Import & export entries', 'Commodity codes', 'Document checks'],
   },
   {
     number: '02',
-    title: 'Freight & shipment coordination',
+    title: 'Freight coordination',
     image: cargoShipSea,
-    copy:
-      'Sea, air and road movements coordinated with the customs work that sits around them, so you are not chasing two different providers for one shipment.',
-    points: ['Sea, air & road freight', 'Door-to-door movements', 'Tracking updates'],
+    copy: 'Sea, air and road movements arranged around the customs work.',
+    points: ['Sea, air & road', 'Door to door', 'Tracking updates'],
   },
   {
     number: '03',
     title: 'Guidance & compliance',
     image: portAerial,
-    copy:
-      'Straight answers on duties, reliefs, licences and paperwork — with a clear view of what applies to your goods before the shipment leaves.',
-    points: ['Duty & VAT guidance', 'Restricted goods checks', 'Process reviews'],
+    copy: 'Straight answers on duty, reliefs and paperwork.',
+    points: ['Duty & VAT', 'Restricted goods', 'Process reviews'],
   },
 ]
 
@@ -50,17 +47,17 @@ const freightModes = [
   },
   {
     title: 'Air freight',
-    detail: 'Time-critical consignments with priority customs clearance.',
+    detail: 'Time-critical consignments with priority clearance.',
     image: planeInClouds,
   },
   {
     title: 'Road freight',
-    detail: 'Groupage and full-load haulage across the UK and Europe.',
+    detail: 'Groupage and full loads across the UK and Europe.',
     image: truckHighway,
   },
   {
     title: 'Warehousing',
-    detail: 'Short-term storage, consolidation and final-mile delivery.',
+    detail: 'Short-term storage, consolidation and final mile.',
     image: warehouseRacks,
   },
 ]
@@ -68,31 +65,31 @@ const freightModes = [
 const steps = [
   {
     number: '01',
-    title: 'Tell us what is moving',
-    detail: 'A short conversation about the goods, the route and the deadline is usually enough to begin.',
+    title: 'Tell us what’s moving',
+    detail: 'A short conversation about the goods, route and deadline.',
   },
   {
     number: '02',
     title: 'We check the detail',
-    detail: 'We review classification, values, origin and any licences or restrictions that apply.',
+    detail: 'We review classification, values, origin and licences.',
   },
   {
     number: '03',
-    title: 'Declarations are prepared',
-    detail: 'Entries are built and checked, then submitted to HMRC with the correct supporting documents.',
+    title: 'We file the entry',
+    detail: 'Entries are built, checked and submitted to HMRC.',
   },
   {
     number: '04',
-    title: 'Cleared and on its way',
-    detail: 'You get confirmation, the paperwork and a clear answer on what to do next time.',
+    title: 'Cleared and moving',
+    detail: 'You get confirmation, paperwork and a clear next step.',
   },
 ]
 
 const stats = [
-  { value: '12+', label: 'Years handling declarations' },
+  { value: '12+', label: 'Years in customs' },
   { value: '8,400+', label: 'Shipments cleared' },
   { value: '96%', label: 'Cleared without delay' },
-  { value: '24h', label: 'Typical response time' },
+  { value: '24h', label: 'Response time' },
 ]
 
 const capabilities = [
@@ -124,19 +121,11 @@ function Home() {
       <section className="section-pad home-welcome">
         <div className="container home-welcome-grid">
           <div className="home-welcome-copy">
-            <p className="eyebrow">Customs, freight and clearance</p>
-            <h1 className="page-title-lg">
-              Moving goods across borders, without the paperwork slowing you down.
-            </h1>
+            <p className="eyebrow">UK customs &amp; freight</p>
+            <h1 className="page-title-lg">Customs clearance, handled properly.</h1>
             <p className="lead">
-              121 Customs Direct is a UK customs company specialising in HMRC declarations and
-              consultancy. We handle import and export entries, coordinate sea, air and road
-              shipments, and keep the details straight from collection to clearance.
-            </p>
-            <p>
-              Whether you ship once a year or every week, you get the same thing: a named contact,
-              declarations prepared properly, and an honest answer about what your shipment needs
-              before it moves.
+              A UK customs company for HMRC declarations and consultancy. Import and export entries,
+              sea, air and road freight — one team, one contact.
             </p>
             <div className="home-welcome-actions">
               <Link href="/121customsdirect/contact" className="button button-dark">
@@ -144,7 +133,7 @@ function Home() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link href="/121customsdirect/solutions" className="text-link">
-                Explore our services
+                Our services
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -188,7 +177,7 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">What we do</p>
-              <h2>Declarations, freight and the details in between.</h2>
+              <h2>Declarations, freight, guidance.</h2>
             </div>
             <Link href="/121customsdirect/solutions" className="text-link">
               All services <span aria-hidden="true">→</span>
@@ -235,11 +224,10 @@ function Home() {
               CustomsDirect app
               <span className="app-pill">New</span>
             </p>
-            <h2>Declare it yourself, with our team behind you.</h2>
+            <h2>Yours to file. Ours to back up.</h2>
             <p>
-              CustomsDirect is our own app for UK customs declarations. Prepare import and export
-              entries, calculate duty and VAT, and submit straight to HMRC’s Customs Declaration
-              Service — with the option to have a declaration checked by us before it goes in.
+              Our app for UK customs declarations. Build an entry, see the duty and VAT, submit to
+              HMRC’s CDS — or have us check it first.
             </p>
             <ul className="tick-list tick-list-wide">
               <li>Guided CDS declaration builder</li>
@@ -249,7 +237,7 @@ function Home() {
             </ul>
             <div className="app-highlight-actions">
               <Link href="/121customsdirect/solutions/customsdirect" className="button button-dark">
-                Explore CustomsDirect <span aria-hidden="true">→</span>
+                See CustomsDirect <span aria-hidden="true">→</span>
               </Link>
               <a
                 href="http://customs-uk.vercel.app/"
@@ -271,11 +259,10 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">Freight &amp; shipments</p>
-              <h2>Every route has its own requirements. We handle all four.</h2>
+              <h2>Four modes, one team.</h2>
             </div>
             <p className="section-note">
-              Sea, air, road or stored — the customs work changes with the mode. We keep both sides
-              of the shipment joined up.
+              Sea, air, road or stored — the customs work changes with the mode.
             </p>
           </div>
 
@@ -332,14 +319,8 @@ function Home() {
             <p className="eyebrow">About us</p>
             <h2>A small team that knows the detail.</h2>
             <p>
-              We started 121 Customs Direct because the customs process had become something
-              businesses tolerated rather than understood. Declarations arrived with questions
-              attached, and nobody was answering them in plain language.
-            </p>
-            <p>
-              Today we act as the customs contact for importers, exporters and freight forwarders
-              across the UK. We prepare entries, keep records, answer HMRC queries and coordinate
-              the movement itself where it helps.
+              We handle customs for UK importers, exporters and forwarders — entries, records, HMRC
+              queries and the movement itself.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -360,7 +341,7 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">How it works</p>
-              <h2>Four steps from enquiry to clearance.</h2>
+              <h2>Four steps to clearance.</h2>
             </div>
           </div>
           <ol className="step-grid">
@@ -381,11 +362,10 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">Companies we work with</p>
-              <h2>Trusted by importers, exporters and forwarders.</h2>
+              <h2>Trusted across the supply chain.</h2>
             </div>
             <p className="section-note">
-              Long-standing relationships with hauliers, freight forwarders and distributors who
-              rely on us for the customs side of their shipments.
+              Hauliers, forwarders and distributors who rely on us for customs.
             </p>
           </div>
 
@@ -413,8 +393,8 @@ function Home() {
             <p className="eyebrow">Get a quote</p>
             <h2>Tell us about the shipment.</h2>
             <p>
-              Share the goods, the route and the date you need to move. We will come back with the
-              customs requirements, the documents needed and a price for handling it.
+              Share the goods, route and date. We will come back with the requirements, documents
+              and a price.
             </p>
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
@@ -440,8 +420,8 @@ function Home() {
       {/* Closing CTA */}
       <section className="closing-cta">
         <div className="container closing-cta-inner">
-          <h2>A shipment to clear? Start with a conversation.</h2>
-          <p>No obligation, no jargon — just a clear answer about what your goods need.</p>
+          <h2>A shipment to clear? Let’s talk.</h2>
+          <p>No obligation, no jargon.</p>
           <Link href="/121customsdirect/contact" className="button button-light">
             Talk to our team <span aria-hidden="true">→</span>
           </Link>

@@ -10,53 +10,47 @@ const features = [
   {
     number: '01',
     title: 'Guided declarations',
-    description:
-      'A step-by-step entry builder that asks for what a declaration actually needs, so nothing is missed before submission.',
+    description: 'A step-by-step entry builder that asks for what a declaration needs.',
   },
   {
     number: '02',
     title: 'Direct CDS submission',
-    description:
-      'Declarations are submitted to HMRC’s Customs Declaration Service from the app, with the response returned to you.',
+    description: 'Submit to HMRC’s Customs Declaration Service and see the response.',
   },
   {
     number: '03',
     title: 'Commodity codes & duty',
-    description:
-      'Look up classifications and see an estimate of duty and import VAT before the shipment is committed.',
+    description: 'Look up classifications and estimate duty and import VAT.',
   },
   {
     number: '04',
     title: 'Document attachments',
-    description:
-      'Invoices, packing lists and licences stay attached to the entry, ready for a query or an audit.',
+    description: 'Invoices, packing lists and licences stay with the entry.',
   },
   {
     number: '05',
     title: 'Live status tracking',
-    description:
-      'Follow each declaration from draft to cleared, with a clear view of what is waiting on HMRC or on you.',
+    description: 'Follow each declaration from draft to cleared.',
   },
   {
     number: '06',
     title: 'Records that stand up',
-    description:
-      'Every submission, amendment and response is kept for your records — exportable when HMRC asks.',
+    description: 'Every submission, amendment and response, kept and exportable.',
   },
 ]
 
 const audiences = [
   {
     title: 'Importers & exporters',
-    detail: 'Businesses that ship regularly and want declarations handled in-house.',
+    detail: 'Businesses that ship regularly and file in-house.',
   },
   {
     title: 'Freight forwarders',
-    detail: 'Teams clearing shipments for clients who need a faster declaration workflow.',
+    detail: 'Teams clearing client shipments, faster.',
   },
   {
     title: 'E-commerce sellers',
-    detail: 'Sellers moving stock into the UK who need repeatable, accurate entries.',
+    detail: 'Sellers moving stock into the UK, with repeatable entries.',
   },
 ]
 
@@ -76,18 +70,14 @@ function CustomsDirectApp() {
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">CustomsDirect app</p>
-            <h1 className="page-title-lg">UK customs declarations, from your own desk.</h1>
+            <h1 className="page-title-lg">Declarations from your own desk.</h1>
           </div>
           <div>
             <p className="lead">
-              CustomsDirect is our declaration platform: a web app for preparing and submitting
-              import and export entries to HMRC’s CDS, built by the team that handles declarations
-              every day.
+              Our app for preparing and submitting import and export entries to HMRC’s CDS — built
+              by the team that files declarations daily.
             </p>
-            <p>
-              It gives you the structure of a brokerage process without the back-and-forth — and
-              when a declaration needs a second pair of eyes, 121 Customs Direct is one message away.
-            </p>
+            <p>When an entry needs a second pair of eyes, we are one message away.</p>
             <div className="app-intro-actions">
               <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
                 Open CustomsDirect <span aria-hidden="true">↗</span>
@@ -106,9 +96,8 @@ function CustomsDirectApp() {
             <p className="eyebrow">Built for UK trade</p>
             <h2>Everything a declaration needs, in one place.</h2>
             <p>
-              CustomsDirect was written around the Customs Declaration Service, not adapted to it.
-              The fields, codes and checks follow how an entry is actually prepared — including the
-              details that usually get missed.
+              Built around the Customs Declaration Service, not adapted to it. The fields, codes and
+              checks follow how an entry is prepared.
             </p>
             <ul className="tick-list tick-list-wide">
               <li>Import and export entries in one workspace</li>
@@ -120,7 +109,7 @@ function CustomsDirectApp() {
             </ul>
             <div className="app-spotlight-actions">
               <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
-                Get started with the app <span aria-hidden="true">↗</span>
+                Open the app <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
@@ -138,8 +127,7 @@ function CustomsDirectApp() {
               <h2>Declare without losing the thread.</h2>
             </div>
             <p className="section-note">
-              Clear screens, checked fields and a record of everything submitted — the parts of
-              declaration software that matter day to day.
+              Clear screens, checked fields and a record of everything submitted.
             </p>
           </div>
           <div className="card-grid card-grid-3">
@@ -159,7 +147,7 @@ function CustomsDirectApp() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">Who it is for</p>
-              <h2>Made for people who ship more than once.</h2>
+              <h2>For anyone who ships more than once.</h2>
             </div>
           </div>
           <div className="card-grid card-grid-3">
@@ -199,9 +187,8 @@ function CustomsDirectApp() {
             <p className="eyebrow">Backed by 121 Customs Direct</p>
             <h2>Software with a brokerage behind it.</h2>
             <p>
-              A UK customs company specialising in HMRC declarations and consultancy. If a shipment
-              is unusual, a code is unclear or HMRC raises a query, the app is not the end of the
-              line — the team that handles declarations for a living is.
+              A UK customs company for HMRC declarations and consultancy. If a shipment is unusual
+              or HMRC raises a query, our team is one message away.
             </p>
           </div>
           <div className="support-panel-media">
@@ -222,7 +209,7 @@ function CustomsDirectApp() {
       <section className="closing-cta">
         <div className="container closing-cta-inner">
           <h2>Ready to file your first declaration?</h2>
-          <p>Open the app and set up your business — or ask us to walk you through it first.</p>
+          <p>Open the app and set up your business — or ask us to walk you through it.</p>
           <div className="closing-cta-actions">
             <a href={APP_URL} className="button button-light" target="_blank" rel="noopener noreferrer">
               Launch CustomsDirect <span aria-hidden="true">↗</span>

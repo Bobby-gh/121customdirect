@@ -29,11 +29,11 @@ export default function EnquiryForm() {
     return (
       <div className="form-panel">
         <div className="form-notice" role="status">
-          <h3>Thanks — your details are ready to send.</h3>
+          <h3>Thanks.</h3>
           <p>
-            This form is not connected to a mailbox yet, so nothing has been sent. In the meantime,
-            email <a href="mailto:hello@121customsdirect.co.uk">hello@121customsdirect.co.uk</a> and
-            we will pick it up from there.
+            This form is not connected to a mailbox yet, so nothing was sent. Email{' '}
+            <a href="mailto:hello@121customsdirect.co.uk">hello@121customsdirect.co.uk</a> and we
+            will pick it up.
           </p>
           <button
             type="button"
@@ -55,8 +55,8 @@ export default function EnquiryForm() {
         setSubmitted(true)
       }}
     >
-      <h3>Request a customs quote</h3>
-      <p className="form-intro">It takes about a minute. Nothing is submitted until you send it.</p>
+      <h3>Request a quote</h3>
+      <p className="form-intro">Takes about a minute.</p>
 
       <div className="form-row">
         <div className="form-group">
@@ -169,7 +169,7 @@ export default function EnquiryForm() {
           className="form-textarea"
           value={values.message}
           onChange={update('message')}
-          placeholder="Volumes, deadlines, questions about duty or paperwork..."
+          placeholder="Volumes, deadlines, questions..."
           required
         />
       </div>
@@ -178,9 +178,7 @@ export default function EnquiryForm() {
         Send enquiry
         <span aria-hidden="true">→</span>
       </button>
-      <p className="form-note">
-        This form is not connected to a mailbox yet — submitting will not send your message.
-      </p>
+      <p className="form-note">Not connected to a mailbox yet — this will not send.</p>
     </form>
   )
 }

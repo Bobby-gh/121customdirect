@@ -8,9 +8,9 @@ const APP_URL = 'http://customs-uk.vercel.app/'
 
 const navItems = [
   { label: 'Home', path: '/121customsdirect' },
-  { label: 'About Us', path: '/121customsdirect/about' },
+  { label: 'About', path: '/121customsdirect/about' },
   { label: 'Solutions', path: '/121customsdirect/solutions' },
-  { label: 'Contact Us', path: '/121customsdirect/contact' },
+  { label: 'Contact', path: '/121customsdirect/contact' },
 ]
 
 function Navbar() {
@@ -53,7 +53,7 @@ function Navbar() {
                   <li>
                     <Link href="/121customsdirect/solutions" onClick={handleNavClick}>
                       <span className="nav-dropdown-title">Customs &amp; freight services</span>
-                      <span className="nav-dropdown-sub">Declarations, freight, warehousing</span>
+                      <span className="nav-dropdown-sub">Declarations, freight, guidance</span>
                     </Link>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ function Navbar() {
                         CustomsDirect app
                         <span className="nav-badge">App</span>
                       </span>
-                      <span className="nav-dropdown-sub">UK customs declarations software</span>
+                      <span className="nav-dropdown-sub">Declaration software</span>
                     </Link>
                   </li>
                 </ul>

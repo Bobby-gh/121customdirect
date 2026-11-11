@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <main className="contact-page">
-      <PageHero images={contactBanners} label="Freight and shipment banner" />
+      <PageHero images={contactBanners} label="Port banner" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
@@ -37,10 +37,10 @@ export default function Contact() {
           </div>
           <div>
             <p className="lead">
-              A declaration, a quote or just a question about where to begin — tell us what is on
-              your mind. You do not need to know the customs terminology to ask for help.
+              A declaration, a quote or a question about where to begin — tell us what is on your
+              mind.
             </p>
-            <p>We reply to most enquiries within one working day.</p>
+            <p>We reply within one working day.</p>
           </div>
         </div>
       </section>
@@ -50,10 +50,7 @@ export default function Contact() {
           <div className="contact-info">
             <p className="eyebrow">A useful place to start</p>
             <h2>Give us a little context.</h2>
-            <p>
-              Share what you are trying to do, what you already know and where you are getting stuck.
-              The more detail you can give, the more specific our answer will be.
-            </p>
+            <p>Share what you are trying to do and where you are stuck.</p>
 
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
@@ -94,15 +91,15 @@ export default function Contact() {
 
           <div className="contact-form-wrapper">
             <h2>Send an enquiry</h2>
-            <p>Fill in the details below and tell us a little about your shipment.</p>
+            <p>Tell us about the shipment.</p>
 
             {submitted ? (
               <div className="form-notice" role="status">
-                <h3>Thanks for taking the time to write.</h3>
+                <h3>Thanks.</h3>
                 <p>
-                  This form is not connected to a mailbox yet, so your message has not been sent.
-                  Email <a href="mailto:hello@121customsdirect.co.uk">hello@121customsdirect.co.uk</a>{' '}
-                  and we will pick it up from there.
+                  This form is not connected to a mailbox yet, so nothing was sent. Email{' '}
+                  <a href="mailto:hello@121customsdirect.co.uk">hello@121customsdirect.co.uk</a> and
+                  we will pick it up.
                 </p>
                 <button
                   type="button"
@@ -244,9 +241,7 @@ export default function Contact() {
                   Send message
                   <span aria-hidden="true">→</span>
                 </button>
-                <p className="form-note">
-                  This form is not connected to a mailbox yet. Submitting will not send your message.
-                </p>
+                <p className="form-note">Not connected to a mailbox yet — this will not send.</p>
               </form>
             )}
           </div>
@@ -266,7 +261,7 @@ export default function Contact() {
         </div>
         <div className="container contact-banner-inner">
           <h2>Prefer to speak to someone?</h2>
-          <p>Call us on 0121 000 0121, Monday to Friday, 08:30 – 17:30.</p>
+          <p>0121 000 0121, Monday to Friday, 08:30 – 17:30.</p>
           <Link href="/121customsdirect/solutions" className="button button-light">
             Browse our services <span aria-hidden="true">→</span>
           </Link>

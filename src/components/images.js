@@ -1,11 +1,14 @@
 // Central image library for the site.
-// All photos are Unsplash URLs (verified) and are served unoptimized via next/image.
+// Card/section photos are Unsplash; full-bleed banner photos are Pexels cargo and
+// port shots. All URLs are verified and served unoptimized via next/image.
 
 const u = (id, w = 1600, q = 85) =>
   `https://images.unsplash.com/${id}?w=${w}&q=${q}&auto=format&fit=crop`
 
-// Banner images are pulled at a higher resolution so they stay crisp full-bleed.
-const banner = (id) => u(id, 2400, 88)
+// Banner imagery: clean cargo, container and port photography (Pexels, free to use).
+// Served at 2400px wide so full-bleed banners stay sharp on large screens.
+const banner = (id) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=2400`
 
 // Freight, port and shipment imagery
 export const portAerial = u('photo-1494412651409-8963ce7935a7')
@@ -26,33 +29,19 @@ export const planeWing = u('photo-1436491865332-7a61a109cc05')
 export const roadDusk = u('photo-1471958680802-1345a694ba6d')
 export const roadFog = u('photo-1516410529446-2c777cb7366d')
 
-// Home page banner rotation (high resolution)
+// Home page banner rotation
+// aerial container port / container yard / ship under cranes at night /
+// tugs at berth / container ship loading
 export const homeBanners = [
-  banner('photo-1494412651409-8963ce7935a7'),
-  banner('photo-1578575437130-527eed3abbec'),
-  banner('photo-1591768793355-74d04bb6608f'),
-  banner('photo-1553413077-190dd305871c'),
-  banner('photo-1570710891163-6d3b5c47248b'),
+  banner('10726228'),
+  banner('14020705'),
+  banner('21234960'),
+  banner('15964419'),
+  banner('30638763'),
 ]
 
-// Per-page banner rotation (high resolution)
-export const aboutBanners = [
-  banner('photo-1494412574643-ff11b0a5c1c3'),
-  banner('photo-1586528116311-ad8dd3c8310d'),
-  banner('photo-1519003722824-194d4455a60c'),
-]
-export const solutionsBanners = [
-  banner('photo-1578575437130-527eed3abbec'),
-  banner('photo-1569154941061-e231b4725ef1'),
-  banner('photo-1565793298595-6a879b1d9492'),
-]
-export const contactBanners = [
-  banner('photo-1605745341112-85968b19335b'),
-  banner('photo-1587293852726-70cdb56c2866'),
-  banner('photo-1471958680802-1345a694ba6d'),
-]
-export const appBanners = [
-  banner('photo-1587293852726-70cdb56c2866'),
-  banner('photo-1494412651409-8963ce7935a7'),
-  banner('photo-1587019158091-1a103c5dd17f'),
-]
+// Per-page banner rotation
+export const aboutBanners = [banner('30261109'), banner('262353'), banner('14639071')]
+export const solutionsBanners = [banner('13025947'), banner('32514815'), banner('10854998')]
+export const contactBanners = [banner('39621587'), banner('28278107'), banner('9328777')]
+export const appBanners = [banner('31637364'), banner('30090435'), banner('6537735')]

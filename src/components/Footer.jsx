@@ -14,20 +14,20 @@ function Footer() {
             </svg>
             <span className="logo-text">121 Customs Direct</span>
           </Link>
-          <p>Clearer customs work, with people at the centre of it.</p>
+          <p>Clearer customs work, with people behind it.</p>
         </div>
 
         <div className="footer-links">
           <div className="footer-column">
             <h4>Company</h4>
             <Link href="/121customsdirect">Home</Link>
-            <Link href="/121customsdirect/about">About Us</Link>
+            <Link href="/121customsdirect/about">About</Link>
             <Link href="/121customsdirect/solutions">Solutions</Link>
             <Link href="/121customsdirect/contact">Contact</Link>
           </div>
           <div className="footer-column">
             <h4>Start here</h4>
-            <Link href="/121customsdirect/solutions">Explore our services</Link>
+            <Link href="/121customsdirect/solutions">Our services</Link>
             <Link href="/121customsdirect/solutions/customsdirect">CustomsDirect app</Link>
             <Link href="/121customsdirect/contact">Ask a question</Link>
           </div>

@@ -19,72 +19,63 @@ const solutions = [
     number: '01',
     title: 'Import declarations',
     image: portCranes,
-    description:
-      'Entries prepared for goods arriving in the UK — including CDS submissions, duty and VAT calculation, and support when HMRC raises a query.',
+    description: 'CDS entries for goods arriving in the UK, with duty and VAT calculated.',
     features: ['CDS entries', 'Duty & VAT', 'Query handling', 'Record keeping'],
   },
   {
     number: '02',
     title: 'Export declarations',
     image: containerShip,
-    description:
-      'Export entries and the accompanying paperwork, so goods leave with the right documentation and proof of export for your records.',
+    description: 'Export entries and paperwork, with proof of export for your records.',
     features: ['Export entries', 'Proof of export', 'Licences', 'Origin evidence'],
   },
   {
     number: '03',
     title: 'Freight coordination',
     image: truckHighway,
-    description:
-      'Sea, air and road movements arranged alongside the customs work, with one point of contact from collection through to delivery.',
+    description: 'Sea, air and road movements arranged alongside the customs work.',
     features: ['FCL & LCL', 'Air cargo', 'Groupage', 'Door to door'],
   },
   {
     number: '04',
     title: 'Warehousing & fulfilment',
     image: warehouseAisle,
-    description:
-      'Short-term storage, consolidation and final-mile dispatch for stock that needs to move in stages rather than all at once.',
+    description: 'Short-term storage, consolidation and final-mile dispatch.',
     features: ['Storage', 'Consolidation', 'Pick & pack', 'Final mile'],
   },
   {
     number: '05',
     title: 'Duty & tax advice',
     image: cargoShipSea,
-    description:
-      'A clear view of what your goods will cost to import — including commodity codes, preferential rates and reliefs you may be able to use.',
+    description: 'What your goods will cost to import, including codes and reliefs.',
     features: ['Classification', 'Preference', 'Reliefs', 'Cost estimates'],
   },
   {
     number: '06',
     title: 'Ongoing trade support',
     image: parcels,
-    description:
-      'For regular importers and exporters: a retained service covering repeat declarations, audits and questions as they come up.',
+    description: 'A retained service for repeat declarations, audits and questions.',
     features: ['Retained service', 'Audit support', 'Training', 'Priority response'],
   },
 ]
 
 const faqs = [
   {
-    question: 'What information do you need to prepare a declaration?',
+    question: 'What do you need to prepare a declaration?',
     answer:
-      'Commercial invoice, packing list, transport document, commodity codes, values, origin and the parties involved. If you do not have all of it, we can tell you what is missing and what can be sourced.',
+      'Commercial invoice, packing list, transport document, commodity codes, values and origin. If anything is missing, we will tell you.',
   },
   {
-    question: 'Do you work with small or occasional importers?',
-    answer:
-      'Yes. A single shipment is fine. We quote per declaration, so there is no retainer needed unless you want one.',
+    question: 'Do you work with occasional importers?',
+    answer: 'Yes. A single shipment is fine, quoted per declaration.',
   },
   {
-    question: 'Can you clear goods that are already at the port?',
-    answer:
-      'Often, yes — but timing matters. Send the paperwork as soon as the shipment is booked so demurrage and storage charges can be avoided.',
+    question: 'Can you clear goods already at the port?',
+    answer: 'Often, yes — send the paperwork early to avoid storage charges.',
   },
   {
     question: 'Which countries do you cover?',
-    answer:
-      'Imports and exports between the UK and the rest of the world, including EU trade under the Trade and Cooperation Agreement.',
+    answer: 'UK trade worldwide, including the EU under the Trade and Cooperation Agreement.',
   },
 ]
 
@@ -97,18 +88,14 @@ function SolutionsContent() {
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">Our services</p>
-            <h1 className="page-title-lg">Practical help for customs and freight work.</h1>
+            <h1 className="page-title-lg">Practical customs and freight support.</h1>
           </div>
           <div>
             <p className="lead">
-              As a UK customs company specialising in HMRC declarations and consultancy, we take on
-              the parts of the process that are easiest to get wrong — from a single declaration
-              question to a retained service across regular shipments.
+              A UK customs company for HMRC declarations and consultancy — from a single
+              declaration question to a retained service.
             </p>
-            <p>
-              Everything below can be used on its own or combined — most clients start with a
-              declaration and add freight or warehousing once the paperwork is under control.
-            </p>
+            <p>Use one service or combine them.</p>
           </div>
         </div>
       </section>
@@ -123,9 +110,8 @@ function SolutionsContent() {
             </p>
             <h2>Submit your own HMRC declarations.</h2>
             <p>
-              Our declaration app for UK importers, exporters and forwarders. Build an entry, see
-              the duty and VAT, attach the documents and send it to CDS — then track it through to
-              clearance.
+              Our app for UK importers, exporters and forwarders. Build an entry, see the duty and
+              VAT, send it to CDS and track it to clearance.
             </p>
             <div className="app-feature-actions">
               <Link href="/121customsdirect/solutions/customsdirect" className="button button-light">
@@ -190,18 +176,18 @@ function SolutionsContent() {
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What is included</p>
-            <h2>One team for the paperwork and the movement.</h2>
+            <h2>One team, start to finish.</h2>
             <p>
-              Customs and freight are usually handled by separate companies, which is where delays
-              and duplicated questions come from. We keep both in the same conversation.
+              Customs and freight usually sit with separate companies — that is where the delays
+              come from.
             </p>
             <ul className="tick-list tick-list-wide">
-              <li>Declaration preparation and submission to HMRC</li>
-              <li>Duty and VAT calculated before the goods land</li>
+              <li>Declarations prepared and submitted to HMRC</li>
+              <li>Duty and VAT calculated before goods land</li>
               <li>Shipping documents checked against the entry</li>
               <li>Carrier and port liaison through clearance</li>
-              <li>Copies of everything filed and kept for your records</li>
-              <li>A named contact for questions during the shipment</li>
+              <li>Copies of everything kept for your records</li>
+              <li>A named contact for the shipment</li>
             </ul>
           </div>
           <div className="split-visual">
@@ -233,11 +219,8 @@ function SolutionsContent() {
         <div className="container faq-layout">
           <div className="faq-intro">
             <p className="eyebrow">Questions</p>
-            <h2>Things clients ask before they start.</h2>
-            <p>
-              If your question is not here, send it over — we answer straight, even when the answer
-              is that we are not the right fit.
-            </p>
+            <h2>Common questions.</h2>
+            <p>If yours is not here, ask us — we answer straight.</p>
             <Link href="/121customsdirect/contact" className="text-link">
               Ask us directly <span aria-hidden="true">→</span>
             </Link>
@@ -256,7 +239,7 @@ function SolutionsContent() {
       <section className="closing-cta">
         <div className="container closing-cta-inner">
           <h2>Not sure which service you need?</h2>
-          <p>Tell us what is moving and we will point you to the right starting place.</p>
+          <p>Tell us what is moving and we will point you to the right place.</p>
           <Link href="/121customsdirect/contact" className="button button-light">
             Contact us <span aria-hidden="true">→</span>
           </Link>
