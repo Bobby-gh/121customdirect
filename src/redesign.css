@@ -393,7 +393,7 @@ img {
 }
 
 .page-banner {
-  height: clamp(340px, 60vh, 560px);
+  height: clamp(400px, 60vh, 560px);
 }
 
 .home-hero-bg,
