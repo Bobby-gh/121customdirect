@@ -54,7 +54,7 @@ const capabilities = [
 function AboutContent() {
   return (
     <main className="about-page">
-      <PageHero label="About 121 Customs Direct" />
+      <PageHero label="About 121 Customs Direct" variant="account" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
@@ -80,7 +80,7 @@ function AboutContent() {
             <div className="home-about-note">
               <span className="media-badge-value">Our own team</span>
               <span className="media-badge-label">
-                Filing GB import and export declarations in CustomsDirect every day
+                Supporting GB import and export declarations in CustomsDirect every day
               </span>
             </div>
           </div>
@@ -93,8 +93,8 @@ function AboutContent() {
               easy to lose track of what is filed and what is outstanding.
             </p>
             <p>
-              CustomsDirect came out of our own declaration work: the checks we made by hand are now
-              built into the software, so fewer entries come back with queries.
+              We work in CustomsDirect every day, and the checks we make by hand are part of the
+              support we give declarants — so fewer entries come back with queries.
             </p>
             <Link href="/121customsdirect/contact" className="text-link">
               Talk to the team <span aria-hidden="true">→</span>

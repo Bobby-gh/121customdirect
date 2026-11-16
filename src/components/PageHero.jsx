@@ -1,39 +1,24 @@
+import AppBanner from './AppBanner'
+
 /**
- * Branded page banner for the software-led site.
- * Rendered in CSS rather than photography so the product, not freight imagery, leads.
+ * Branded page banner for the declarant-support site.
+ * Leads with a Customs Portal screen recreated in CSS instead of freight photography.
  */
-export default function PageHero({ label = 'Customs software' }) {
+export default function PageHero({ label = 'Customs software', variant = 'dashboard' }) {
   return (
     <section className="page-banner page-banner-brand" aria-label={label}>
       <div className="page-banner-grid" aria-hidden="true" />
       <div className="page-banner-glow" aria-hidden="true" />
 
       <div className="container page-banner-inner">
-        <div className="page-banner-window" aria-hidden="true">
+        <div className="page-banner-window">
           <div className="page-banner-window-bar">
             <i />
             <i />
             <i />
-            <span>CustomsDirect · CDS</span>
+            <span>Customs Portal · {variant === 'account' ? 'Account' : 'Dashboard'}</span>
           </div>
-          <div className="page-banner-window-body">
-            <div className="page-banner-window-side">
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-            <div className="page-banner-window-main">
-              <span className="page-banner-line is-wide" />
-              <span className="page-banner-line" />
-              <span className="page-banner-line is-short" />
-              <div className="page-banner-window-blocks">
-                <i />
-                <i />
-                <i />
-              </div>
-            </div>
-          </div>
+          <AppBanner variant={variant} />
         </div>
 
         <div className="page-banner-meta">

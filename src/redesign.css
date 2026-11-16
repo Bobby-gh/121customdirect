@@ -2568,13 +2568,12 @@ img {
 
 .page-banner-window {
   order: 2;
-  width: min(430px, 52%);
+  width: min(640px, 58%);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  background: #f4f6fa;
+  box-shadow: 0 34px 70px -32px rgba(0, 0, 0, 0.65);
 }
 
 .page-banner-window-bar {
@@ -2600,64 +2599,431 @@ img {
   text-transform: uppercase;
 }
 
-.page-banner-window-body {
+/* ---------- App screen banners ---------- */
+
+.app-banner {
   display: flex;
-  gap: 0.85rem;
-  padding: 1rem;
+  height: 322px;
+  overflow: hidden;
+  background: #f4f6fa;
+  color: #0b2b4b;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  text-align: left;
 }
 
-.page-banner-window-side {
+.app-banner-side {
+  display: flex;
+  width: 132px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.8rem 0.55rem;
+  background: #062a52;
+  color: #fff;
+}
+
+.app-banner-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.56rem;
+  line-height: 1.2;
+}
+
+.app-banner-logo-mark {
+  display: grid;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #04253f;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.app-banner-nav {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  font-size: 0.55rem;
+}
+
+.app-banner-nav span {
+  padding: 0.4rem 0.45rem;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.app-banner-nav span.is-active {
+  background: var(--accent);
+  color: #04253f;
+  font-weight: 700;
+}
+
+.app-banner-nav-bottom {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.app-banner-main {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.app-banner-top {
+  display: flex;
+  align-items: center;
   gap: 0.4rem;
-  width: 52px;
-  flex-shrink: 0;
+  color: #213b59;
+  font-size: 0.55rem;
 }
 
-.page-banner-window-side i {
-  height: 8px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.16);
+.app-banner-top strong {
+  font-size: 0.74rem;
+  font-weight: 700;
 }
 
-.page-banner-window-side i:first-child {
+.app-banner-live {
+  padding: 0.12rem 0.35rem;
+  border-radius: 999px;
+  background: #e2f7f4;
+  color: #0a7d6c;
+  font-size: 0.44rem;
+  font-weight: 700;
+}
+
+.app-banner-search {
+  width: 96px;
+  margin-left: auto;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid #dfe6ee;
+  border-radius: 5px;
+  background: #fff;
+  color: #8898aa;
+  font-size: 0.46rem;
+}
+
+.app-banner-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+
+.app-banner-stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  padding: 0.45rem 0.5rem 0.6rem;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.app-banner-stat-label {
+  color: #8798ab;
+  font-size: 0.44rem;
+  line-height: 1.3;
+}
+
+.app-banner-stat strong {
+  color: #0b2b4b;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.app-banner-stat em {
+  color: #97a6b8;
+  font-size: 0.42rem;
+  font-style: normal;
+}
+
+.app-banner-stat em.is-up {
+  color: #0a8f7a;
+}
+
+.app-banner-stat em.is-down {
+  color: #c2453f;
+}
+
+.app-banner-spark {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.28rem;
+  left: 0.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: #d7e1ea;
+}
+
+.app-banner-spark.is-blue {
+  background: #3b6ff5;
+}
+
+.app-banner-spark.is-teal {
   background: var(--accent);
 }
 
-.page-banner-window-main {
+.app-banner-spark.is-red {
+  background: #e05a4f;
+}
+
+.app-banner-panels {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 0.4rem;
+  min-height: 0;
+}
+
+.app-banner-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.app-banner-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #213b59;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.app-banner-toggles {
+  display: flex;
+  gap: 2px;
+}
+
+.app-banner-toggles i {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #e1e8f0;
+  border-radius: 999px;
+  color: #8b9ab0;
+  font-size: 0.4rem;
+  font-style: normal;
+}
+
+.app-banner-toggles i.is-on {
+  border-color: #08376b;
+  background: #08376b;
+  color: #fff;
+}
+
+.app-banner-bars {
   display: flex;
   flex: 1;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: flex-end;
+  gap: 4px;
+  min-height: 60px;
+  padding-top: 0.2rem;
+  border-bottom: 1px solid #eef2f6;
 }
 
-.page-banner-line {
-  height: 7px;
+.app-banner-bars i {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, #1f5d9e, #08376b);
+}
+
+.app-banner-months {
+  display: flex;
+  justify-content: space-between;
+  color: #9aa8b8;
+  font-size: 0.38rem;
+}
+
+.app-banner-status {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app-banner-donut {
+  position: relative;
+  display: grid;
+  width: 78px;
+  height: 78px;
+  margin: 0.2rem auto;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) 0 88%, #e05a4f 88% 93%, #08376b 93% 100%);
+}
+
+.app-banner-donut::before {
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  background: #fff;
+  content: '';
+}
+
+.app-banner-donut span {
+  position: relative;
+  color: #0b2b4b;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.app-banner-legend {
+  display: flex;
   width: 100%;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: #7d8da1;
+  font-size: 0.42rem;
+}
+
+.app-banner-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.app-banner-legend b {
+  margin-left: auto;
+  color: #0b2b4b;
+  font-size: 0.48rem;
+}
+
+.app-banner-legend i {
+  width: 5px;
+  height: 5px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
+  background: #08376b;
 }
 
-.page-banner-line.is-wide {
-  width: 82%;
+.app-banner-legend i.is-teal {
+  background: var(--accent);
 }
 
-.page-banner-line.is-short {
-  width: 46%;
+.app-banner-legend i.is-red {
+  background: #e05a4f;
 }
 
-.page-banner-window-blocks {
+.app-banner-members {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  margin-top: 0.35rem;
+  gap: 0.4rem;
 }
 
-.page-banner-window-blocks i {
-  height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+.app-banner-members div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.app-banner-members strong {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.app-banner-members span {
+  color: #8798ab;
+  font-size: 0.44rem;
+}
+
+.app-banner-plan {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.app-banner-plan-label {
+  display: block;
+  color: #8798ab;
+  font-size: 0.42rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-banner-plan strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.app-banner-plan-price {
+  display: block;
+  color: #0b2b4b;
+  font-size: 0.62rem;
+}
+
+.app-banner-plan-price i {
+  color: #8798ab;
+  font-size: 0.44rem;
+  font-style: normal;
+}
+
+.app-banner-plan-note {
+  display: block;
+  color: #8798ab;
+  font-size: 0.42rem;
+}
+
+.app-banner-trial {
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: #e6f8f2;
+  color: #0a8f7a;
+  font-size: 0.42rem;
+  font-weight: 700;
+}
+
+.app-banner-org {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.app-banner-org-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #e4eaf1;
+  border-radius: 6px;
+  background: #fff;
+  color: #8798ab;
+  font-size: 0.45rem;
+}
+
+.app-banner-org-row strong {
+  margin-left: auto;
+  color: #213b59;
+  font-size: 0.5rem;
+}
+
+.app-banner-org-row em {
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  background: #e6f8f2;
+  color: #0a8f7a;
+  font-size: 0.4rem;
+  font-style: normal;
+  font-weight: 600;
 }
 
 /* ---------- Photo-free service and declaration cards ---------- */
@@ -2846,5 +3212,38 @@ img {
 
   .home-about-panel {
     padding-bottom: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-banner {
+    height: auto;
+    min-height: 360px;
+  }
+
+  .app-banner-side {
+    width: 96px;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .app-banner-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app-banner-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .app-banner-donut {
+    width: 64px;
+    height: 64px;
+  }
+
+  .app-banner-donut::before {
+    inset: 10px;
+  }
+
+  .app-banner-search {
+    display: none;
   }
 }

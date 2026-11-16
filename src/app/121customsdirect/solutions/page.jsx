@@ -106,8 +106,8 @@ function SolutionsContent() {
             </p>
             <h2>Submit your own HMRC declarations.</h2>
             <p>
-              Our app for UK importers, exporters and forwarders. Build an entry, see the duty and
-              VAT, send it to CDS and track it to clearance.
+              The CustomsDirect platform for UK importers, exporters and forwarders. Build an entry,
+              see the duty and VAT, send it to CDS and track it to clearance.
             </p>
             <div className="app-feature-actions">
               <Link href="/121customsdirect/solutions/customsdirect" className="button button-light">

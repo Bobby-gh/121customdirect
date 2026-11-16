@@ -29,7 +29,7 @@ export default function Contact() {
 
   return (
     <main className="contact-page">
-      <PageHero label="Contact 121 Customs Direct" />
+      <PageHero label="Contact 121 Customs Direct" variant="account" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">

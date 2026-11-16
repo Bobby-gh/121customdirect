@@ -74,8 +74,8 @@ function CustomsDirectApp() {
           </div>
           <div>
             <p className="lead">
-              Our app for preparing and submitting import and export entries to HMRC’s CDS — built
-              by the team that files declarations daily.
+              CustomsDirect is the platform we support for preparing and submitting import and
+              export entries to HMRC’s CDS — with a team that files declarations daily.
             </p>
             <p>When an entry needs a second pair of eyes, we are one message away.</p>
             <div className="app-intro-actions">
@@ -185,7 +185,7 @@ function CustomsDirectApp() {
         <div className="container support-panel">
           <div>
             <p className="eyebrow">Backed by 121 Customs Direct</p>
-            <h2>Software with a brokerage behind it.</h2>
+            <h2>Software backed by customs support.</h2>
             <p>
               A UK customs company for HMRC declarations and consultancy. If a shipment is unusual
               or HMRC raises a query, our team is one message away.

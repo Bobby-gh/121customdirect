@@ -216,8 +216,8 @@ function Home() {
             </p>
             <h2>Yours to file. Ours to back up.</h2>
             <p>
-              Our app for UK customs declarations. Build an entry, see the duty and VAT, submit to
-              HMRC’s CDS — or have us check it first.
+              CustomsDirect is the declaration platform we support. Build an entry, see the duty and
+              VAT, submit to HMRC’s CDS — or have us check it first.
             </p>
             <ul className="tick-list tick-list-wide">
               <li>Guided CDS declaration builder</li>
@@ -279,19 +279,19 @@ function Home() {
           <div className="home-about-panel">
             <AppPreview />
             <div className="home-about-note">
-              <span className="media-badge-value">Built in-house</span>
+              <span className="media-badge-value">Support included</span>
               <span className="media-badge-label">
-                By a UK customs team, for declarants moving goods in and out of GB
+                A UK customs team alongside declarants moving goods in and out of GB
               </span>
             </div>
           </div>
 
           <div className="split-copy">
             <p className="eyebrow">About us</p>
-            <h2>Software built by people who file declarations.</h2>
+            <h2>Software backed by people who file declarations.</h2>
             <p>
-              CustomsDirect is built in-house by a UK customs team. We know where entries go wrong —
-              so the software checks the details that hold a shipment up.
+              We support declarants on the CustomsDirect platform every day. We know where entries
+              go wrong — and we are on hand when one needs checking.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -314,8 +314,11 @@ function Home() {
         <div className="container">
           <div className="people-band-inner">
             <p className="eyebrow">Support</p>
-            <h2>Software with a customs team behind it.</h2>
-            <p>When an entry needs checking or HMRC raises a query, talk to the people who built it.</p>
+            <h2>A customs team alongside the software.</h2>
+            <p>
+              When an entry needs checking or HMRC raises a query, talk to customs people who work
+              with CDS every day — whether you file it yourself or ask us to.
+            </p>
             <Link href="/121customsdirect/contact" className="button button-light">
               Talk to our team <span aria-hidden="true">→</span>
             </Link>
