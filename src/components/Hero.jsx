@@ -1,99 +1,60 @@
-'use client'
-
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { homeBanners } from './images'
+import AppPreview from './AppPreview'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
 /**
- * Full-bleed freight / shipment banner. Images only — no overlay copy.
+ * Home hero: declaration support story beside a live-style preview of the app.
  */
 function Hero() {
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % homeBanners.length)
-    }, 5500)
-    return () => clearInterval(timer)
-  }, [])
-
-  const go = (index) => setActive((index + homeBanners.length) % homeBanners.length)
-
   return (
-    <section
-      className="home-hero"
-      aria-roledescription="carousel"
-      aria-label="Customs declaration software"
-    >
-      <div className="home-hero-bg">
-        {homeBanners.map((image, index) => (
-          <div
-            key={image}
-            className={`home-hero-bg-slide ${index === active ? 'is-active' : ''}`}
-            style={{ backgroundImage: `url(${image})` }}
-            aria-hidden="true"
-          />
-        ))}
-        <div className="home-hero-bg-scrim" aria-hidden="true" />
-      </div>
+    <section className="home-hero" aria-label="Customs declaration support and software">
+      <div className="home-hero-glow" aria-hidden="true" />
 
-      <div className="container home-hero-content">
-        <p className="hero-eyebrow">UK customs declaration software</p>
-        <h1 className="hero-title">Declarations prepared, checked and submitted to HMRC.</h1>
-        <p className="hero-sub">
-          CustomsDirect guides you through every CDS entry, with a customs team behind you when you
-          need one.
-        </p>
-        <div className="hero-actions">
-          <a
-            href={APP_URL}
-            className="button button-light"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open CustomsDirect <span aria-hidden="true">↗</span>
-          </a>
-          <Link
-            href="/121customsdirect/solutions/customsdirect"
-            className="button button-outline button-outline-light"
-          >
-            See how it works
-          </Link>
+      <div className="container home-hero-grid">
+        <div className="home-hero-content">
+          <p className="hero-eyebrow">Customs support for GB declarants</p>
+          <h1 className="hero-title">
+            Everything you need to declare goods into and out of Great Britain.
+          </h1>
+          <p className="hero-sub">
+            CustomsDirect is our declaration platform — guided CDS entries, commodity codes, duty
+            and VAT, documents and direct submission to HMRC, with a customs team alongside you.
+          </p>
+          <div className="hero-actions">
+            <a
+              href={APP_URL}
+              className="button button-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open CustomsDirect <span aria-hidden="true">↗</span>
+            </a>
+            <Link
+              href="/121customsdirect/solutions/customsdirect"
+              className="button button-outline button-outline-light"
+            >
+              See how it works
+            </Link>
+          </div>
+          <ul className="hero-points">
+            <li>Import &amp; export entries</li>
+            <li>Direct to HMRC CDS</li>
+            <li>Customs team behind you</li>
+          </ul>
         </div>
-      </div>
 
-      <div className="home-hero-controls">
-        <button
-          type="button"
-          className="hero-arrow"
-          onClick={() => go(active - 1)}
-          aria-label="Previous image"
-        >
-          ←
-        </button>
-        <div className="hero-dots" role="tablist" aria-label="Choose an image">
-          {homeBanners.map((image, index) => (
-            <button
-              type="button"
-              key={image}
-              role="tab"
-              className={`hero-dot ${index === active ? 'is-active' : ''}`}
-              onClick={() => go(index)}
-              aria-label={`Image ${index + 1}`}
-              aria-selected={index === active}
-            />
-          ))}
+        <div className="home-hero-visual">
+          <AppPreview />
+          <div className="hero-chip hero-chip-validated">
+            <span aria-hidden="true">✓</span>
+            HMRC validated
+          </div>
+          <div className="hero-chip hero-chip-support">
+            <span aria-hidden="true">●</span>
+            Declarant support
+          </div>
         </div>
-        <button
-          type="button"
-          className="hero-arrow"
-          onClick={() => go(active + 1)}
-          aria-label="Next image"
-        >
-          →
-        </button>
       </div>
     </section>
   )

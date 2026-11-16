@@ -1,13 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import PageHero from '../../../components/PageHero'
-import {
-  aboutBanners,
-  containerShip,
-  portCranes,
-  warehouseBoxes,
-  warehouseRacks,
-} from '../../../components/images'
+import AppPreview from '../../../components/AppPreview'
+import { businessMeeting } from '../../../components/images'
 
 const principles = [
   {
@@ -59,18 +54,19 @@ const capabilities = [
 function AboutContent() {
   return (
     <main className="about-page">
-      <PageHero images={aboutBanners} label="Cargo and port banner" />
+      <PageHero label="About 121 Customs Direct" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">About us</p>
-            <h1 className="page-title-lg">Customs software, with customs people behind it.</h1>
+            <h1 className="page-title-lg">Supporting declarants moving goods into and out of Great Britain.</h1>
           </div>
           <div>
             <p className="lead">
-              CustomsDirect is our cloud platform for HMRC declarations — built by a UK customs team
-              for importers, exporters and forwarders.
+              We give importers, exporters and customs agents everything they need to make a
+              declaration to HMRC: the CustomsDirect platform, the checks, and a customs team that
+              files every day.
             </p>
             <p>A named contact, checked entries, a straight answer.</p>
           </div>
@@ -79,26 +75,13 @@ function AboutContent() {
 
       <section className="section-pad about-story">
         <div className="container split-layout">
-          <div className="split-visual">
-            <div className="media-frame media-tall">
-              <Image
-                src={portCranes}
-                alt="Container cranes and stacked shipping containers at a port"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
-            </div>
-            <div className="media-frame media-inset">
-              <Image
-                src={warehouseBoxes}
-                alt="Goods wrapped and stored in a warehouse"
-                fill
-                sizes="200px"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
+          <div className="home-about-panel">
+            <AppPreview />
+            <div className="home-about-note">
+              <span className="media-badge-value">Our own team</span>
+              <span className="media-badge-label">
+                Filing GB import and export declarations in CustomsDirect every day
+              </span>
             </div>
           </div>
 
@@ -172,20 +155,10 @@ function AboutContent() {
           <div className="split-visual">
             <div className="media-frame">
               <Image
-                src={containerShip}
-                alt="Containers being loaded onto a cargo ship"
+                src={businessMeeting}
+                alt="The customs team working with a client"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
-            </div>
-            <div className="media-frame media-inset">
-              <Image
-                src={warehouseRacks}
-                alt="Racked stock in a distribution warehouse"
-                fill
-                sizes="200px"
                 style={{ objectFit: 'cover' }}
                 unoptimized
               />

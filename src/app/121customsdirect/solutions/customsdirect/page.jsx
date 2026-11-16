@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AppPreview from '../../../../components/AppPreview'
 import PageHero from '../../../../components/PageHero'
-import { appBanners, containerShip } from '../../../../components/images'
+import { businessMeeting } from '../../../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -64,7 +64,7 @@ const steps = [
 function CustomsDirectApp() {
   return (
     <main className="app-page">
-      <PageHero images={appBanners} label="CustomsDirect app banner" />
+      <PageHero label="CustomsDirect app" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
@@ -194,8 +194,8 @@ function CustomsDirectApp() {
           <div className="support-panel-media">
             <div className="media-frame">
               <Image
-                src={containerShip}
-                alt="Containers being loaded at a port"
+                src={businessMeeting}
+                alt="Customs specialists supporting a declarant"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
                 style={{ objectFit: 'cover' }}

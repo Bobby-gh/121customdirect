@@ -16,7 +16,7 @@ function Footer() {
             </svg>
             <span className="logo-text">121 Customs Direct</span>
           </Link>
-          <p>Customs declaration software, backed by a customs team.</p>
+          <p>Declaration software and customs support for goods moving in and out of Great Britain.</p>
         </div>
 
         <div className="footer-links">

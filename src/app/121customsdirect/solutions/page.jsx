@@ -2,16 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PageHero from '../../../components/PageHero'
 import AppPreview from '../../../components/AppPreview'
-import {
-  cargoShipSea,
-  containerShip,
-  parcels,
-  planeAtGate,
-  portCranes,
-  solutionsBanners,
-  trailerFleet,
-  truckHighway,
-} from '../../../components/images'
+import ServiceIcon from '../../../components/ServiceIcon'
+import { businessMeeting } from '../../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -19,42 +11,42 @@ const solutions = [
   {
     number: '01',
     title: 'Import declarations',
-    image: portCranes,
+    icon: 'document',
     description: 'Guided CDS import entries for goods arriving in Great Britain, with duty and VAT calculated.',
     features: ['CDS entries', 'Duty & VAT', 'Validation', 'Audit trail'],
   },
   {
     number: '02',
     title: 'Export declarations',
-    image: containerShip,
+    icon: 'export',
     description: 'Export entries filed directly with HMRC CDS, with proof of export kept on record.',
     features: ['Export entries', 'Proof of export', 'Documents', 'Record keeping'],
   },
   {
     number: '03',
     title: 'Safety & security',
-    image: planeAtGate,
+    icon: 'shield',
     description: 'Pre-arrival entry summary (ENS) declarations for goods arriving in Great Britain.',
     features: ['GB ENS', 'Pre-arrival', 'Linked to CDS', 'Records'],
   },
   {
     number: '04',
     title: 'Transit & GVMS',
-    image: truckHighway,
+    icon: 'route',
     description: 'NCTS transit movements and Goods Movement References for RoRo crossings.',
     features: ['NCTS', 'T1 & T2', 'GMR', 'Port references'],
   },
   {
     number: '05',
     title: 'Duty & tax tools',
-    image: cargoShipSea,
+    icon: 'calculator',
     description: 'Commodity codes, duty rates and import VAT estimates inside the declaration.',
     features: ['Classification', 'Preference', 'Reliefs', 'Cost estimates'],
   },
   {
     number: '06',
     title: 'Brokerage support',
-    image: parcels,
+    icon: 'support',
     description: 'Our customs team can prepare, check or file declarations on your behalf.',
     features: ['Managed filing', 'Entry review', 'HMRC queries', 'Training'],
   },
@@ -85,7 +77,7 @@ const faqs = [
 function SolutionsContent() {
   return (
     <main className="solutions-page">
-      <PageHero images={solutionsBanners} label="Freight and customs services banner" />
+      <PageHero label="Customs declaration services" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
@@ -95,8 +87,9 @@ function SolutionsContent() {
           </div>
           <div>
             <p className="lead">
-              CustomsDirect handles the declaration; our customs team handles the questions. Start
-              with the software, or ask us to file for you.
+              We support declarants moving goods into and out of Great Britain, with everything the
+              declaration needs in one place. File it yourself in CustomsDirect, or ask our customs
+              team to prepare and submit it for you.
             </p>
             <p>Use one service or combine them.</p>
           </div>
@@ -144,15 +137,10 @@ function SolutionsContent() {
           <div className="card-grid card-grid-3">
             {solutions.map((solution) => (
               <article className="service-card" key={solution.number}>
-                <div className="service-card-media">
-                  <Image
-                    src={solution.image}
-                    alt={solution.title}
-                    fill
-                    sizes="(max-width: 720px) 100vw, 33vw"
-                    style={{ objectFit: 'cover' }}
-                    unoptimized
-                  />
+                <div className="service-card-visual">
+                  <span className="service-card-icon">
+                    <ServiceIcon name={solution.icon} />
+                  </span>
                   <span className="service-card-number">{solution.number}</span>
                 </div>
                 <div className="service-card-body">
@@ -196,20 +184,10 @@ function SolutionsContent() {
           <div className="split-visual">
             <div className="media-frame">
               <Image
-                src={trailerFleet}
-                alt="Trailers lined up at a freight terminal"
+                src={businessMeeting}
+                alt="Customs specialists reviewing declarations with a client"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
-            </div>
-            <div className="media-frame media-inset">
-              <Image
-                src={planeAtGate}
-                alt="Aircraft on the apron ready for cargo"
-                fill
-                sizes="200px"
                 style={{ objectFit: 'cover' }}
                 unoptimized
               />

@@ -3,15 +3,8 @@ import Image from 'next/image'
 import Hero from '../../components/Hero'
 import EnquiryForm from '../../components/EnquiryForm'
 import AppPreview from '../../components/AppPreview'
-import {
-  businessMeeting,
-  cargoShipSea,
-  planeAtGate,
-  portCranes,
-  trailerFleet,
-  truckHighway,
-  warehouseBoxes,
-} from '../../components/images'
+import ServiceIcon from '../../components/ServiceIcon'
+import { businessMeeting } from '../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -19,21 +12,21 @@ const services = [
   {
     number: '01',
     title: 'CDS declarations',
-    image: warehouseBoxes,
+    icon: 'document',
     copy: 'Guided import and export entries, validated against HMRC rules and submitted to CDS.',
     points: ['Import & export entries', 'Built-in validation', 'Direct CDS submission'],
   },
   {
     number: '02',
     title: 'Duty & VAT tools',
-    image: cargoShipSea,
+    icon: 'calculator',
     copy: 'See what a declaration will cost before anything is sent to HMRC.',
     points: ['Duty estimates', 'Import VAT', 'Preference & reliefs'],
   },
   {
     number: '03',
     title: 'Customs support',
-    image: businessMeeting,
+    icon: 'support',
     copy: 'Software backed by a team that prepares and files declarations every day.',
     points: ['Onboarding & training', 'Entry reviews', 'HMRC queries'],
   },
@@ -43,22 +36,18 @@ const declarationTypes = [
   {
     title: 'Import declarations',
     detail: 'Guided CDS entries for goods arriving in Great Britain, with duty and VAT calculated as you go.',
-    image: portCranes,
   },
   {
     title: 'Export declarations',
     detail: 'Export entries with proof of export, filed from the same workspace.',
-    image: trailerFleet,
   },
   {
     title: 'Transit & GVMS',
     detail: 'NCTS transit movements and Goods Movement References for RoRo crossings.',
-    image: truckHighway,
   },
   {
     title: 'Safety & security',
     detail: 'Entry summary (ENS) declarations submitted before goods arrive.',
-    image: planeAtGate,
   },
 ]
 
@@ -121,12 +110,12 @@ function Home() {
       <section className="section-pad home-welcome">
         <div className="container home-welcome-grid">
           <div className="home-welcome-copy">
-            <p className="eyebrow">UK customs declaration software</p>
-            <h2 className="page-title-lg">Customs software that checks the detail.</h2>
+            <p className="eyebrow">What we do</p>
+            <h2 className="page-title-lg">Everything a declarant needs to file with HMRC.</h2>
             <p className="lead">
-              CustomsDirect is our cloud platform for GB import and export declarations. Build an
-              entry, check it against HMRC rules, submit to CDS and track it to clearance — with our
-              customs team behind you.
+              We support declarants moving goods into and out of Great Britain. CustomsDirect brings
+              the declaration, the checks and the customs support together — so you can prepare and
+              submit to HMRC’s Customs Declaration Service with confidence.
             </p>
             <div className="home-welcome-actions">
               <a
@@ -193,15 +182,10 @@ function Home() {
           <div className="card-grid card-grid-3">
             {services.map((service) => (
               <article className="service-card" key={service.number}>
-                <div className="service-card-media">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    sizes="(max-width: 720px) 100vw, 33vw"
-                    style={{ objectFit: 'cover' }}
-                    unoptimized
-                  />
+                <div className="service-card-visual">
+                  <span className="service-card-icon">
+                    <ServiceIcon name={service.icon} />
+                  </span>
                   <span className="service-card-number">{service.number}</span>
                 </div>
                 <div className="service-card-body">
@@ -275,18 +259,11 @@ function Home() {
 
           <div className="freight-grid">
             {declarationTypes.map((mode) => (
-              <article className="freight-card" key={mode.title}>
-                <div className="freight-card-media">
-                  <Image
-                    src={mode.image}
-                    alt={mode.title}
-                    fill
-                    sizes="(max-width: 720px) 100vw, 50vw"
-                    style={{ objectFit: 'cover' }}
-                    unoptimized
-                  />
-                </div>
-                <div className="freight-card-body">
+              <article className="declaration-card" key={mode.title}>
+                <span className="declaration-card-mark" aria-hidden="true">
+                  ✓
+                </span>
+                <div className="declaration-card-body">
                   <h3>{mode.title}</h3>
                   <p>{mode.detail}</p>
                 </div>
@@ -299,26 +276,13 @@ function Home() {
       {/* About the company */}
       <section className="section-pad home-about section-dark">
         <div className="container split-layout">
-          <div className="split-visual">
-            <div className="media-frame">
-              <Image
-                src={portCranes}
-                alt="Container cranes at a UK port"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
-            </div>
-            <div className="media-frame media-inset">
-              <Image
-                src={warehouseBoxes}
-                alt="Goods prepared for an import declaration"
-                fill
-                sizes="200px"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-              />
+          <div className="home-about-panel">
+            <AppPreview />
+            <div className="home-about-note">
+              <span className="media-badge-value">Built in-house</span>
+              <span className="media-badge-label">
+                By a UK customs team, for declarants moving goods in and out of GB
+              </span>
             </div>
           </div>
 

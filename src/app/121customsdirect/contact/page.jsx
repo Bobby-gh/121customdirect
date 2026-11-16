@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageHero from '../../../components/PageHero'
-import { businessMeeting, contactBanners, roadDusk } from '../../../components/images'
+import { businessMeeting, roadDusk } from '../../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -29,7 +29,7 @@ export default function Contact() {
 
   return (
     <main className="contact-page">
-      <PageHero images={contactBanners} label="Port banner" />
+      <PageHero label="Contact 121 Customs Direct" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
