@@ -5,7 +5,7 @@ import EnquiryForm from '../../components/EnquiryForm'
 import AppPreview from '../../components/AppPreview'
 import LoginPreview from '../../components/LoginPreview'
 import ServiceIcon from '../../components/ServiceIcon'
-import { businessMeeting } from '../../components/images'
+import { businessMeeting, portCranes, warehouseBoxes } from '../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -14,6 +14,7 @@ const services = [
     number: '01',
     title: 'CDS declarations',
     icon: 'document',
+    image: portCranes,
     copy: 'Guided import and export entries, validated against HMRC rules and submitted to CDS.',
     points: ['Import & export entries', 'Built-in validation', 'Direct CDS submission'],
   },
@@ -21,6 +22,7 @@ const services = [
     number: '02',
     title: 'Duty & VAT tools',
     icon: 'calculator',
+    image: warehouseBoxes,
     copy: 'See what a declaration will cost before anything is sent to HMRC.',
     points: ['Duty estimates', 'Import VAT', 'Preference & reliefs'],
   },
@@ -28,6 +30,7 @@ const services = [
     number: '03',
     title: 'Customs support',
     icon: 'support',
+    image: businessMeeting,
     copy: 'Software backed by a team that prepares and files declarations every day.',
     points: ['Onboarding & training', 'Entry reviews', 'HMRC queries'],
   },
@@ -183,7 +186,15 @@ function Home() {
           <div className="card-grid card-grid-3">
             {services.map((service) => (
               <article className="service-card" key={service.number}>
-                <div className="service-card-visual">
+                <div className="service-card-visual has-image">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                    style={{ objectFit: 'cover' }}
+                    unoptimized
+                  />
                   <span className="service-card-icon">
                     <ServiceIcon name={service.icon} />
                   </span>

@@ -2394,15 +2394,20 @@ img {
 
 .home-hero-content {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1;
   display: flex;
+  max-width: 720px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin: 0;
   padding: 2rem clamp(1.2rem, 4vw, 3rem) 3.5rem;
+  padding-left: max(1.25rem, calc((100vw - 1180px) / 2 + 2rem));
   color: #fff;
-  max-width: 720px;
+  text-align: left;
 }
 
 .hero-title {
@@ -3039,6 +3044,40 @@ img {
   background:
     radial-gradient(circle at 85% 10%, rgba(4, 177, 196, 0.24), transparent 60%),
     linear-gradient(145deg, #f2f8fa 0%, #e8f2f5 100%);
+}
+
+.service-card-visual.has-image {
+  min-height: 188px;
+  background: #dfe7ed;
+  isolation: isolate;
+}
+
+.service-card-visual.has-image img {
+  transition: transform 600ms ease;
+}
+
+.service-card:hover .service-card-visual.has-image img {
+  transform: scale(1.05);
+}
+
+.service-card-visual.has-image::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(4, 33, 63, 0.05) 20%, rgba(4, 33, 63, 0.7) 100%);
+  content: '';
+}
+
+.service-card-visual.has-image .service-card-icon,
+.service-card-visual.has-image .service-card-number {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-visual.has-image .service-card-icon {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+  box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.6);
 }
 
 .service-card-icon {
