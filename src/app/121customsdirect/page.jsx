@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Hero from '../../components/Hero'
 import EnquiryForm from '../../components/EnquiryForm'
 import AppPreview from '../../components/AppPreview'
+import LoginPreview from '../../components/LoginPreview'
 import ServiceIcon from '../../components/ServiceIcon'
 import { businessMeeting } from '../../components/images'
 
@@ -240,6 +241,22 @@ function Home() {
             </div>
           </div>
           <AppPreview />
+        </div>
+      </section>
+
+      {/* Sign in */}
+      <section className="section-pad home-login">
+        <div className="container">
+          <div className="section-heading-row">
+            <div>
+              <p className="eyebrow">The app</p>
+              <h2>Sign in and file from your own desk.</h2>
+            </div>
+            <p className="section-note">
+              The CustomsDirect login screen — your declarations, your business, your team.
+            </p>
+          </div>
+          <LoginPreview />
         </div>
       </section>
 

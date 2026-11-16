@@ -3247,3 +3247,129 @@ img {
     display: none;
   }
 }
+
+/* ---------- Login screen preview ---------- */
+
+.home-login {
+  background: #fff;
+}
+
+.login-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-lift);
+}
+
+.login-preview-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+}
+
+.login-preview-form h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.login-preview-form > p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+.login-preview-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.login-preview-form label span {
+  color: #c2453f;
+}
+
+.login-preview-form input {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  background: #eef2f7;
+  color: var(--ink);
+  font-size: 0.85rem;
+}
+
+.login-preview-links {
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+}
+
+.login-preview-button {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-preview-divider {
+  position: relative;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+}
+
+.login-preview-divider::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: '';
+}
+
+.login-preview-divider span {
+  position: relative;
+  padding: 0 0.6rem;
+  background: #fff;
+}
+
+.login-preview-footer {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.login-preview-footer span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.login-preview-photo {
+  position: relative;
+  min-height: 240px;
+}
+
+@media (max-width: 720px) {
+  .login-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .login-preview-photo {
+    min-height: 200px;
+  }
+}
