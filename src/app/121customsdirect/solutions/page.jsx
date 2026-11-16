@@ -11,51 +11,52 @@ import {
   solutionsBanners,
   trailerFleet,
   truckHighway,
-  warehouseAisle,
 } from '../../../components/images'
+
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 const solutions = [
   {
     number: '01',
     title: 'Import declarations',
     image: portCranes,
-    description: 'CDS entries for goods arriving in the UK, with duty and VAT calculated.',
-    features: ['CDS entries', 'Duty & VAT', 'Query handling', 'Record keeping'],
+    description: 'Guided CDS import entries for goods arriving in Great Britain, with duty and VAT calculated.',
+    features: ['CDS entries', 'Duty & VAT', 'Validation', 'Audit trail'],
   },
   {
     number: '02',
     title: 'Export declarations',
     image: containerShip,
-    description: 'Export entries and paperwork, with proof of export for your records.',
-    features: ['Export entries', 'Proof of export', 'Licences', 'Origin evidence'],
+    description: 'Export entries filed directly with HMRC CDS, with proof of export kept on record.',
+    features: ['Export entries', 'Proof of export', 'Documents', 'Record keeping'],
   },
   {
     number: '03',
-    title: 'Freight coordination',
-    image: truckHighway,
-    description: 'Sea, air and road movements arranged alongside the customs work.',
-    features: ['FCL & LCL', 'Air cargo', 'Groupage', 'Door to door'],
+    title: 'Safety & security',
+    image: planeAtGate,
+    description: 'Pre-arrival entry summary (ENS) declarations for goods arriving in Great Britain.',
+    features: ['GB ENS', 'Pre-arrival', 'Linked to CDS', 'Records'],
   },
   {
     number: '04',
-    title: 'Warehousing & fulfilment',
-    image: warehouseAisle,
-    description: 'Short-term storage, consolidation and final-mile dispatch.',
-    features: ['Storage', 'Consolidation', 'Pick & pack', 'Final mile'],
+    title: 'Transit & GVMS',
+    image: truckHighway,
+    description: 'NCTS transit movements and Goods Movement References for RoRo crossings.',
+    features: ['NCTS', 'T1 & T2', 'GMR', 'Port references'],
   },
   {
     number: '05',
-    title: 'Duty & tax advice',
+    title: 'Duty & tax tools',
     image: cargoShipSea,
-    description: 'What your goods will cost to import, including codes and reliefs.',
+    description: 'Commodity codes, duty rates and import VAT estimates inside the declaration.',
     features: ['Classification', 'Preference', 'Reliefs', 'Cost estimates'],
   },
   {
     number: '06',
-    title: 'Ongoing trade support',
+    title: 'Brokerage support',
     image: parcels,
-    description: 'A retained service for repeat declarations, audits and questions.',
-    features: ['Retained service', 'Audit support', 'Training', 'Priority response'],
+    description: 'Our customs team can prepare, check or file declarations on your behalf.',
+    features: ['Managed filing', 'Entry review', 'HMRC queries', 'Training'],
   },
 ]
 
@@ -63,19 +64,21 @@ const faqs = [
   {
     question: 'What do you need to prepare a declaration?',
     answer:
-      'Commercial invoice, packing list, transport document, commodity codes, values and origin. If anything is missing, we will tell you.',
+      'Commercial invoice, packing list, transport document, commodity codes, values and origin. If anything is missing, the software flags it before you submit.',
   },
   {
-    question: 'Do you work with occasional importers?',
-    answer: 'Yes. A single shipment is fine, quoted per declaration.',
+    question: 'Is CustomsDirect software or a brokerage?',
+    answer:
+      'It is self-service software. Your team files its own declarations using guided entries and built-in checks — or our customs team can file on your behalf.',
   },
   {
-    question: 'Can you clear goods already at the port?',
-    answer: 'Often, yes — send the paperwork early to avoid storage charges.',
+    question: 'Do I need my own HMRC authorisation?',
+    answer:
+      'Yes. You authorise CustomsDirect against your GB EORI in CDS. We help you set this up during onboarding.',
   },
   {
-    question: 'Which countries do you cover?',
-    answer: 'UK trade worldwide, including the EU under the Trade and Cooperation Agreement.',
+    question: 'Does the software work for occasional importers?',
+    answer: 'Yes. File a single declaration, or set up a retained account for regular trade.',
   },
 ]
 
@@ -88,12 +91,12 @@ function SolutionsContent() {
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">Our services</p>
-            <h1 className="page-title-lg">Practical customs and freight support.</h1>
+            <h1 className="page-title-lg">Declarations, software and customs support.</h1>
           </div>
           <div>
             <p className="lead">
-              A UK customs company for HMRC declarations and consultancy — from a single
-              declaration question to a retained service.
+              CustomsDirect handles the declaration; our customs team handles the questions. Start
+              with the software, or ask us to file for you.
             </p>
             <p>Use one service or combine them.</p>
           </div>
@@ -118,7 +121,7 @@ function SolutionsContent() {
                 Explore the app <span aria-hidden="true">→</span>
               </Link>
               <a
-                href="http://customs-uk.vercel.app/"
+                href={APP_URL}
                 className="text-link text-link-light"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -176,18 +179,18 @@ function SolutionsContent() {
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What is included</p>
-            <h2>One team, start to finish.</h2>
+            <h2>One platform, one record.</h2>
             <p>
-              Customs and freight usually sit with separate companies — that is where the delays
-              come from.
+              Everything the declaration needs sits together — no chasing documents across email
+              and spreadsheets.
             </p>
             <ul className="tick-list tick-list-wide">
-              <li>Declarations prepared and submitted to HMRC</li>
-              <li>Duty and VAT calculated before goods land</li>
-              <li>Shipping documents checked against the entry</li>
-              <li>Carrier and port liaison through clearance</li>
-              <li>Copies of everything kept for your records</li>
-              <li>A named contact for the shipment</li>
+              <li>CDS import and export entries in one workspace</li>
+              <li>Built-in checks against HMRC rules before submission</li>
+              <li>Duty and import VAT calculated before you file</li>
+              <li>Documents attached to every declaration</li>
+              <li>HMRC responses and submission history kept</li>
+              <li>Optional review by our customs team</li>
             </ul>
           </div>
           <div className="split-visual">
@@ -238,8 +241,8 @@ function SolutionsContent() {
 
       <section className="closing-cta">
         <div className="container closing-cta-inner">
-          <h2>Not sure which service you need?</h2>
-          <p>Tell us what is moving and we will point you to the right place.</p>
+          <h2>Not sure which declaration you need?</h2>
+          <p>Tell us what you are importing or exporting and we will point you to the right place.</p>
           <Link href="/121customsdirect/contact" className="button button-light">
             Contact us <span aria-hidden="true">→</span>
           </Link>

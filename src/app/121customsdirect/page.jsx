@@ -6,100 +6,99 @@ import AppPreview from '../../components/AppPreview'
 import {
   businessMeeting,
   cargoShipSea,
-  containerShip,
-  parcels,
-  planeInClouds,
-  portCrew,
+  planeAtGate,
+  portCranes,
   trailerFleet,
   truckHighway,
   warehouseBoxes,
-  warehouseRacks,
 } from '../../components/images'
+
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 const services = [
   {
     number: '01',
-    title: 'Customs declarations',
+    title: 'CDS declarations',
     image: warehouseBoxes,
-    copy: 'Import and export entries, checked before anything is submitted.',
-    points: ['Import & export entries', 'Commodity codes', 'Document checks'],
+    copy: 'Guided import and export entries, validated against HMRC rules and submitted to CDS.',
+    points: ['Import & export entries', 'Built-in validation', 'Direct CDS submission'],
   },
   {
     number: '02',
-    title: 'Freight coordination',
+    title: 'Duty & VAT tools',
     image: cargoShipSea,
-    copy: 'Sea, air and road movements arranged around the customs work.',
-    points: ['Sea, air & road', 'Door to door', 'Tracking updates'],
+    copy: 'See what a declaration will cost before anything is sent to HMRC.',
+    points: ['Duty estimates', 'Import VAT', 'Preference & reliefs'],
   },
   {
     number: '03',
-    title: 'Guidance & compliance',
+    title: 'Customs support',
     image: businessMeeting,
-    copy: 'Straight answers on duty, reliefs and paperwork.',
-    points: ['Duty & VAT', 'Restricted goods', 'Process reviews'],
+    copy: 'Software backed by a team that prepares and files declarations every day.',
+    points: ['Onboarding & training', 'Entry reviews', 'HMRC queries'],
   },
 ]
 
-const freightModes = [
+const declarationTypes = [
   {
-    title: 'Sea freight',
-    detail: 'FCL and LCL container movements through UK and EU ports.',
-    image: containerShip,
+    title: 'Import declarations',
+    detail: 'Guided CDS entries for goods arriving in Great Britain, with duty and VAT calculated as you go.',
+    image: portCranes,
   },
   {
-    title: 'Air freight',
-    detail: 'Time-critical consignments with priority clearance.',
-    image: planeInClouds,
+    title: 'Export declarations',
+    detail: 'Export entries with proof of export, filed from the same workspace.',
+    image: trailerFleet,
   },
   {
-    title: 'Road freight',
-    detail: 'Groupage and full loads across the UK and Europe.',
+    title: 'Transit & GVMS',
+    detail: 'NCTS transit movements and Goods Movement References for RoRo crossings.',
     image: truckHighway,
   },
   {
-    title: 'Warehousing',
-    detail: 'Short-term storage, consolidation and final mile.',
-    image: warehouseRacks,
+    title: 'Safety & security',
+    detail: 'Entry summary (ENS) declarations submitted before goods arrive.',
+    image: planeAtGate,
   },
 ]
 
 const steps = [
   {
     number: '01',
-    title: 'Tell us what’s moving',
-    detail: 'A short conversation about the goods, route and deadline.',
+    title: 'Create your account',
+    detail: 'Register, add your business details and GB EORI.',
   },
   {
     number: '02',
-    title: 'We check the detail',
-    detail: 'We review classification, values, origin and licences.',
+    title: 'Authorise with HMRC',
+    detail: 'Connect CustomsDirect to CDS so declarations can be filed.',
   },
   {
     number: '03',
-    title: 'We file the entry',
-    detail: 'Entries are built, checked and submitted to HMRC.',
+    title: 'Build the entry',
+    detail: 'Guided fields, commodity codes and checks as you type.',
   },
   {
     number: '04',
-    title: 'Cleared and moving',
-    detail: 'You get confirmation, paperwork and a clear next step.',
+    title: 'Submit and track',
+    detail: 'Send to HMRC CDS and follow the declaration to clearance.',
   },
 ]
 
 const stats = [
   { value: '12+', label: 'Years in customs' },
-  { value: '8,400+', label: 'Shipments cleared' },
-  { value: '96%', label: 'Cleared without delay' },
-  { value: '24h', label: 'Response time' },
+  { value: '8,400+', label: 'Declarations filed' },
+  { value: '96%', label: 'Accepted first time' },
+  { value: '24h', label: 'Support response' },
 ]
 
 const capabilities = [
-  'HMRC-compliant import and export entries',
-  'CDS declarations handled end to end',
-  'Duty, VAT and preference guidance',
-  'Customs clearance for sea, air and road',
-  'Consolidated shipments and groupage',
-  'Ongoing support for regular traders',
+  'Guided CDS import and export declarations',
+  'Checks against HMRC rules before submission',
+  'Duty and import VAT calculated as you enter data',
+  'Documents attached to every declaration',
+  'Submission history and a full audit trail',
+  'Optional review by our customs team',
 ]
 
 const partners = [
@@ -122,19 +121,25 @@ function Home() {
       <section className="section-pad home-welcome">
         <div className="container home-welcome-grid">
           <div className="home-welcome-copy">
-            <p className="eyebrow">UK customs &amp; freight</p>
-            <h1 className="page-title-lg">Customs clearance, handled properly.</h1>
+            <p className="eyebrow">UK customs declaration software</p>
+            <h2 className="page-title-lg">Customs software that checks the detail.</h2>
             <p className="lead">
-              A UK customs company for HMRC declarations and consultancy. Import and export entries,
-              sea, air and road freight — one team, one contact.
+              CustomsDirect is our cloud platform for GB import and export declarations. Build an
+              entry, check it against HMRC rules, submit to CDS and track it to clearance — with our
+              customs team behind you.
             </p>
             <div className="home-welcome-actions">
-              <Link href="/121customsdirect/contact" className="button button-dark">
-                Request a quote
-                <span aria-hidden="true">→</span>
-              </Link>
-              <Link href="/121customsdirect/solutions" className="text-link">
-                Our services
+              <a
+                href={APP_URL}
+                className="button button-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open the app
+                <span aria-hidden="true">↗</span>
+              </a>
+              <Link href="/121customsdirect/solutions/customsdirect" className="text-link">
+                See how it works
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -178,7 +183,7 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">What we do</p>
-              <h2>Declarations, freight, guidance.</h2>
+              <h2>Software, duties, support.</h2>
             </div>
             <Link href="/121customsdirect/solutions" className="text-link">
               All services <span aria-hidden="true">→</span>
@@ -241,7 +246,7 @@ function Home() {
                 See CustomsDirect <span aria-hidden="true">→</span>
               </Link>
               <a
-                href="http://customs-uk.vercel.app/"
+                href={APP_URL}
                 className="text-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -254,21 +259,22 @@ function Home() {
         </div>
       </section>
 
-      {/* Freight modes */}
+      {/* Declaration types */}
       <section className="section-pad home-freight">
         <div className="container">
           <div className="section-heading-row">
             <div>
-              <p className="eyebrow">Freight &amp; shipments</p>
-              <h2>Four modes, one team.</h2>
+              <p className="eyebrow">What you can file</p>
+              <h2>One workspace, every declaration.</h2>
             </div>
             <p className="section-note">
-              Sea, air, road or stored — the customs work changes with the mode.
+              Import, export, transit and safety &amp; security — built around HMRC’s Customs
+              Declaration Service.
             </p>
           </div>
 
           <div className="freight-grid">
-            {freightModes.map((mode) => (
+            {declarationTypes.map((mode) => (
               <article className="freight-card" key={mode.title}>
                 <div className="freight-card-media">
                   <Image
@@ -296,8 +302,8 @@ function Home() {
           <div className="split-visual">
             <div className="media-frame">
               <Image
-                src={trailerFleet}
-                alt="A fleet of haulage trailers parked at a distribution centre"
+                src={portCranes}
+                alt="Container cranes at a UK port"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
                 style={{ objectFit: 'cover' }}
@@ -306,8 +312,8 @@ function Home() {
             </div>
             <div className="media-frame media-inset">
               <Image
-                src={parcels}
-                alt="Packed parcels ready for dispatch"
+                src={warehouseBoxes}
+                alt="Goods prepared for an import declaration"
                 fill
                 sizes="200px"
                 style={{ objectFit: 'cover' }}
@@ -318,10 +324,10 @@ function Home() {
 
           <div className="split-copy">
             <p className="eyebrow">About us</p>
-            <h2>A small team that knows the detail.</h2>
+            <h2>Software built by people who file declarations.</h2>
             <p>
-              We handle customs for UK importers, exporters and forwarders — entries, records, HMRC
-              queries and the movement itself.
+              CustomsDirect is built in-house by a UK customs team. We know where entries go wrong —
+              so the software checks the details that hold a shipment up.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -336,16 +342,16 @@ function Home() {
         </div>
       </section>
 
-      {/* People at the port */}
+      {/* Support team */}
       <section
         className="people-band"
-        style={{ '--people-image': `url(${portCrew})` }}
+        style={{ '--people-image': `url(${businessMeeting})` }}
       >
         <div className="container">
           <div className="people-band-inner">
-            <p className="eyebrow">At the port</p>
-            <h2>People who know your cargo.</h2>
-            <p>Ports, hauliers and HMRC — we deal with them daily, so you do not have to.</p>
+            <p className="eyebrow">Support</p>
+            <h2>Software with a customs team behind it.</h2>
+            <p>When an entry needs checking or HMRC raises a query, talk to the people who built it.</p>
             <Link href="/121customsdirect/contact" className="button button-light">
               Talk to our team <span aria-hidden="true">→</span>
             </Link>
@@ -359,7 +365,7 @@ function Home() {
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">How it works</p>
-              <h2>Four steps to clearance.</h2>
+              <h2>Four steps to a submitted declaration.</h2>
             </div>
           </div>
           <ol className="step-grid">
@@ -379,11 +385,11 @@ function Home() {
         <div className="container">
           <div className="section-heading-row">
             <div>
-              <p className="eyebrow">Companies we work with</p>
-              <h2>Trusted across the supply chain.</h2>
+              <p className="eyebrow">Who files with us</p>
+              <h2>Trusted by traders and forwarders.</h2>
             </div>
             <p className="section-note">
-              Hauliers, forwarders and distributors who rely on us for customs.
+              Importers, exporters and customs agents filing through CustomsDirect.
             </p>
           </div>
 
@@ -408,16 +414,16 @@ function Home() {
       <section className="section-pad home-enquiry" id="enquiry">
         <div className="container enquiry-layout">
           <div className="enquiry-copy">
-            <p className="eyebrow">Get a quote</p>
-            <h2>Tell us about the shipment.</h2>
+            <p className="eyebrow">Talk to us</p>
+            <h2>Not sure where to start?</h2>
             <p>
-              Share the goods, route and date. We will come back with the requirements, documents
-              and a price.
+              Tell us what you are importing or exporting and we will show you how it is declared —
+              or book a walkthrough of the software.
             </p>
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
-              <li>Where is it travelling from and to?</li>
-              <li>When does it need to move?</li>
+              <li>Are you filing yourself or do you need our team?</li>
+              <li>Would you like a walkthrough of CustomsDirect?</li>
             </ul>
             <div className="enquiry-contact">
               <p>
@@ -438,11 +444,24 @@ function Home() {
       {/* Closing CTA */}
       <section className="closing-cta">
         <div className="container closing-cta-inner">
-          <h2>A shipment to clear? Let’s talk.</h2>
-          <p>No obligation, no jargon.</p>
-          <Link href="/121customsdirect/contact" className="button button-light">
-            Talk to our team <span aria-hidden="true">→</span>
-          </Link>
+          <h2>Ready to submit your first declaration?</h2>
+          <p>Open CustomsDirect and set up your business — or ask us to walk you through it.</p>
+          <div className="closing-cta-actions">
+            <a
+              href={APP_URL}
+              className="button button-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open CustomsDirect <span aria-hidden="true">↗</span>
+            </a>
+            <Link
+              href="/121customsdirect/contact"
+              className="button button-outline button-outline-light"
+            >
+              Talk to the team
+            </Link>
+          </div>
         </div>
       </section>
     </main>

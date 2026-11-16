@@ -15,9 +15,9 @@ const headingFont = Source_Serif_4({
 })
 
 export const metadata = {
-  title: '121 Customs Direct',
+  title: '121 Customs Direct | Customs Declaration Software',
   description:
-    '121 Customs Direct is a UK customs company specialising in HMRC declarations and consultancy, with CustomsDirect — our app for UK customs declarations.',
+    '121 Customs Direct builds CustomsDirect, cloud software for UK importers, exporters and forwarders to prepare, validate and submit import and export declarations to HMRC’s Customs Declaration Service.',
 }
 
 export default function RootLayout({ children }) {

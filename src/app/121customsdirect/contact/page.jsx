@@ -4,13 +4,15 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageHero from '../../../components/PageHero'
-import { contactBanners, roadDusk, warehouseAisle } from '../../../components/images'
+import { businessMeeting, contactBanners, roadDusk } from '../../../components/images'
+
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 const initialValues = {
   name: '',
   email: '',
   company: '',
-  mode: 'Sea freight',
+  enquiryType: 'CustomsDirect software',
   origin: '',
   destination: '',
   goods: '',
@@ -33,12 +35,12 @@ export default function Contact() {
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">Contact</p>
-            <h1 className="page-title-lg">Let’s talk through your shipment.</h1>
+            <h1 className="page-title-lg">Let’s talk through your declarations.</h1>
           </div>
           <div>
             <p className="lead">
-              A declaration, a quote or a question about where to begin — tell us what is on your
-              mind.
+              A declaration, a duty question or a walkthrough of the software — tell us what you
+              need.
             </p>
             <p>We reply within one working day.</p>
           </div>
@@ -48,14 +50,14 @@ export default function Contact() {
       <section className="section-pad contact-section">
         <div className="container contact-layout">
           <div className="contact-info">
-            <p className="eyebrow">A useful place to start</p>
-            <h2>Give us a little context.</h2>
+            <p className="eyebrow">Talk to the right team</p>
+            <h2>Tell us what you are working on.</h2>
             <p>Share what you are trying to do and where you are stuck.</p>
 
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
-              <li>Where is the shipment travelling from and to?</li>
-              <li>What would you like help understanding?</li>
+              <li>Do you file in-house or need a broker?</li>
+              <li>Would you like a walkthrough of CustomsDirect?</li>
             </ul>
 
             <div className="contact-details">
@@ -75,12 +77,18 @@ export default function Contact() {
                 <span className="contact-detail-label">Based in</span>
                 <span>Birmingham, United Kingdom</span>
               </div>
+              <div className="contact-detail-row">
+                <span className="contact-detail-label">CustomsDirect</span>
+                <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                  Open the app ↗
+                </a>
+              </div>
             </div>
 
             <div className="media-frame media-contact">
               <Image
-                src={warehouseAisle}
-                alt="A warehouse aisle lined with pallets ready for dispatch"
+                src={businessMeeting}
+                alt="The customs team talking through a declaration"
                 fill
                 sizes="(max-width: 900px) 100vw, 40vw"
                 style={{ objectFit: 'cover' }}
@@ -91,7 +99,7 @@ export default function Contact() {
 
           <div className="contact-form-wrapper">
             <h2>Send an enquiry</h2>
-            <p>Tell us about the shipment.</p>
+            <p>Tell us what you need.</p>
 
             {submitted ? (
               <div className="form-notice" role="status">
@@ -162,20 +170,20 @@ export default function Contact() {
                     />
                   </div>
                   <div className="form-group">
-                    <label className="form-label" htmlFor="mode">
-                      Freight mode
+                    <label className="form-label" htmlFor="enquiry">
+                      What do you need?
                     </label>
                     <select
-                      id="mode"
+                      id="enquiry"
                       className="form-select"
-                      value={values.mode}
-                      onChange={update('mode')}
+                      value={values.enquiryType}
+                      onChange={update('enquiryType')}
                     >
-                      <option>Sea freight</option>
-                      <option>Air freight</option>
-                      <option>Road freight</option>
-                      <option>Warehousing / courier</option>
-                      <option>Not sure yet</option>
+                      <option>CustomsDirect software</option>
+                      <option>Import declaration</option>
+                      <option>Export declaration</option>
+                      <option>Duty &amp; VAT question</option>
+                      <option>Something else</option>
                     </select>
                   </div>
                 </div>
@@ -218,8 +226,7 @@ export default function Contact() {
                     className="form-input"
                     type="text"
                     value={values.goods}
-                    onChange={update('goods')}
-                    placeholder="What are you shipping?"
+                    onChange={update('goods')}                      placeholder="What do you import or export?"
                   />
                 </div>
 

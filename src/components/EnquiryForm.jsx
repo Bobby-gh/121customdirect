@@ -6,7 +6,7 @@ const initialValues = {
   name: '',
   email: '',
   company: '',
-  mode: 'Sea freight',
+  enquiryType: 'CustomsDirect software',
   origin: '',
   destination: '',
   goods: '',
@@ -14,7 +14,7 @@ const initialValues = {
 }
 
 /**
- * Quote / enquiry form used on the home page.
+ * Enquiry form used on the home page.
  * Not wired to a mailbox yet — submission shows a confirmation only.
  */
 export default function EnquiryForm() {
@@ -55,7 +55,7 @@ export default function EnquiryForm() {
         setSubmitted(true)
       }}
     >
-      <h3>Request a quote</h3>
+      <h3>Ask about CustomsDirect</h3>
       <p className="form-intro">Takes about a minute.</p>
 
       <div className="form-row">
@@ -104,15 +104,20 @@ export default function EnquiryForm() {
           />
         </div>
         <div className="form-group">
-          <label className="form-label" htmlFor="q-mode">
-            Freight mode
+          <label className="form-label" htmlFor="q-enquiry">
+            What do you need?
           </label>
-          <select id="q-mode" className="form-select" value={values.mode} onChange={update('mode')}>
-            <option>Sea freight</option>
-            <option>Air freight</option>
-            <option>Road freight</option>
-            <option>Warehousing / courier</option>
-            <option>Not sure yet</option>
+          <select
+            id="q-enquiry"
+            className="form-select"
+            value={values.enquiryType}
+            onChange={update('enquiryType')}
+          >
+            <option>CustomsDirect software</option>
+            <option>Import declaration</option>
+            <option>Export declaration</option>
+            <option>Duty &amp; VAT question</option>
+            <option>Something else</option>
           </select>
         </div>
       </div>
@@ -146,18 +151,17 @@ export default function EnquiryForm() {
         </div>
       </div>
 
-      <div className="form-group">
-        <label className="form-label" htmlFor="q-goods">
-          Goods
-        </label>
-        <input
-          id="q-goods"
-          className="form-input"
-          type="text"
-          value={values.goods}
-          onChange={update('goods')}
-          placeholder="What are you shipping?"
-        />
+      <div className="form-group">          <label className="form-label" htmlFor="q-goods">
+            Goods
+          </label>
+          <input
+            id="q-goods"
+            className="form-input"
+            type="text"
+            value={values.goods}
+            onChange={update('goods')}
+            placeholder="What do you import or export?"
+          />
       </div>
 
       <div className="form-group">
@@ -169,7 +173,7 @@ export default function EnquiryForm() {
           className="form-textarea"
           value={values.message}
           onChange={update('message')}
-          placeholder="Volumes, deadlines, questions..."
+          placeholder="Volumes, systems, questions..."
           required
         />
       </div>

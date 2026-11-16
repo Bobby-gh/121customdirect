@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+const APP_URL = 'https://customs-uk.vercel.app/'
+
 function Footer() {
   return (
     <footer className="footer">
@@ -8,13 +10,13 @@ function Footer() {
           <Link href="/121customsdirect" className="logo">
             <svg className="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="8" fill="#ffffff" />
-              <path d="M12 28V12L20 8L28 12V28" stroke="#102a43" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M20 16V24" stroke="#102a43" strokeWidth="2.5" strokeLinecap="round" />
-              <circle cx="20" cy="20" r="2" fill="#102a43" />
+              <path d="M12 28V12L20 8L28 12V28" stroke="#08376b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M20 16V24" stroke="#08376b" strokeWidth="2.5" strokeLinecap="round" />
+              <circle cx="20" cy="20" r="2" fill="#08376b" />
             </svg>
             <span className="logo-text">121 Customs Direct</span>
           </Link>
-          <p>Clearer customs work, with people behind it.</p>
+          <p>Customs declaration software, backed by a customs team.</p>
         </div>
 
         <div className="footer-links">
@@ -27,6 +29,9 @@ function Footer() {
           </div>
           <div className="footer-column">
             <h4>Start here</h4>
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              Log in to the app
+            </a>
             <Link href="/121customsdirect/solutions">Our services</Link>
             <Link href="/121customsdirect/solutions/customsdirect">CustomsDirect app</Link>
             <Link href="/121customsdirect/contact">Ask a question</Link>

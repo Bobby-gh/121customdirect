@@ -29,9 +29,9 @@ const principles = [
 
 const stats = [
   { value: '12+', label: 'Years in customs' },
-  { value: '8,400+', label: 'Shipments cleared' },
-  { value: '3', label: 'Freight modes covered' },
-  { value: '96%', label: 'Cleared without delay' },
+  { value: '8,400+', label: 'Declarations filed' },
+  { value: 'CDS', label: 'Direct HMRC submission' },
+  { value: '96%', label: 'Accepted first time' },
 ]
 
 const partners = [
@@ -46,14 +46,14 @@ const partners = [
 ]
 
 const capabilities = [
-  'Import and export declarations (CDS)',
-  'Sea freight: FCL, LCL and groupage',
-  'Air freight for time-critical goods',
-  'Road haulage across the UK and EU',
-  'Warehousing, consolidation and final mile',
-  'Duty, VAT and preference guidance',
-  'Customs audits and historical records',
-  'Training for in-house shipping teams',
+  'Guided CDS import and export declarations',
+  'Direct submission to HMRC CDS',
+  'Commodity codes and duty estimates',
+  'Documents attached to each declaration',
+  'Live status from draft to cleared',
+  'Submission records and an audit trail',
+  'Optional review by our customs team',
+  'Training and onboarding',
 ]
 
 function AboutContent() {
@@ -65,14 +65,14 @@ function AboutContent() {
         <div className="container page-intro-grid">
           <div>
             <p className="eyebrow">About us</p>
-            <h1 className="page-title-lg">Customs support should feel personal.</h1>
+            <h1 className="page-title-lg">Customs software, with customs people behind it.</h1>
           </div>
           <div>
             <p className="lead">
-              A UK customs company for HMRC declarations and consultancy, working with importers,
-              exporters and forwarders.
+              CustomsDirect is our cloud platform for HMRC declarations — built by a UK customs team
+              for importers, exporters and forwarders.
             </p>
-            <p>A named contact, a checked declaration, a straight answer.</p>
+            <p>A named contact, checked entries, a straight answer.</p>
           </div>
         </div>
       </section>
@@ -104,14 +104,14 @@ function AboutContent() {
 
           <div className="split-copy">
             <p className="eyebrow">Our story</p>
-            <h2>Getting help should be the easy part.</h2>
+            <h2>Built around how declarations are actually filed.</h2>
             <p>
               Declarations pull together shipment details, documents and HMRC requirements. It is
               easy to lose track of what is filed and what is outstanding.
             </p>
             <p>
-              We are deliberately small: the person who prepares your entry is the person you can
-              call about it.
+              CustomsDirect came out of our own declaration work: the checks we made by hand are now
+              built into the software, so fewer entries come back with queries.
             </p>
             <Link href="/121customsdirect/contact" className="text-link">
               Talk to the team <span aria-hidden="true">→</span>
@@ -158,10 +158,10 @@ function AboutContent() {
         <div className="container split-layout split-layout-reverse">
           <div className="split-copy">
             <p className="eyebrow">What we handle</p>
-            <h2>Declarations, freight and what connects them.</h2>
+            <h2>Declarations, duties and the details in between.</h2>
             <p>
-              We cover the span of a shipment, so nothing falls between a forwarder, a broker and a
-              haulier.
+              The software covers the declaration; our team covers the questions around it — from
+              classification to an HMRC query.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -198,11 +198,11 @@ function AboutContent() {
         <div className="container">
           <div className="section-heading-row">
             <div>
-              <p className="eyebrow">Companies we work with</p>
-              <h2>Partners across the supply chain.</h2>
+              <p className="eyebrow">Who files with us</p>
+              <h2>Trusted by traders and forwarders.</h2>
             </div>
             <p className="section-note">
-              Hauliers, forwarders and distributors who rely on us for customs.
+              Importers, exporters and customs agents filing through CustomsDirect.
             </p>
           </div>
           <div className="partner-wall">
@@ -226,8 +226,8 @@ function AboutContent() {
         <div className="container cta-panel">
           <div>
             <p className="eyebrow">Start here</p>
-            <h2>Tell us what you are working through.</h2>
-            <p>We will start with your question — no obligation.</p>
+            <h2>See the platform for yourself.</h2>
+            <p>Book a walkthrough with one of your own declarations — no obligation.</p>
           </div>
           <div className="cta-panel-actions">
             <Link href="/121customsdirect/contact" className="button button-dark">

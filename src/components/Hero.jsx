@@ -1,7 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { homeBanners } from './images'
+
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 /**
  * Full-bleed freight / shipment banner. Images only — no overlay copy.
@@ -19,7 +22,11 @@ function Hero() {
   const go = (index) => setActive((index + homeBanners.length) % homeBanners.length)
 
   return (
-    <section className="home-hero" aria-roledescription="carousel" aria-label="Freight and shipment imagery">
+    <section
+      className="home-hero"
+      aria-roledescription="carousel"
+      aria-label="Customs declaration software"
+    >
       <div className="home-hero-bg">
         {homeBanners.map((image, index) => (
           <div
@@ -30,6 +37,31 @@ function Hero() {
           />
         ))}
         <div className="home-hero-bg-scrim" aria-hidden="true" />
+      </div>
+
+      <div className="container home-hero-content">
+        <p className="hero-eyebrow">UK customs declaration software</p>
+        <h1 className="hero-title">Declarations prepared, checked and submitted to HMRC.</h1>
+        <p className="hero-sub">
+          CustomsDirect guides you through every CDS entry, with a customs team behind you when you
+          need one.
+        </p>
+        <div className="hero-actions">
+          <a
+            href={APP_URL}
+            className="button button-light"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open CustomsDirect <span aria-hidden="true">↗</span>
+          </a>
+          <Link
+            href="/121customsdirect/solutions/customsdirect"
+            className="button button-outline button-outline-light"
+          >
+            See how it works
+          </Link>
+        </div>
       </div>
 
       <div className="home-hero-controls">

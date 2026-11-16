@@ -4,7 +4,7 @@ import AppPreview from '../../../../components/AppPreview'
 import PageHero from '../../../../components/PageHero'
 import { appBanners, containerShip } from '../../../../components/images'
 
-const APP_URL = 'http://customs-uk.vercel.app/'
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 const features = [
   {

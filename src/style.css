@@ -4,14 +4,14 @@
 
 :root {
     /* Primary Colors */
-    --primary: #1e40af;
-    --primary-light: #3b82f6;
-    --primary-dark: #1e3a8a;
-    --primary-glow: rgba(59, 130, 246, 0.3);
+    --primary: #08376b;
+    --primary-light: #04b1c4;
+    --primary-dark: #052a52;
+    --primary-glow: rgba(4, 177, 196, 0.3);
 
     /* Secondary Colors */
-    --secondary: #0f172a;
-    --accent: #f59e0b;
+    --secondary: #052a52;
+    --accent: #04b1c4;
 
     /* Neutral Colors */
     --white: #ffffff;

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const APP_URL = 'http://customs-uk.vercel.app/'
+const APP_URL = 'https://customs-uk.vercel.app/'
 
 const navItems = [
   { label: 'Home', path: '/121customsdirect' },
@@ -26,7 +26,7 @@ function Navbar() {
       <div className="container nav-container">
         <Link href="/121customsdirect" className="logo" onClick={handleNavClick}>
           <svg className="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="8" fill="#102a43" />
+            <rect width="40" height="40" rx="8" fill="#08376b" />
             <path d="M12 28V12L20 8L28 12V28" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M20 16V24" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
             <circle cx="20" cy="20" r="2" fill="white" />
@@ -85,7 +85,7 @@ function Navbar() {
           )}
           <li className="nav-menu-cta">
             <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
-              Get started
+              Log in
               <span aria-hidden="true">↗</span>
             </a>
           </li>
@@ -98,7 +98,7 @@ function Navbar() {
           rel="noopener noreferrer"
           onClick={handleNavClick}
         >
-          Get started
+          Log in
           <span aria-hidden="true">↗</span>
         </a>
 
