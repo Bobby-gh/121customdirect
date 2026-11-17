@@ -3517,8 +3517,8 @@ img {
   display: flex;
   flex-direction: column;
   margin: 1.35rem 0 1.1rem;
-  font-size: clamp(2.6rem, 5.1vw, 4.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.2rem, 4.1vw, 3.6rem);
+  line-height: 1.02;
   font-weight: 800;
   letter-spacing: -0.045em;
 }
@@ -4439,7 +4439,7 @@ img {
   }
 
   .hero-saas-title {
-    font-size: clamp(2.2rem, 10vw, 3rem);
+    font-size: clamp(1.9rem, 8.2vw, 2.5rem);
   }
 
   .hero-saas-actions {
