@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import PageHero from '../../../components/PageHero'
-import { businessMeeting, roadDusk } from '../../../components/images'
+import PageHero from '../../components/PageHero'
+import { businessMeeting, roadDusk } from '../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -269,7 +269,7 @@ export default function Contact() {
         <div className="container contact-banner-inner">
           <h2>Prefer to speak to someone?</h2>
           <p>0121 000 0121, Monday to Friday, 08:30 – 17:30.</p>
-          <Link href="/121customsdirect/solutions" className="button button-light">
+          <Link href="/solutions" className="button button-light">
             Browse our services <span aria-hidden="true">→</span>
           </Link>
         </div>

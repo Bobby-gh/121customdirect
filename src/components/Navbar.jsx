@@ -8,9 +8,9 @@ const APP_URL = 'https://customs-uk.vercel.app/'
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'About', path: '/121customsdirect/about' },
-  { label: 'Solutions', path: '/121customsdirect/solutions' },
-  { label: 'Contact', path: '/121customsdirect/contact' },
+  { label: 'About', path: '/about' },
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Contact', path: '/contact' },
 ]
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
   const handleNavClick = () => {
     setIsMenuOpen(false)
   }
-  const solutionsActive = pathname.startsWith('/121customsdirect/solutions')
+  const solutionsActive = pathname.startsWith('/solutions')
 
   return (
     <nav className="navbar">
@@ -51,14 +51,14 @@ function Navbar() {
                 </Link>
                 <ul className="nav-dropdown">
                   <li>
-                    <Link href="/121customsdirect/solutions" onClick={handleNavClick}>
+                    <Link href="/solutions" onClick={handleNavClick}>
                       <span className="nav-dropdown-title">Customs &amp; freight services</span>
                       <span className="nav-dropdown-sub">Declarations, freight, guidance</span>
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/121customsdirect/solutions/customsdirect"
+                      href="/solutions/customsdirect"
                       className="nav-dropdown-feature"
                       onClick={handleNavClick}
                     >

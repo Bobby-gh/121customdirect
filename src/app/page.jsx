@@ -4,7 +4,6 @@ import Hero from '../components/Hero'
 import EnquiryForm from '../components/EnquiryForm'
 import LoginPreview from '../components/LoginPreview'
 import ServiceIcon from '../components/ServiceIcon'
-import SiteShell from '../components/SiteShell'
 import { businessMeeting, portCranes, warehouseBoxes } from '../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
@@ -107,8 +106,7 @@ const partners = [
 
 function Home() {
   return (
-    <SiteShell>
-      <main className="home-page">
+    <main className="home-page">
       <Hero />
 
       {/* Document processing */}
@@ -185,7 +183,7 @@ function Home() {
                 Open the app
                 <span aria-hidden="true">↗</span>
               </a>
-              <Link href="/121customsdirect/solutions/customsdirect" className="text-link">
+              <Link href="/solutions/customsdirect" className="text-link">
                 See how it works
                 <span aria-hidden="true">↗</span>
               </Link>
@@ -225,7 +223,7 @@ function Home() {
               AI processing and HMRC checks built in.
             </p>
             <div className="services-saas-actions">
-              <Link href="/121customsdirect/solutions" className="services-saas-btn">
+              <Link href="/solutions" className="services-saas-btn">
                 Explore services <span aria-hidden="true">→</span>
               </Link>
               <span className="services-saas-note">Pay as you go or subscribe</span>
@@ -279,7 +277,7 @@ function Home() {
               <p className="eyebrow">What we do</p>
               <h2>Software, duties, support.</h2>
             </div>
-            <Link href="/121customsdirect/solutions" className="text-link">
+            <Link href="/solutions" className="text-link">
               All services <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -309,7 +307,7 @@ function Home() {
                       <li key={point}>{point}</li>
                     ))}
                   </ul>
-                  <Link href="/121customsdirect/solutions" className="text-link">
+                  <Link href="/solutions" className="text-link">
                     Learn more <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -339,7 +337,7 @@ function Home() {
               <li>Live status from draft to cleared</li>
             </ul>
             <div className="app-highlight-actions">
-              <Link href="/121customsdirect/solutions/customsdirect" className="button button-dark">
+              <Link href="/solutions/customsdirect" className="button button-dark">
                 See how it works <span aria-hidden="true">→</span>
               </Link>
               <a
@@ -469,7 +467,7 @@ function Home() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <Link href="/121customsdirect/about" className="button button-dark">
+            <Link href="/about" className="button button-dark">
               More about us
               <span aria-hidden="true">→</span>
             </Link>
@@ -490,7 +488,7 @@ function Home() {
               When an entry needs checking or HMRC raises a query, talk to customs people who work
               with CDS every day — whether you file it yourself or ask us to.
             </p>
-            <Link href="/121customsdirect/contact" className="button button-light">
+            <Link href="/contact" className="button button-light">
               Talk to our team <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -594,7 +592,7 @@ function Home() {
               Open the app <span aria-hidden="true">↗</span>
             </a>
             <Link
-              href="/121customsdirect/contact"
+              href="/contact"
               className="button button-outline button-outline-light"
             >
               Talk to the team
@@ -602,8 +600,7 @@ function Home() {
           </div>
         </div>
       </section>
-      </main>
-    </SiteShell>
+    </main>
   )
 }
 

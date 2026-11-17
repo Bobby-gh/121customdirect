@@ -23,18 +23,18 @@ function Footer() {
           <div className="footer-column">
             <h4>Company</h4>
             <Link href="/">Home</Link>
-            <Link href="/121customsdirect/about">About</Link>
-            <Link href="/121customsdirect/solutions">Solutions</Link>
-            <Link href="/121customsdirect/contact">Contact</Link>
+            <Link href="/about">About</Link>
+            <Link href="/solutions">Solutions</Link>
+            <Link href="/contact">Contact</Link>
           </div>
           <div className="footer-column">
             <h4>Start here</h4>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               Log in to the app
             </a>
-            <Link href="/121customsdirect/solutions">Our services</Link>
-            <Link href="/121customsdirect/solutions/customsdirect">Declaration app</Link>
-            <Link href="/121customsdirect/contact">Ask a question</Link>
+            <Link href="/solutions">Our services</Link>
+            <Link href="/solutions/customsdirect">Declaration app</Link>
+            <Link href="/contact">Ask a question</Link>
           </div>
         </div>
       </div>

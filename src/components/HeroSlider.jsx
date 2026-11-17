@@ -119,7 +119,7 @@ export default function HeroSlider() {
             >
               Open the app <span aria-hidden="true">↗</span>
             </a>
-            <a href="/121customsdirect/contact" className="hero-saas-btn hero-saas-btn-secondary">
+            <a href="/contact" className="hero-saas-btn hero-saas-btn-secondary">
               Book a demo
             </a>
           </div>

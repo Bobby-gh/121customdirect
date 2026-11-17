@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import AppPreview from '../../../../components/AppPreview'
-import PageHero from '../../../../components/PageHero'
-import { businessMeeting } from '../../../../components/images'
+import AppPreview from '../../../components/AppPreview'
+import PageHero from '../../../components/PageHero'
+import { businessMeeting } from '../../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -82,7 +82,7 @@ function CustomsDirectApp() {
               <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
                 Open the app <span aria-hidden="true">↗</span>
               </a>
-              <Link href="/121customsdirect/contact" className="text-link">
+              <Link href="/contact" className="text-link">
                 Ask about access <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -214,7 +214,7 @@ function CustomsDirectApp() {
             <a href={APP_URL} className="button button-light" target="_blank" rel="noopener noreferrer">
               Launch the app <span aria-hidden="true">↗</span>
             </a>
-            <Link href="/121customsdirect/contact" className="button button-outline button-outline-light">
+            <Link href="/contact" className="button button-outline button-outline-light">
               Talk to the team
             </Link>
           </div>

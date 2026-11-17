@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PageHero from '../../../components/PageHero'
-import AppPreview from '../../../components/AppPreview'
-import { businessMeeting } from '../../../components/images'
+import PageHero from '../../components/PageHero'
+import AppPreview from '../../components/AppPreview'
+import { businessMeeting } from '../../components/images'
 
 const principles = [
   {
@@ -96,7 +96,7 @@ function AboutContent() {
               We work in the app every day, and the checks we make by hand are part of the
               support we give declarants — so fewer entries come back with queries.
             </p>
-            <Link href="/121customsdirect/contact" className="text-link">
+            <Link href="/contact" className="text-link">
               Talk to the team <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -203,10 +203,10 @@ function AboutContent() {
             <p>Book a walkthrough with one of your own declarations — no obligation.</p>
           </div>
           <div className="cta-panel-actions">
-            <Link href="/121customsdirect/contact" className="button button-dark">
+            <Link href="/contact" className="button button-dark">
               Get in touch <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/121customsdirect/solutions" className="button button-outline">
+            <Link href="/solutions" className="button button-outline">
               See our services
             </Link>
           </div>

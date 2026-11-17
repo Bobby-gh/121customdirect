@@ -1,4 +1,5 @@
 import { Inter, Source_Serif_4 } from 'next/font/google'
+import SiteShell from '../components/SiteShell'
 import '../style.css'
 import '../redesign.css'
 
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
-      <body className={`${bodyFont.variable} ${headingFont.variable}`}>{children}</body>
+      <body className={`${bodyFont.variable} ${headingFont.variable}`}>
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   )
 }

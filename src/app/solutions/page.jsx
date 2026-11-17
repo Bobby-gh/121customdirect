@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PageHero from '../../../components/PageHero'
-import AppPreview from '../../../components/AppPreview'
-import ServiceIcon from '../../../components/ServiceIcon'
-import { businessMeeting } from '../../../components/images'
+import PageHero from '../../components/PageHero'
+import AppPreview from '../../components/AppPreview'
+import ServiceIcon from '../../components/ServiceIcon'
+import { businessMeeting } from '../../components/images'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -110,7 +110,7 @@ function SolutionsContent() {
               see the duty and VAT, send it to CDS and track it to clearance.
             </p>
             <div className="app-feature-actions">
-              <Link href="/121customsdirect/solutions/customsdirect" className="button button-light">
+              <Link href="/solutions/customsdirect" className="button button-light">
                 Explore the app <span aria-hidden="true">→</span>
               </Link>
               <a
@@ -153,7 +153,7 @@ function SolutionsContent() {
                       </span>
                     ))}
                   </div>
-                  <Link href="/121customsdirect/contact" className="text-link">
+                  <Link href="/contact" className="text-link">
                     Enquire <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -202,7 +202,7 @@ function SolutionsContent() {
             <p className="eyebrow">Questions</p>
             <h2>Common questions.</h2>
             <p>If yours is not here, ask us — we answer straight.</p>
-            <Link href="/121customsdirect/contact" className="text-link">
+            <Link href="/contact" className="text-link">
               Ask us directly <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -221,7 +221,7 @@ function SolutionsContent() {
         <div className="container closing-cta-inner">
           <h2>Not sure which declaration you need?</h2>
           <p>Tell us what you are importing or exporting and we will point you to the right place.</p>
-          <Link href="/121customsdirect/contact" className="button button-light">
+          <Link href="/contact" className="button button-light">
             Contact us <span aria-hidden="true">→</span>
           </Link>
         </div>
