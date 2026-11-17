@@ -5,11 +5,14 @@ import Image from 'next/image'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
+const systems = ['GB CDS', 'EU ICS2', 'NCTS6', 'GVMS', 'French ELO', 'GB S&S']
+
 const slides = [
   {
     src: '/images/cds-table.png',
     alt: 'Declaration queue showing CDS entries and their statuses',
     label: 'Declaration queue',
+    scene: 'skyline',
     eyebrow: 'Customs software for GB & EU trade',
     title: [
       { text: 'Customs declarations,' },
@@ -22,6 +25,7 @@ const slides = [
     src: '/images/declaration-upload.png',
     alt: 'Upload invoice, fill form or bulk upload a customs declaration',
     label: 'AI document upload',
+    scene: 'documents',
     eyebrow: 'AI document processing',
     title: [
       { text: 'Documents become' },
@@ -34,6 +38,7 @@ const slides = [
     src: '/images/cds-declaration-form.png',
     alt: 'CDS declaration form with header-level fields',
     label: 'CDS declaration form',
+    scene: 'form',
     eyebrow: 'HMRC CDS workspace',
     title: [
       { text: 'Every field,' },
@@ -59,11 +64,35 @@ export default function HeroSlider() {
   const slide = slides[active]
 
   return (
-    <div
-      className="hero-slider hero-banner-slider"
+    <section
+      className="hero-saas hero-slider hero-banner-slider"
       aria-roledescription="carousel"
       aria-label="Customs software highlights"
     >
+      <div className="hero-scenes" aria-hidden="true">
+        {slides.map((item, index) => (
+          <div
+            className={`hero-scene hero-scene--${item.scene}${index === active ? ' is-active' : ''}`}
+            key={item.scene}
+          >
+            <span className="hero-scene-grid" />
+            <span className="hero-scene-orb" />
+            {item.scene === 'skyline' && (
+              <svg
+                className="hero-scene-city"
+                viewBox="0 0 1440 260"
+                preserveAspectRatio="none"
+              >
+                <path d="M0,260 L0,190 L40,190 L40,150 L70,150 L70,120 L95,120 L95,170 L130,170 L130,140 L160,140 L160,100 L185,100 L185,160 L220,160 L220,130 L250,130 L250,180 L290,180 L290,110 L315,110 L315,90 L330,90 L330,110 L355,110 L355,175 L395,175 L395,145 L425,145 L425,120 L450,120 L450,165 L485,165 L485,135 L515,135 L515,190 L560,190 L560,150 L590,150 L590,105 L620,105 L620,100 L635,100 L635,105 L665,105 L665,160 L700,160 L700,125 L730,125 L730,180 L770,180 L770,140 L800,140 L800,110 L825,110 L825,170 L860,170 L860,130 L890,130 L890,195 L935,195 L935,155 L965,155 L965,115 L990,115 L990,100 L1005,100 L1005,115 L1030,115 L1030,170 L1070,170 L1070,135 L1100,135 L1100,190 L1145,190 L1145,150 L1175,150 L1175,120 L1200,120 L1200,165 L1235,165 L1235,140 L1265,140 L1265,195 L1310,195 L1310,160 L1340,160 L1340,130 L1365,130 L1365,185 L1400,185 L1400,200 L1440,200 L1440,260 Z" />
+              </svg>
+            )}
+            <span className="hero-scene-shape hero-scene-shape-a" />
+            <span className="hero-scene-shape hero-scene-shape-b" />
+            <span className="hero-scene-shape hero-scene-shape-c" />
+          </div>
+        ))}
+      </div>
+
       <div className="container hero-saas-grid">
         <div className="hero-saas-copy hero-slider-copy" key={active}>
           <p className="hero-saas-eyebrow">
@@ -165,6 +194,15 @@ export default function HeroSlider() {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="container hero-saas-strip">
+        <span>One workspace for</span>
+        <ul>
+          {systems.map((system) => (
+            <li key={system}>{system}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
   )
 }
