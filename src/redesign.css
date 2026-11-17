@@ -237,8 +237,8 @@ img {
 .page-title-lg {
   max-width: 20ch;
   margin: 0;
-  font-size: clamp(1.95rem, 3.7vw, 3.1rem);
-  line-height: 1.04;
+  font-size: clamp(1.75rem, 3.2vw, 2.7rem);
+  line-height: 1.06;
 }
 
 .lead {
@@ -3293,10 +3293,16 @@ img {
   background: #fff;
 }
 
-.home-login .section-heading-row > div > h2,
-.home-freight .section-heading-row > div > h2 {
+.home-page .section-heading-row > div > h2,
+.home-page .split-copy h2,
+.home-page .people-band h2 {
   font-size: clamp(1.65rem, 3vw, 2.5rem);
   line-height: 1.08;
+}
+
+.home-page .enquiry-copy h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+  line-height: 1.1;
 }
 
 .login-preview {
