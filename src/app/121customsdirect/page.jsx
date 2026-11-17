@@ -114,101 +114,82 @@ function Home() {
       <section className="docproc-section section-pad">
         <div className="container docproc-grid">
           <div className="docproc-copy">
-            <div className="docproc-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 4V2 M15 16v-2 M8 9h2 M20 9h2 M17.8 11.8L19 13 M17.8 6.2L19 5 M12.2 11.8L11 13 M12.2 6.2L11 5" />
-                <path d="M15 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-              </svg>
-            </div>
+            <p className="docproc-eyebrow">AI document processing</p>
             <h2 className="docproc-title">
-              <span>From Trade</span>
-              <span>Documents</span>
-              <span>to an AI-Generated</span>
-              <span className="docproc-title-green">Declaration Draft</span>
+              <span>From trade documents</span>
+              <span className="docproc-title-accent">to a declaration draft.</span>
             </h2>
             <p className="docproc-sub">
-              Invoices, packing lists and transport documents already contain much of the information
-              needed for customs declarations. Customs Intelligent Document Processing extracts,
-              structures and prepares the data for review, while you keep full control.
+              Upload invoices, packing lists and transport documents. We extract the data, structure
+              it and prepare the draft — you review and submit.
             </p>
-            <a
-              href={APP_URL}
-              className="docproc-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore Document Processing <span aria-hidden="true">→</span>
-            </a>
-            <span className="docproc-tag">
-              <span aria-hidden="true">🎁</span> Free for every declaration type
-            </span>
-          </div>
-
-          <div className="docproc-cards">
-            <article className="docproc-card docproc-card-blue">
-              <span className="docproc-card-icon">📄</span>
-              <div>
-                <strong>Commercial invoice</strong>
-                <small>invoice-2026-0918.pdf</small>
-                <div className="docproc-card-lines"><i /><i /></div>
-              </div>
-            </article>
-            <article className="docproc-card docproc-card-green">
-              <span className="docproc-card-icon">📦</span>
-              <div>
-                <strong>Packing list</strong>
-                <small>packing-list.xlsx</small>
-                <div className="docproc-card-lines"><i /><i /></div>
-              </div>
-            </article>
-            <article className="docproc-card docproc-card-orange">
-              <span className="docproc-card-icon">🚚</span>
-              <div>
-                <strong>Transport document</strong>
-                <small>CMR-44871.jpg</small>
-                <div className="docproc-card-lines"><i /><i /></div>
-              </div>
-            </article>
-          </div>
-
-          <div className="docproc-laptop">
-            <div className="laptop-frame">
-              <div className="laptop-screen">
-                <div className="laptop-topbar">
-                  <span className="laptop-brand">
-                    <span className="laptop-check">✓</span> CDUK
-                  </span>
-                  <span className="laptop-title">
-                    Declaration draft <span className="laptop-ai">AI</span>
-                  </span>
-                </div>
-                <div className="laptop-sidebar">
-                  <i /><i /><i />
-                </div>
-                <div className="laptop-table">
-                  {[
-                    ['Consignor', 'Example Trading GmbH'],
-                    ['Consignee', 'Example Imports Ltd'],
-                    ['Goods description', 'Laptops, 64 units'],
-                    ['Commodity code', '8471 30 00 00'],
-                    ['Net weight', '392.0 kg'],
-                    ['Transport / CMR', 'CMR-44871'],
-                    ['Customs value', '£12,480.00'],
-                  ].map(([label, value]) => (
-                    <div className="laptop-row" key={label}>
-                      <span>{label}</span>
-                      <span>{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="laptop-base" />
+            <div className="docproc-actions">
+              <a
+                href={APP_URL}
+                className="docproc-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                See it in the app <span aria-hidden="true">→</span>
+              </a>
+              <span className="docproc-note">No manual re-keying</span>
             </div>
-            <svg className="docproc-lines" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M40,40 C160,40 220,90 360,90" className="docproc-line docproc-line-blue" />
-              <path d="M40,150 C160,150 220,150 360,150" className="docproc-line docproc-line-green" />
-              <path d="M40,260 C160,260 220,210 360,210" className="docproc-line docproc-line-orange" />
-            </svg>
+          </div>
+
+          <div className="docproc-stage">
+            <div className="docproc-stage-top">
+              <span className="docproc-stage-label">Documents in</span>
+              <div className="docproc-doc-row">
+                <div className="docproc-doc">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6" />
+                  </svg>
+                  Invoice
+                </div>
+                <div className="docproc-doc">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M21 8l-9-5-9 5 9 5 9-5z M3 8v8l9 5 9-5V8" />
+                  </svg>
+                  Packing list
+                </div>
+                <div className="docproc-doc">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M1 3h15v13H1z M16 8h4l3 3v5h-7z" />
+                    <circle cx="5.5" cy="19" r="2" />
+                    <circle cx="18.5" cy="19" r="2" />
+                  </svg>
+                  CMR
+                </div>
+              </div>
+              <span className="docproc-stage-ai">AI</span>
+            </div>
+
+            <div className="docproc-stage-screen">
+              <div className="docproc-screen-head">
+                <span>Declaration draft</span>
+                <span className="docproc-screen-badge">AI assisted</span>
+              </div>
+              <div className="docproc-screen-grid">
+                {[
+                  ['Consignor', 'Example Trading GmbH'],
+                  ['Consignee', 'Example Imports Ltd'],
+                  ['Goods description', 'Laptops, 64 units'],
+                  ['Commodity code', '8471 30 00 00'],
+                  ['Net weight', '392.0 kg'],
+                  ['Customs value', '£12,480.00'],
+                ].map(([label, value]) => (
+                  <div className="docproc-screen-row" key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                  </div>
+                ))}
+              </div>
+              <div className="docproc-screen-footer">
+                <span><span aria-hidden="true">✓</span> Reviewed by you</span>
+                <strong>Ready to submit</strong>
+              </div>
+            </div>
+            <div className="docproc-stage-glow" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -217,39 +198,38 @@ function Home() {
       <section className="services-saas section-pad">
         <div className="container services-saas-grid">
           <div className="services-saas-copy">
-            <p className="eyebrow">OUR SERVICES</p>
+            <p className="eyebrow">Our services</p>
             <h2 className="services-saas-title">
-              Everything You Need to <span className="services-saas-green">Move</span>{' '}
-              <span className="services-saas-green">Goods Across</span> UK &amp; EU Borders
+              Six systems. <span>One workspace.</span>
             </h2>
             <p className="services-saas-sub">
-              Six border systems, one account. File GB CDS import and export declarations, GB and EU
-              safety and security filings, NCTS6 transit movements, GVMS Goods Movement References
-              and French ELO envelopes from the same cloud workspace. AI document processing and
-              real-time HMRC checks are built in. Pay as you go or choose a subscription plan, with
-              volume discounts available. No port badge needed for GVMS movements or export
-              declarations.
+              File GB CDS, EU ICS2, NCTS6, GVMS, GB S&amp;S and French ELO from one account — with
+              AI processing and HMRC checks built in.
             </p>
+            <div className="services-saas-actions">
+              <Link href="/121customsdirect/solutions" className="services-saas-btn">
+                Explore services <span aria-hidden="true">→</span>
+              </Link>
+              <span className="services-saas-note">Pay as you go or subscribe</span>
+            </div>
           </div>
-          <div className="services-saas-illustration" aria-hidden="true">
-            <div className="services-shield">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+
+          <div className="services-orbit" aria-label="Border systems supported by CustomsDirect">
+            <div className="services-orbit-ring services-orbit-ring-1" aria-hidden="true" />
+            <div className="services-orbit-ring services-orbit-ring-2" aria-hidden="true" />
+            <div className="services-orbit-core">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
+              <span>One account</span>
             </div>
-            <div className="services-doc services-doc-1">📄</div>
-            <div className="services-doc services-doc-2">👑</div>
-            <div className="services-doc services-doc-3">🇪🇺</div>
-            <div className="services-doc services-doc-4">📍</div>
-            <div className="services-doc services-doc-5">🚚</div>
-            <div className="services-doc services-doc-6">✉️</div>
-            <div className="services-scene">
-              <span className="services-sun" />
-              <span className="services-ship">🚢</span>
-              <span className="services-truck">🚛</span>
-              <span className="services-crane">🏗️</span>
-            </div>
+            <div className="services-orbit-chip chip-1"><i />GB CDS</div>
+            <div className="services-orbit-chip chip-2"><i />EU ICS2</div>
+            <div className="services-orbit-chip chip-3"><i />NCTS6</div>
+            <div className="services-orbit-chip chip-4"><i />GVMS</div>
+            <div className="services-orbit-chip chip-5"><i />French ELO</div>
+            <div className="services-orbit-chip chip-6"><i />GB S&amp;S</div>
           </div>
         </div>
       </section>
