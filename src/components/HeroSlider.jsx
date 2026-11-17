@@ -176,6 +176,7 @@ export default function HeroSlider() {
                 {active + 1} / {slides.length}
               </span>
             </div>
+            <span key={active} className="hero-slider-progress" aria-hidden="true" />
           </div>
 
           <div className="hero-slider-controls">
