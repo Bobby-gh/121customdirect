@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '../../components/Hero'
 import EnquiryForm from '../../components/EnquiryForm'
-import AppPreview from '../../components/AppPreview'
 import LoginPreview from '../../components/LoginPreview'
 import ServiceIcon from '../../components/ServiceIcon'
 import { businessMeeting, portCranes, warehouseBoxes } from '../../components/images'
@@ -64,7 +63,7 @@ const steps = [
   {
     number: '02',
     title: 'Authorise with HMRC',
-    detail: 'Connect CustomsDirect to CDS so declarations can be filed.',
+    detail: 'Connect the app to CDS so declarations can be filed.',
   },
   {
     number: '03',
@@ -136,100 +135,29 @@ function Home() {
             </div>
           </div>
 
-          <div className="docproc-stage">
-            <div className="docproc-stage-top">
-              <span className="docproc-stage-label">Documents in</span>
-              <div className="docproc-doc-row">
-                <div className="docproc-doc">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6" />
-                  </svg>
-                  Invoice
-                </div>
-                <div className="docproc-doc">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M21 8l-9-5-9 5 9 5 9-5z M3 8v8l9 5 9-5V8" />
-                  </svg>
-                  Packing list
-                </div>
-                <div className="docproc-doc">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M1 3h15v13H1z M16 8h4l3 3v5h-7z" />
-                    <circle cx="5.5" cy="19" r="2" />
-                    <circle cx="18.5" cy="19" r="2" />
-                  </svg>
-                  CMR
-                </div>
-              </div>
-              <span className="docproc-stage-ai">AI</span>
+          <div className="system-shot system-shot-docproc">
+            <div className="system-shot-bar">
+              <span className="system-shot-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span className="system-shot-title">AI document upload</span>
+              <span className="system-shot-tag">Real screen</span>
             </div>
-
-            <div className="docproc-stage-screen">
-              <div className="docproc-screen-head">
-                <span>Declaration draft</span>
-                <span className="docproc-screen-badge">AI assisted</span>
-              </div>
-              <div className="docproc-screen-grid">
-                {[
-                  ['Consignor', 'Example Trading GmbH'],
-                  ['Consignee', 'Example Imports Ltd'],
-                  ['Goods description', 'Laptops, 64 units'],
-                  ['Commodity code', '8471 30 00 00'],
-                  ['Net weight', '392.0 kg'],
-                  ['Customs value', '£12,480.00'],
-                ].map(([label, value]) => (
-                  <div className="docproc-screen-row" key={label}>
-                    <span>{label}</span>
-                    <strong>{value}</strong>
-                  </div>
-                ))}
-              </div>
-              <div className="docproc-screen-footer">
-                <span><span aria-hidden="true">✓</span> Reviewed by you</span>
-                <strong>Ready to submit</strong>
-              </div>
+            <div className="system-shot-media">
+              <Image
+                src="/images/declaration-upload.png"
+                alt="Upload an invoice, fill a declaration form or bulk upload customs documents"
+                fill
+                sizes="(max-width: 980px) 100vw, 54vw"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
             </div>
-            <div className="docproc-stage-glow" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
-
-      {/* Services illustration */}
-      <section className="services-saas section-pad">
-        <div className="container services-saas-grid">
-          <div className="services-saas-copy">
-            <p className="eyebrow">Our services</p>
-            <h2 className="services-saas-title">
-              Six systems. <span>One workspace.</span>
-            </h2>
-            <p className="services-saas-sub">
-              File GB CDS, EU ICS2, NCTS6, GVMS, GB S&amp;S and French ELO from one account — with
-              AI processing and HMRC checks built in.
-            </p>
-            <div className="services-saas-actions">
-              <Link href="/121customsdirect/solutions" className="services-saas-btn">
-                Explore services <span aria-hidden="true">→</span>
-              </Link>
-              <span className="services-saas-note">Pay as you go or subscribe</span>
+            <div className="system-shot-caption">
+              <span>Upload documents. AI prepares the draft.</span>
+              <span>Live system</span>
             </div>
-          </div>
-
-          <div className="services-orbit" aria-label="Border systems supported by CustomsDirect">
-            <div className="services-orbit-ring services-orbit-ring-1" aria-hidden="true" />
-            <div className="services-orbit-ring services-orbit-ring-2" aria-hidden="true" />
-            <div className="services-orbit-core">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M9 12l2 2 4-4" />
-              </svg>
-              <span>One account</span>
-            </div>
-            <div className="services-orbit-chip chip-1"><i />GB CDS</div>
-            <div className="services-orbit-chip chip-2"><i />EU ICS2</div>
-            <div className="services-orbit-chip chip-3"><i />NCTS6</div>
-            <div className="services-orbit-chip chip-4"><i />GVMS</div>
-            <div className="services-orbit-chip chip-5"><i />French ELO</div>
-            <div className="services-orbit-chip chip-6"><i />GB S&amp;S</div>
           </div>
         </div>
       </section>
@@ -241,7 +169,7 @@ function Home() {
             <p className="eyebrow">What we do</p>
             <h2 className="page-title-lg">Everything a declarant needs to file with HMRC.</h2>
             <p className="lead">
-              We support declarants moving goods into and out of Great Britain. CustomsDirect brings
+              We support declarants moving goods into and out of Great Britain. Our platform brings
               the declaration, the checks and the customs support together — so you can prepare and
               submit to HMRC’s Customs Declaration Service with confidence.
             </p>
@@ -277,6 +205,53 @@ function Home() {
             <div className="media-badge">
               <span className="media-badge-value">CDS</span>
               <span className="media-badge-label">Customs Declaration Service</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services illustration */}
+      <section className="services-saas section-pad">
+        <div className="container services-saas-grid">
+          <div className="services-saas-copy">
+            <p className="eyebrow">Our services</p>
+            <h2 className="services-saas-title">
+              Six systems. <span>One workspace.</span>
+            </h2>
+            <p className="services-saas-sub">
+              File GB CDS, EU ICS2, NCTS6, GVMS, GB S&amp;S and French ELO from one account — with
+              AI processing and HMRC checks built in.
+            </p>
+            <div className="services-saas-actions">
+              <Link href="/121customsdirect/solutions" className="services-saas-btn">
+                Explore services <span aria-hidden="true">→</span>
+              </Link>
+              <span className="services-saas-note">Pay as you go or subscribe</span>
+            </div>
+          </div>
+
+          <div className="system-shot system-shot-services">
+            <div className="system-shot-bar">
+              <span className="system-shot-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span className="system-shot-title">CDS declaration form</span>
+              <span className="system-shot-tag">Real screen</span>
+            </div>
+            <div className="system-shot-media system-shot-media-tall">
+              <Image
+                src="/images/cds-declaration-form.png"
+                alt="CDS declaration form showing header-level declaration fields"
+                fill
+                sizes="(max-width: 980px) 100vw, 54vw"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
+            </div>
+            <div className="system-shot-caption">
+              <span>Guided header and item fields, built around CDS.</span>
+              <span>Live system</span>
             </div>
           </div>
         </div>
@@ -342,18 +317,18 @@ function Home() {
         </div>
       </section>
 
-      {/* CustomsDirect app highlight */}
+      {/* App highlight */}
       <section className="section-pad app-highlight section-dark">
         <div className="container app-highlight-grid">
           <div className="app-highlight-copy">
             <p className="eyebrow">
-              CustomsDirect app
+              The app
               <span className="app-pill">New</span>
             </p>
             <h2>Yours to file. Ours to back up.</h2>
             <p>
-              CustomsDirect is the declaration platform we support. Build an entry, see the duty and
-              VAT, submit to HMRC’s CDS — or have us check it first.
+              Our declaration platform lets you build an entry, see the duty and VAT, submit to
+              HMRC’s CDS — or have us check it first.
             </p>
             <ul className="tick-list tick-list-wide">
               <li>Guided CDS declaration builder</li>
@@ -363,7 +338,7 @@ function Home() {
             </ul>
             <div className="app-highlight-actions">
               <Link href="/121customsdirect/solutions/customsdirect" className="button button-dark">
-                See CustomsDirect <span aria-hidden="true">→</span>
+                See how it works <span aria-hidden="true">→</span>
               </Link>
               <a
                 href={APP_URL}
@@ -375,7 +350,30 @@ function Home() {
               </a>
             </div>
           </div>
-          <AppPreview />
+          <div className="system-shot system-shot-app">
+            <div className="system-shot-bar">
+              <span className="system-shot-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span className="system-shot-title">Declaration queue</span>
+              <span className="system-shot-tag">Real screen</span>
+            </div>
+            <div className="system-shot-media system-shot-media-wide">
+              <Image
+                src="/images/cds-table.png"
+                alt="Declaration queue showing submitted entries, references and clearance statuses"
+                fill
+                sizes="(max-width: 980px) 100vw, 54vw"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
+            </div>
+            <div className="system-shot-caption">
+              <span>Every entry, reference and status in one view.</span>
+              <span>Live system</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -388,7 +386,7 @@ function Home() {
               <h2>Sign in and file from your own desk.</h2>
             </div>
             <p className="section-note">
-              The CustomsDirect login screen — your declarations, your business, your team.
+              The login screen — your declarations, your business, your team.
             </p>
           </div>
           <LoginPreview />
@@ -429,7 +427,26 @@ function Home() {
       <section className="section-pad home-about section-dark">
         <div className="container split-layout">
           <div className="home-about-panel">
-            <AppPreview />
+            <div className="system-shot system-shot-about">
+              <div className="system-shot-bar">
+                <span className="system-shot-dots" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <span className="system-shot-title">CDS declaration form</span>
+                <span className="system-shot-tag">Real screen</span>
+              </div>
+              <div className="system-shot-media">
+                <Image
+                  src="/images/cds-declaration-form.png"
+                  alt="CDS declaration form with guided header-level fields"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 45vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                />
+              </div>
+            </div>
             <div className="home-about-note">
               <span className="media-badge-value">Support included</span>
               <span className="media-badge-label">
@@ -442,8 +459,8 @@ function Home() {
             <p className="eyebrow">About us</p>
             <h2>Software backed by people who file declarations.</h2>
             <p>
-              We support declarants on the CustomsDirect platform every day. We know where entries
-              go wrong — and we are on hand when one needs checking.
+              We support declarants on our declaration platform every day. We know where entries go
+              wrong — and we are on hand when one needs checking.
             </p>
             <ul className="tick-list tick-list-wide">
               {capabilities.map((item) => (
@@ -508,7 +525,7 @@ function Home() {
               <h2>Trusted by traders and forwarders.</h2>
             </div>
             <p className="section-note">
-              Importers, exporters and customs agents filing through CustomsDirect.
+              Importers, exporters and customs agents filing through our platform.
             </p>
           </div>
 
@@ -542,7 +559,7 @@ function Home() {
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
               <li>Are you filing yourself or do you need our team?</li>
-              <li>Would you like a walkthrough of CustomsDirect?</li>
+              <li>Would you like a walkthrough of the app?</li>
             </ul>
             <div className="enquiry-contact">
               <p>
@@ -564,7 +581,7 @@ function Home() {
       <section className="closing-cta">
         <div className="container closing-cta-inner">
           <h2>Ready to submit your first declaration?</h2>
-          <p>Open CustomsDirect and set up your business — or ask us to walk you through it.</p>
+          <p>Open the app and set up your business — or ask us to walk you through it.</p>
           <div className="closing-cta-actions">
             <a
               href={APP_URL}
@@ -572,7 +589,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open CustomsDirect <span aria-hidden="true">↗</span>
+              Open the app <span aria-hidden="true">↗</span>
             </a>
             <Link
               href="/121customsdirect/contact"

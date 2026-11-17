@@ -1,17 +1,17 @@
 /**
- * Stylised preview of the CustomsDirect app interface.
+ * Stylised preview of the declaration app interface.
  * Built in HTML/CSS rather than a screenshot so it stays crisp and on-brand.
  */
 export default function AppPreview() {
   return (
-    <div className="app-preview" aria-label="Preview of the CustomsDirect declaration app">
+    <div className="app-preview" aria-label="Preview of the declaration app">
       <div className="app-preview-bar">
         <span className="app-preview-dots" aria-hidden="true">
           <i />
           <i />
           <i />
         </span>
-        <span className="app-preview-url">app.customsdirect.uk</span>
+        <span className="app-preview-url">customs-declarations.uk</span>
         <span className="app-preview-tag">CDS</span>
       </div>
 

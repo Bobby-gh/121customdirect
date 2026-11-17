@@ -33,7 +33,7 @@ function Footer() {
               Log in to the app
             </a>
             <Link href="/121customsdirect/solutions">Our services</Link>
-            <Link href="/121customsdirect/solutions/customsdirect">CustomsDirect app</Link>
+            <Link href="/121customsdirect/solutions/customsdirect">Declaration app</Link>
             <Link href="/121customsdirect/contact">Ask a question</Link>
           </div>
         </div>

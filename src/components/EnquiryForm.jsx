@@ -6,7 +6,7 @@ const initialValues = {
   name: '',
   email: '',
   company: '',
-  enquiryType: 'CustomsDirect software',
+  enquiryType: 'Declaration software',
   origin: '',
   destination: '',
   goods: '',
@@ -55,7 +55,7 @@ export default function EnquiryForm() {
         setSubmitted(true)
       }}
     >
-      <h3>Ask about CustomsDirect</h3>
+      <h3>Ask about the app</h3>
       <p className="form-intro">Takes about a minute.</p>
 
       <div className="form-row">
@@ -113,7 +113,7 @@ export default function EnquiryForm() {
             value={values.enquiryType}
             onChange={update('enquiryType')}
           >
-            <option>CustomsDirect software</option>
+            <option>Declaration software</option>
             <option>Import declaration</option>
             <option>Export declaration</option>
             <option>Duty &amp; VAT question</option>

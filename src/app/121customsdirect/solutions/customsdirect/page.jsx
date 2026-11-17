@@ -64,23 +64,23 @@ const steps = [
 function CustomsDirectApp() {
   return (
     <main className="app-page">
-      <PageHero label="CustomsDirect app" />
+      <PageHero label="Declaration app" />
 
       <section className="section-pad page-intro">
         <div className="container page-intro-grid">
           <div>
-            <p className="eyebrow">CustomsDirect app</p>
+            <p className="eyebrow">Declaration app</p>
             <h1 className="page-title-lg">Declarations from your own desk.</h1>
           </div>
           <div>
             <p className="lead">
-              CustomsDirect is the platform we support for preparing and submitting import and
+              Our declaration platform is built for preparing and submitting import and
               export entries to HMRC’s CDS — with a team that files declarations daily.
             </p>
             <p>When an entry needs a second pair of eyes, we are one message away.</p>
             <div className="app-intro-actions">
               <a href={APP_URL} className="button button-dark" target="_blank" rel="noopener noreferrer">
-                Open CustomsDirect <span aria-hidden="true">↗</span>
+                Open the app <span aria-hidden="true">↗</span>
               </a>
               <Link href="/121customsdirect/contact" className="text-link">
                 Ask about access <span aria-hidden="true">→</span>
@@ -212,7 +212,7 @@ function CustomsDirectApp() {
           <p>Open the app and set up your business — or ask us to walk you through it.</p>
           <div className="closing-cta-actions">
             <a href={APP_URL} className="button button-light" target="_blank" rel="noopener noreferrer">
-              Launch CustomsDirect <span aria-hidden="true">↗</span>
+              Launch the app <span aria-hidden="true">↗</span>
             </a>
             <Link href="/121customsdirect/contact" className="button button-outline button-outline-light">
               Talk to the team

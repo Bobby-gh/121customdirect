@@ -59,14 +59,14 @@ const faqs = [
       'Commercial invoice, packing list, transport document, commodity codes, values and origin. If anything is missing, the software flags it before you submit.',
   },
   {
-    question: 'Is CustomsDirect software or a brokerage?',
+    question: 'Is the app software or a brokerage?',
     answer:
       'It is self-service software. Your team files its own declarations using guided entries and built-in checks — or our customs team can file on your behalf.',
   },
   {
     question: 'Do I need my own HMRC authorisation?',
     answer:
-      'Yes. You authorise CustomsDirect against your GB EORI in CDS. We help you set this up during onboarding.',
+      'Yes. You authorise the app against your GB EORI in CDS. We help you set this up during onboarding.',
   },
   {
     question: 'Does the software work for occasional importers?',
@@ -88,7 +88,7 @@ function SolutionsContent() {
           <div>
             <p className="lead">
               We support declarants moving goods into and out of Great Britain, with everything the
-              declaration needs in one place. File it yourself in CustomsDirect, or ask our customs
+              declaration needs in one place. File it yourself in the app, or ask our customs
               team to prepare and submit it for you.
             </p>
             <p>Use one service or combine them.</p>
@@ -96,17 +96,17 @@ function SolutionsContent() {
         </div>
       </section>
 
-      {/* CustomsDirect app spotlight */}
+      {/* App spotlight */}
       <section className="solutions-app-spotlight">
         <div className="container app-feature-banner">
           <div className="app-feature-copy">
             <p className="eyebrow eyebrow-light">
-              CustomsDirect app
+              Declaration app
               <span className="app-pill app-pill-light">App</span>
             </p>
             <h2>Submit your own HMRC declarations.</h2>
             <p>
-              The CustomsDirect platform for UK importers, exporters and forwarders. Build an entry,
+              Our declaration platform for UK importers, exporters and forwarders. Build an entry,
               see the duty and VAT, send it to CDS and track it to clearance.
             </p>
             <div className="app-feature-actions">
@@ -119,7 +119,7 @@ function SolutionsContent() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open CustomsDirect <span aria-hidden="true">↗</span>
+                Open the app <span aria-hidden="true">↗</span>
               </a>
             </div>
             <ul className="app-feature-points">

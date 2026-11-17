@@ -1,3 +1,5 @@
+import HeroSlider from './HeroSlider'
+
 const APP_URL = 'https://customs-uk.vercel.app/'
 
 const systems = ['GB CDS', 'EU ICS2', 'NCTS6', 'GVMS', 'French ELO', 'GB S&S']
@@ -32,8 +34,8 @@ export default function Hero() {
             <rect x="-12" y="30" width="24" height="130" fill="#08376B" />
             <polygon points="-12,30 12,30 0,0" fill="#08376B" />
             <rect x="-16" y="160" width="32" height="10" fill="#08376B" />
-            <circle cx="0" cy="62" r="6" fill="#f5c542" />
-            <rect x="-2" y="78" width="4" height="90" fill="#f5c542" opacity="0.55" />
+            <circle cx="0" cy="62" r="6" fill="#04B1C4" />
+            <rect x="-2" y="78" width="4" height="90" fill="#04B1C4" opacity="0.55" />
           </g>
         </svg>
         <div className="hero-saas-horizon" />
@@ -80,110 +82,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-saas-visual">
-          <div className="hero-mockup">
-            <div className="hero-mockup-chrome">
-              <span className="hero-mockup-dots">
-                <i />
-                <i />
-                <i />
-              </span>
-              <span className="hero-mockup-url">app.customs-declarations.uk</span>
-              <span className="hero-mockup-cds">HMRC CDS</span>
-            </div>
-            <div className="hero-mockup-body">
-              <aside className="hero-mockup-rail">
-                <span className="is-active">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6" />
-                  </svg>
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                  </svg>
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 11l3 3L22 4 M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-                  </svg>
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </span>
-              </aside>
-
-              <main className="hero-mockup-main">
-                <div className="hero-mockup-head">
-                  <div>
-                    <span className="hero-mockup-kicker">Declaration draft</span>
-                    <strong>Import · CD-2026-0418</strong>
-                  </div>
-                  <span className="hero-mockup-status">AI extracted</span>
-                </div>
-
-                <div className="hero-mockup-fields">
-                  <div>
-                    <span>Consignor</span>
-                    <strong>Example Trading GmbH</strong>
-                  </div>
-                  <div>
-                    <span>Commodity code</span>
-                    <strong>8471 30 00 00</strong>
-                  </div>
-                  <div>
-                    <span>Customs value</span>
-                    <strong>£12,480.00</strong>
-                  </div>
-                  <div>
-                    <span>Documents</span>
-                    <strong>3 attached</strong>
-                  </div>
-                </div>
-
-                <div className="hero-mockup-flow">
-                  <div className="hero-mockup-file">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6" />
-                    </svg>
-                    Invoice
-                  </div>
-                  <div className="hero-mockup-file">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M21 8l-9-5-9 5 9 5 9-5z M3 8v8l9 5 9-5V8" />
-                    </svg>
-                    Packing list
-                  </div>
-                  <div className="hero-mockup-file">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M1 3h15v13H1z M16 8h4l3 3v5h-7z" />
-                      <circle cx="5.5" cy="19" r="2" />
-                      <circle cx="18.5" cy="19" r="2" />
-                    </svg>
-                    CMR
-                  </div>
-                  <span className="hero-mockup-arrow" aria-hidden="true">→</span>
-                  <span className="hero-mockup-ai">AI</span>
-                </div>
-              </main>
-            </div>
-          </div>
-
-          <div className="hero-float hero-float-top">
-            <span className="hero-float-dot" aria-hidden="true" />
-            <span>
-              <strong>AI extraction complete</strong>
-              <small>3 documents read</small>
-            </span>
-          </div>
-          <div className="hero-float hero-float-bottom">
-            <span className="hero-float-check" aria-hidden="true">✓</span>
-            <span>
-              <strong>Ready for HMRC CDS</strong>
-              <small>Validated and reviewed</small>
-            </span>
-          </div>
+          <HeroSlider />
         </div>
       </div>
 

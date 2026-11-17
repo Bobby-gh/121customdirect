@@ -3,7 +3,7 @@ import { cargoShipSea } from './images'
 
 export default function LoginPreview() {
   return (
-    <div className="login-preview" aria-label="Preview of the CustomsDirect login screen">
+    <div className="login-preview" aria-label="Preview of the login screen">
       <div className="login-preview-form">
         <h3>Welcome back!</h3>
         <p>Enter your credentials</p>

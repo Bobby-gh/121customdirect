@@ -12,7 +12,7 @@ const initialValues = {
   name: '',
   email: '',
   company: '',
-  enquiryType: 'CustomsDirect software',
+  enquiryType: 'Declaration software',
   origin: '',
   destination: '',
   goods: '',
@@ -57,7 +57,7 @@ export default function Contact() {
             <ul className="contact-prompt-list">
               <li>What are you importing or exporting?</li>
               <li>Do you file in-house or need a broker?</li>
-              <li>Would you like a walkthrough of CustomsDirect?</li>
+              <li>Would you like a walkthrough of the app?</li>
             </ul>
 
             <div className="contact-details">
@@ -78,7 +78,7 @@ export default function Contact() {
                 <span>Birmingham, United Kingdom</span>
               </div>
               <div className="contact-detail-row">
-                <span className="contact-detail-label">CustomsDirect</span>
+                <span className="contact-detail-label">App</span>
                 <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                   Open the app ↗
                 </a>
@@ -179,7 +179,7 @@ export default function Contact() {
                       value={values.enquiryType}
                       onChange={update('enquiryType')}
                     >
-                      <option>CustomsDirect software</option>
+                      <option>Declaration software</option>
                       <option>Import declaration</option>
                       <option>Export declaration</option>
                       <option>Duty &amp; VAT question</option>

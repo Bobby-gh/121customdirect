@@ -65,7 +65,7 @@ function AboutContent() {
           <div>
             <p className="lead">
               We give importers, exporters and customs agents everything they need to make a
-              declaration to HMRC: the CustomsDirect platform, the checks, and a customs team that
+              declaration to HMRC: our declaration platform, the checks, and a customs team that
               files every day.
             </p>
             <p>A named contact, checked entries, a straight answer.</p>
@@ -80,7 +80,7 @@ function AboutContent() {
             <div className="home-about-note">
               <span className="media-badge-value">Our own team</span>
               <span className="media-badge-label">
-                Supporting GB import and export declarations in CustomsDirect every day
+                Supporting GB import and export declarations in the app every day
               </span>
             </div>
           </div>
@@ -93,7 +93,7 @@ function AboutContent() {
               easy to lose track of what is filed and what is outstanding.
             </p>
             <p>
-              We work in CustomsDirect every day, and the checks we make by hand are part of the
+              We work in the app every day, and the checks we make by hand are part of the
               support we give declarants — so fewer entries come back with queries.
             </p>
             <Link href="/121customsdirect/contact" className="text-link">
@@ -175,7 +175,7 @@ function AboutContent() {
               <h2>Trusted by traders and forwarders.</h2>
             </div>
             <p className="section-note">
-              Importers, exporters and customs agents filing through CustomsDirect.
+              Importers, exporters and customs agents filing through our platform.
             </p>
           </div>
           <div className="partner-wall">

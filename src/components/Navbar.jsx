@@ -63,7 +63,7 @@ function Navbar() {
                       onClick={handleNavClick}
                     >
                       <span className="nav-dropdown-title">
-                        CustomsDirect app
+                        Declaration app
                         <span className="nav-badge">App</span>
                       </span>
                       <span className="nav-dropdown-sub">Declaration software</span>
