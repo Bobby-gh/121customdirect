@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 const APP_URL = 'https://customs-uk.vercel.app/'
 
 const navItems = [
-  { label: 'Home', path: '/121customsdirect' },
+  { label: 'Home', path: '/' },
   { label: 'About', path: '/121customsdirect/about' },
   { label: 'Solutions', path: '/121customsdirect/solutions' },
   { label: 'Contact', path: '/121customsdirect/contact' },
@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <Link href="/121customsdirect" className="logo" onClick={handleNavClick}>
+        <Link href="/" className="logo" onClick={handleNavClick}>
           <svg className="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="8" fill="#08376b" />
             <path d="M12 28V12L20 8L28 12V28" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
