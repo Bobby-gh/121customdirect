@@ -237,8 +237,8 @@ img {
 .page-title-lg {
   max-width: 20ch;
   margin: 0;
-  font-size: clamp(2.4rem, 4.6vw, 3.9rem);
-  line-height: 1.02;
+  font-size: clamp(1.95rem, 3.7vw, 3.1rem);
+  line-height: 1.04;
 }
 
 .lead {
@@ -3293,6 +3293,12 @@ img {
   background: #fff;
 }
 
+.home-login .section-heading-row > div > h2,
+.home-freight .section-heading-row > div > h2 {
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.08;
+}
+
 .login-preview {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3515,8 +3521,8 @@ img {
   display: flex;
   flex-direction: column;
   margin: 1.35rem 0 1.1rem;
-  font-size: clamp(2.2rem, 4.1vw, 3.6rem);
-  line-height: 1.02;
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.045em;
 }
@@ -3992,8 +3998,8 @@ img {
   flex-direction: column;
   margin: 1rem 0 1.1rem;
   color: #08376B;
-  font-size: clamp(2rem, 3.8vw, 3.1rem);
-  line-height: 1.02;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.035em;
 }
@@ -4262,8 +4268,8 @@ img {
 .services-saas-title {
   margin: 0.8rem 0 1rem;
   color: #08376B;
-  font-size: clamp(2rem, 3.8vw, 3.1rem);
-  line-height: 1.02;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.035em;
 }
@@ -4456,7 +4462,7 @@ img {
   }
 
   .hero-saas-title {
-    font-size: clamp(1.9rem, 8.2vw, 2.5rem);
+    font-size: clamp(1.65rem, 7.2vw, 2.15rem);
   }
 
   .hero-saas-actions {
