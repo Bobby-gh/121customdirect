@@ -1,7 +1,5 @@
 import HeroSlider from './HeroSlider'
 
-const APP_URL = 'https://customs-uk.vercel.app/'
-
 const systems = ['GB CDS', 'EU ICS2', 'NCTS6', 'GVMS', 'French ELO', 'GB S&S']
 
 export default function Hero() {
@@ -41,50 +39,7 @@ export default function Hero() {
         <div className="hero-saas-horizon" />
       </div>
 
-      <div className="container hero-saas-grid">
-        <div className="hero-saas-copy">
-          <p className="hero-saas-eyebrow">
-            <span className="hero-saas-dot" aria-hidden="true" />
-            Customs software for GB &amp; EU trade
-          </p>
-          <h1 className="hero-saas-title">
-            <span>Customs declarations,</span>
-            <span className="hero-saas-title-accent">made clear.</span>
-          </h1>
-          <p className="hero-saas-sub">
-            Prepare, validate and submit to HMRC CDS — with AI document processing and a UK customs
-            team behind you.
-          </p>
-          <div className="hero-saas-actions">
-            <a
-              href={APP_URL}
-              className="hero-saas-btn hero-saas-btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open the app <span aria-hidden="true">↗</span>
-            </a>
-            <a href="/121customsdirect/contact" className="hero-saas-btn hero-saas-btn-secondary">
-              Book a demo
-            </a>
-          </div>
-          <ul className="hero-saas-chips">
-            <li>
-              <span aria-hidden="true">✓</span> CDS ready
-            </li>
-            <li>
-              <span aria-hidden="true">✦</span> AI extraction
-            </li>
-            <li>
-              <span aria-hidden="true">●</span> UK support
-            </li>
-          </ul>
-        </div>
-
-        <div className="hero-saas-visual">
-          <HeroSlider />
-        </div>
-      </div>
+      <HeroSlider />
 
       <div className="container hero-saas-strip">
         <span>One workspace for</span>
