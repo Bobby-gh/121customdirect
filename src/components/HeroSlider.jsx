@@ -24,8 +24,8 @@ const slides = [
     label: 'AI document upload',
     eyebrow: 'AI document processing',
     title: [
-      { text: 'Documents in.' },
-      { text: 'Draft out.', accent: true },
+      { text: 'Documents become' },
+      { text: 'declarations.', accent: true },
     ],
     sub: 'Upload invoices and packing lists. AI builds the entry for you to review.',
     position: 'center center',
@@ -150,14 +150,6 @@ export default function HeroSlider() {
           </div>
 
           <div className="hero-slider-controls">
-            <button
-              type="button"
-              className="hero-slider-arrow"
-              onClick={() => goTo(active - 1)}
-              aria-label="Previous slide"
-            >
-              ←
-            </button>
             <div className="hero-slider-dots-nav">
               {slides.map((item, index) => (
                 <button
@@ -170,14 +162,6 @@ export default function HeroSlider() {
                 />
               ))}
             </div>
-            <button
-              type="button"
-              className="hero-slider-arrow"
-              onClick={() => goTo(active + 1)}
-              aria-label="Next slide"
-            >
-              →
-            </button>
           </div>
         </div>
       </div>

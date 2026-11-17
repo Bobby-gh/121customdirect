@@ -4652,28 +4652,6 @@ img {
   margin-top: 0.9rem;
 }
 
-.hero-slider-arrow {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  padding: 0;
-  border: 1px solid rgba(8, 55, 107, 0.16);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.74);
-  color: #08376B;
-  font-size: 0.9rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
-}
-
-.hero-slider-arrow:hover {
-  border-color: #08376B;
-  background: #08376B;
-  color: #fff;
-}
-
 .hero-slider-dots-nav {
   display: flex;
   align-items: center;
@@ -4696,7 +4674,6 @@ img {
   background: #04B1C4;
 }
 
-.hero-slider-arrow:focus-visible,
 .hero-slider-dot:focus-visible {
   outline: 2px solid #04B1C4;
   outline-offset: 2px;
