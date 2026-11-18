@@ -3429,7 +3429,7 @@ img {
 .hero-saas {
   position: relative;
   overflow: hidden;
-  min-height: clamp(640px, 90vh, 940px);
+  min-height: clamp(700px, 96vh, 1000px);
   color: #ffffff;
   background: #031a31;
 }
