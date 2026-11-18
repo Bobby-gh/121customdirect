@@ -109,6 +109,54 @@ function Home() {
     <main className="home-page">
       <Hero />
 
+      {/* Intro / who we are */}
+      <section className="section-pad home-welcome">
+        <div className="container home-welcome-grid">
+          <div className="home-welcome-copy">
+            <p className="eyebrow">What we do</p>
+            <h2 className="page-title-lg">Everything a declarant needs to file with HMRC.</h2>
+            <p className="lead">
+              We support declarants moving goods into and out of Great Britain. Our platform brings
+              the declaration, the checks and the customs support together — so you can prepare and
+              submit to HMRC’s Customs Declaration Service with confidence.
+            </p>
+            <div className="home-welcome-actions">
+              <a
+                href={APP_URL}
+                className="button button-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open the app
+                <span aria-hidden="true">↗</span>
+              </a>
+              <Link href="/solutions/customsdirect" className="text-link">
+                See how it works
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="home-welcome-visual">
+            <div className="media-frame media-tall">
+              <Image
+                src={businessMeeting}
+                alt="Colleagues around a table in a business meeting"
+                fill
+                sizes="(max-width: 900px) 100vw, 45vw"
+                style={{ objectFit: 'cover' }}
+                unoptimized
+                priority
+              />
+            </div>
+            <div className="media-badge">
+              <span className="media-badge-value">CDS</span>
+              <span className="media-badge-label">Customs Declaration Service</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Document processing */}
       <section className="docproc-section section-pad">
         <div className="container docproc-grid">
@@ -162,51 +210,15 @@ function Home() {
         </div>
       </section>
 
-      {/* Intro / who we are */}
-      <section className="section-pad home-welcome">
-        <div className="container home-welcome-grid">
-          <div className="home-welcome-copy">
-            <p className="eyebrow">What we do</p>
-            <h2 className="page-title-lg">Everything a declarant needs to file with HMRC.</h2>
-            <p className="lead">
-              We support declarants moving goods into and out of Great Britain. Our platform brings
-              the declaration, the checks and the customs support together — so you can prepare and
-              submit to HMRC’s Customs Declaration Service with confidence.
-            </p>
-            <div className="home-welcome-actions">
-              <a
-                href={APP_URL}
-                className="button button-dark"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open the app
-                <span aria-hidden="true">↗</span>
-              </a>
-              <Link href="/solutions/customsdirect" className="text-link">
-                See how it works
-                <span aria-hidden="true">↗</span>
-              </Link>
+      {/* Stats */}
+      <section className="stats-band">
+        <div className="container stats-band-grid">
+          {stats.map((stat) => (
+            <div className="stats-band-item" key={stat.label}>
+              <span className="stats-band-value">{stat.value}</span>
+              <span className="stats-band-label">{stat.label}</span>
             </div>
-          </div>
-
-          <div className="home-welcome-visual">
-            <div className="media-frame media-tall">
-              <Image
-                src={businessMeeting}
-                alt="Colleagues around a table in a business meeting"
-                fill
-                sizes="(max-width: 900px) 100vw, 45vw"
-                style={{ objectFit: 'cover' }}
-                unoptimized
-                priority
-              />
-            </div>
-            <div className="media-badge">
-              <span className="media-badge-value">CDS</span>
-              <span className="media-badge-label">Customs Declaration Service</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -257,17 +269,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="stats-band">
-        <div className="container stats-band-grid">
-          {stats.map((stat) => (
-            <div className="stats-band-item" key={stat.label}>
-              <span className="stats-band-value">{stat.value}</span>
-              <span className="stats-band-label">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Services */}
       <section className="section-pad home-services">
