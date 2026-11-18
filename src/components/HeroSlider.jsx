@@ -49,16 +49,18 @@ const slides = [
   },
 ]
 
+const SLIDE_MS = 6500
+
 export default function HeroSlider() {
   const [active, setActive] = useState(0)
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
+    const timer = window.setTimeout(() => {
       setActive((current) => (current + 1) % slides.length)
-    }, 6500)
+    }, SLIDE_MS)
 
-    return () => window.clearInterval(timer)
-  }, [])
+    return () => window.clearTimeout(timer)
+  }, [active])
 
   const goTo = (index) => setActive((index + slides.length) % slides.length)
   const slide = slides[active]
@@ -203,6 +205,10 @@ export default function HeroSlider() {
             <li key={system}>{system}</li>
           ))}
         </ul>
+      </div>
+
+      <div className="hero-loader" key={active} aria-hidden="true">
+        <span className="hero-loader-bar" />
       </div>
     </section>
   )

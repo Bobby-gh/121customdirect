@@ -3494,6 +3494,45 @@ img {
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
+.hero-loader {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+  height: 3px;
+  overflow: hidden;
+  background: rgba(127, 224, 234, 0.14);
+  pointer-events: none;
+}
+
+.hero-loader-bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #7fe0ea, #04b1c4);
+  box-shadow: 0 0 14px rgba(127, 224, 234, 0.6);
+  transform-origin: left center;
+  animation: hero-loader-fill 6500ms linear both;
+}
+
+@keyframes hero-loader-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-loader-bar {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
 .hero-saas-copy {
   max-width: 570px;
 }
