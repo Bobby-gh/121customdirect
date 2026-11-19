@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import HeroMotion from './HeroMotion'
 
 const APP_URL = 'https://customs-uk.vercel.app/'
 
@@ -53,6 +54,35 @@ const SLIDE_MS = 6500
 
 export default function HeroSlider() {
   const [active, setActive] = useState(0)
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+      const limit = window.innerWidth < 720 ? 28 : 70
+      const shift = Math.min(window.scrollY * 0.16, limit)
+      section.style.setProperty('--hero-parallax', `${shift.toFixed(1)}px`)
+    }
+
+    const handleScroll = () => {
+      if (frame) return
+      frame = window.requestAnimationFrame(update)
+    }
+
+    update()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (frame) window.cancelAnimationFrame(frame)
+    }
+  }, [])
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -67,6 +97,7 @@ export default function HeroSlider() {
 
   return (
     <section
+      ref={sectionRef}
       className="hero-saas hero-slider hero-banner-slider"
       aria-roledescription="carousel"
       aria-label="Customs software highlights"
@@ -94,6 +125,8 @@ export default function HeroSlider() {
           </div>
         ))}
       </div>
+
+      <HeroMotion />
 
       <div className="container hero-saas-grid">
         <div className="hero-saas-copy hero-slider-copy" key={active}>

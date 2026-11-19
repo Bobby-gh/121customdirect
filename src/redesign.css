@@ -4832,6 +4832,170 @@ img {
   }
 }
 
+/* ---------- Hero motion ---------- */
+.hero-scenes {
+  transform: translate3d(0, var(--hero-parallax, 0px), 0);
+  will-change: transform;
+}
+
+.hero-scenes::after {
+  position: absolute;
+  inset: -45%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(127, 224, 234, 0.14) 14%,
+    transparent 32%,
+    rgba(4, 177, 196, 0.12) 54%,
+    transparent 72%,
+    rgba(127, 224, 234, 0.1) 88%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  animation: hero-aurora-spin 54s linear infinite;
+  content: '';
+  pointer-events: none;
+}
+
+.hero-motion {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero-scene-orb {
+  animation: hero-orb-drift 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-scene-grid {
+  animation: hero-grid-pan 38s linear infinite;
+}
+
+.hero-scene--documents .hero-scene-grid {
+  animation-name: hero-grid-pan-near;
+}
+
+.hero-scene-city {
+  animation: hero-city-breathe 11s ease-in-out infinite alternate;
+}
+
+.hero-scene--skyline .hero-scene-shape-a {
+  animation: hero-float 18s ease-in-out infinite alternate;
+}
+
+.hero-scene--skyline .hero-scene-shape-b {
+  animation: hero-float 13s ease-in-out infinite alternate-reverse;
+}
+
+.hero-scene--documents .hero-scene-shape-a {
+  animation: hero-float-tilt-a 20s ease-in-out infinite alternate;
+}
+
+.hero-scene--documents .hero-scene-shape-b {
+  animation: hero-float-tilt-b 15s ease-in-out infinite alternate;
+}
+
+.hero-scene--form .hero-scene-shape-a {
+  animation: hero-float 22s ease-in-out infinite alternate;
+}
+
+.hero-scene--form .hero-scene-shape-b {
+  animation: hero-float 16s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes hero-aurora-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hero-orb-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(-4%, 5%, 0) scale(1.12);
+  }
+}
+
+@keyframes hero-grid-pan {
+  to {
+    background-position: 68px 68px;
+  }
+}
+
+@keyframes hero-grid-pan-near {
+  to {
+    background-position: 26px 26px;
+  }
+}
+
+@keyframes hero-city-breathe {
+  from {
+    opacity: 0.85;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-float {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+@keyframes hero-float-tilt-a {
+  from {
+    transform: rotate(9deg) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: rotate(9deg) translate3d(0, -18px, 0);
+  }
+}
+
+@keyframes hero-float-tilt-b {
+  from {
+    transform: rotate(-8deg) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: rotate(-8deg) translate3d(0, 16px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scenes {
+    transform: none;
+  }
+
+  .hero-scenes::after,
+  .hero-scene-orb,
+  .hero-scene-grid,
+  .hero-scene-city,
+  .hero-scene-shape {
+    animation: none;
+  }
+
+  .hero-motion {
+    display: none;
+  }
+}
+
 /* ---------- Real system screenshots ---------- */
 
 .hero-slider {
