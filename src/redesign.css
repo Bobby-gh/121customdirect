@@ -5319,3 +5319,200 @@ img {
   border-color: rgba(255, 255, 255, 0.16);
   box-shadow: 0 36px 70px -30px rgba(0, 0, 0, 0.55);
 }
+
+/* ---------- Site motion ---------- */
+
+.reveal-item {
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-item:not(.is-inview) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Banner strip marquee */
+.hero-strip-marquee-window {
+  flex: 1 1 240px;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.hero-strip-marquee {
+  display: flex;
+  width: max-content;
+  animation: hero-strip-marquee 26s linear infinite;
+}
+
+.hero-saas-strip .hero-strip-marquee ul {
+  flex: none;
+  flex-wrap: nowrap;
+  padding-right: 0.45rem;
+}
+
+.hero-strip-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes hero-strip-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Branded page banners */
+.page-banner {
+  overflow: hidden;
+}
+
+.page-banner::after {
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(127, 224, 234, 0.13) 16%,
+    transparent 34%,
+    rgba(4, 177, 196, 0.12) 58%,
+    transparent 76%,
+    rgba(127, 224, 234, 0.1) 90%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  animation: page-banner-aurora 62s linear infinite;
+  content: '';
+  pointer-events: none;
+}
+
+.page-banner-grid {
+  animation: page-banner-grid-pan 44s linear infinite;
+}
+
+.page-banner-glow {
+  animation: page-banner-glow-drift 20s ease-in-out infinite alternate;
+}
+
+.page-banner-window {
+  animation: page-banner-float 11s ease-in-out infinite alternate;
+}
+
+.page-banner-chip {
+  animation: page-banner-chip-in 700ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.page-banner-chip:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.page-banner-chip:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+@keyframes page-banner-aurora {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes page-banner-grid-pan {
+  to {
+    background-position: 56px 56px;
+  }
+}
+
+@keyframes page-banner-glow-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(6%, 8%, 0) scale(1.15);
+  }
+}
+
+@keyframes page-banner-float {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes page-banner-chip-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hover motion */
+.button:hover {
+  box-shadow: 0 16px 30px -20px rgba(4, 33, 63, 0.8);
+}
+
+.media-frame img {
+  transition: transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.media-frame:hover img {
+  transform: scale(1.04);
+}
+
+.step-card::before {
+  transition: width 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.step-card:hover::before {
+  width: 100%;
+}
+
+.partner-mark {
+  transition: transform 300ms ease, border-color 300ms ease;
+}
+
+.partner-tile:hover .partner-mark {
+  transform: translateY(-3px) rotate(-5deg);
+}
+
+.hero-slider-dot {
+  transition: transform 240ms ease, background-color 240ms ease, width 240ms ease;
+}
+
+.hero-slider-dot:hover {
+  transform: scale(1.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item,
+  .reveal-item:not(.is-inview) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-strip-marquee,
+  .page-banner::after,
+  .page-banner-grid,
+  .page-banner-glow,
+  .page-banner-window,
+  .page-banner-chip {
+    animation: none;
+  }
+
+  .media-frame:hover img {
+    transform: none;
+  }
+}

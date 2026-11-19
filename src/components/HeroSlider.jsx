@@ -233,11 +233,20 @@ export default function HeroSlider() {
 
       <div className="container hero-saas-strip">
         <span>One workspace for</span>
-        <ul>
-          {systems.map((system) => (
-            <li key={system}>{system}</li>
-          ))}
-        </ul>
+        <div className="hero-strip-marquee-window">
+          <div className="hero-strip-marquee">
+            <ul>
+              {systems.map((system) => (
+                <li key={system}>{system}</li>
+              ))}
+            </ul>
+            <ul aria-hidden="true">
+              {systems.map((system) => (
+                <li key={`${system}-clone`}>{system}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div className="hero-loader" key={active} aria-hidden="true">
