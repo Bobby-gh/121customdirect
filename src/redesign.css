@@ -5495,7 +5495,60 @@ img {
   transform: scale(1.35);
 }
 
+/* Pointer-reactive cards (position vars set by CardMotion) */
+.card-spotlight {
+  position: relative;
+}
+
+.card-spotlight::after {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  background: radial-gradient(
+    260px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(4, 177, 196, 0.16),
+    rgba(4, 177, 196, 0.05) 44%,
+    transparent 72%
+  );
+  opacity: 0;
+  transition: opacity 320ms ease;
+  pointer-events: none;
+  content: '';
+}
+
+.stats-band .card-spotlight::after {
+  background: radial-gradient(
+    240px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+}
+
+.card-spotlight.is-pointer::after {
+  opacity: 1;
+}
+
+.card-tilt.is-tilting {
+  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))
+    translateY(-4px);
+  transition: transform 130ms ease-out, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.system-shot.card-tilt.is-tilting {
+  transform: perspective(1500px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))
+    translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .card-spotlight::after {
+    display: none;
+  }
+
+  .card-tilt.is-tilting {
+    transform: none;
+  }
+
   .reveal-item,
   .reveal-item:not(.is-inview) {
     opacity: 1;

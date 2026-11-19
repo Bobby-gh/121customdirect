@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import CardMotion from './CardMotion'
 
 const REVEAL_SELECTOR = [
   '.section-heading-row',
@@ -152,6 +153,7 @@ export default function SiteShell({ children }) {
   return (
     <>
       <Navbar />
+      <CardMotion />
       {children}
       <Footer />
     </>
